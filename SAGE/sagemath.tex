@@ -1,0 +1,59 @@
+\documentclass{article}
+\usepackage[german]{babel}
+
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{amsmath, amssymb, amsfonts, amsthm, mathtools, bbm}
+\usepackage{hyperref}
+
+\theoremstyle{plain}
+\newtheorem{talk}{Talk}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}{Corollary}[thm]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\theoremstyle{remakr}
+\newtheorem{rem}[thm]{Remark}
+
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\im}{im}
+
+
+\title{SageMath}
+
+
+\begin{document}
+Um SageMath zu benutzen gibt es zwei möglichkeiten.
+
+\section{CoCalc}
+Am leichtsten ist es um CoCalc zu benutzen. 
+\begin{enumerate}
+\item Besuchen Sie folgende Website: \url{http://www.sagemath.org} und clicken Sie auf \verb+Sage on CoCalc+ (Sie können auch sofort die CoCalc Website besuchen: \url{http://www.cocalc.com}
+\item Clicken Sie auf \verb+Sign Up+, stimmen Sie zu mit den Terms of Service und geben Sie Ihre Daten ein. (Haben Sie schon ein Account, clicken Sie dann auf \verb+Sing In+.)
+\item Wenn Sie eingeloggt sind, clicken Sie auf \verb+Create New Nroject+ und geben Sie diesem Projekt eine Name wie 'LinAlg2'. Dieses Projekt muss noch gestartet werden, also clicken Sie auf \verb+Start project+
+\item Jetzt können Sie neue Dateien erstellen und Hochladen. Clicken Sie dazu auf \verb+Create or Upload Files...+ oder benutzen Sie das 'drag and drop' Interface
+\end{enumerate}
+
+\section{SageMath}
+Wollen Sie CoClac auf Ihrem Computer installieren, besuchen Sie dann auch \url{http://www.sagemath.org} und clicken Sie jetzt auf \verb+install 9.8+ (zum Zeitpunkt der Erstellung dieses Dokuments war 9.8 die neueste Version). Hier wird ganz ausführlich beschrieben wie mann weiter gehen soll, also das wird hier nicht kopiert. Einige Dinge zu beachten sind aber:
+\begin{itemize}
+\item Es ist nicht notwendig SageMath weiter zu entwickeln. Natürlich ist es schön, wenn Sie an so etwas interessiert sind, aber wenn Sie nicht explizit diese Wunsch haben, wählen Sie dann 'No development'.
+\item Apple hat einen neuen Chip entwickelt die in den neuesten Macs sitzt. Was für einen Chip Sie in Ihrem Mac haben können Sie sehen unter 'About This Mac'. Haben Sie noch einen Intel Chip, dann brauchen Sie etwas mit \verb+x86+ und haben Sie den Apple Chip, dann brauchen Sie etwas mit \verb+arm+.
+\item Sind Sie linux Benutzer, und arbeiten Sie auf Ihrem eigenen Computer, dann haben Sie wahrscheinlich 'root acces' und außerdem ist es wahrscheinlich dass Sie schon eine kompatible Linux Distribution installiert haben.
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
