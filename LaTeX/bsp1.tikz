@@ -1,0 +1,33 @@
+\begin{tikzpicture}[y=-1cm]
+
+% objects at depth 50:
+\draw[black] (2.5,5.6) -- (3.3,5.6);
+\draw[black] (2.7,6.4) -- (3.5,6.4);
+\draw[black] (2.5,5.6) -- (2.7,5.6) -- (2.5,6.4) -- (2.7,6.4);
+\draw[black] (3.3,5.6) -- (3.5,5.6) -- (3.3,6.4) -- (3.5,6.4);
+\draw[black] (5.5,5.6) -- (6.3,5.6);
+\draw[black] (5.7,6.4) -- (6.5,6.4);
+\draw[black] (5.5,5.6) -- (5.7,5.6) -- (5.5,6.4) -- (5.7,6.4);
+\draw[black] (6.3,5.6) -- (6.5,5.6) -- (6.3,6.4) -- (6.5,6.4);
+\draw[black] (5.5,2.5) -- (6.3,2.5);
+\draw[black] (5.7,3.3) -- (6.5,3.3);
+\draw[black] (5.5,2.5) -- (5.7,2.5) -- (5.5,3.3) -- (5.7,3.3);
+\draw[black] (6.3,2.5) -- (6.5,2.5) -- (6.3,3.3) -- (6.5,3.3);
+\draw[black] (2.5,2.5) -- (3.3,2.5);
+\draw[black] (2.7,3.3) -- (3.5,3.3);
+\draw[black] (2.5,2.5) -- (2.7,2.5) -- (2.5,3.3) -- (2.7,3.3);
+\draw[black] (3.3,2.5) -- (3.5,2.5) -- (3.3,3.3) -- (3.5,3.3);
+\draw[arrows=-to,black] (3.5,5.3) -- (5.3,3.5);
+\draw[arrows=-to,black] (5.3,2.8) -- (3.7,2.8);
+\draw[arrows=to-,black] (5.3,6) -- (3.7,6);
+\draw[arrows=-to,black] (5.3,5.3) -- (3.5,3.5);
+\draw[arrows=-to,black] (3.7,3) -- (5.3,3);
+\draw[arrows=-to,black] (3,3.6) -- (3,5.2);
+\draw[arrows=to-,black] (6,3.6) -- (6,5.2);
+\draw[arrows=-to,black] (3.4,3.6) -- (5.2,5.4);
+\path (3,3.1) node[text=black,anchor=base] {\large{}$1$};
+\path (6,6.2) node[text=black,anchor=base] {\large{}$4$};
+\path (6,3.1) node[text=black,anchor=base] {\large{}$3$};
+\path (3,6.2) node[text=black,anchor=base] {\large{}$2$};
+
+\end{tikzpicture}%

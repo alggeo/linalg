@@ -1,0 +1,296 @@
+\documentclass[a4,11pt]{article}
+
+\usepackage{exercises}
+\usepackage{macros}
+
+\usepackage{graphicx}
+\usepackage{ngerman}
+
+\vltitel{Lineare Algebra 2}
+\dozent{\small{Christian Haase}}
+\assistent{\small{Jan Marten Sevenster}}
+\tutoren{\small{%
+    Theresa Graeber \\[-1ex] Eva Schinzel}}
+
+\semester{Sommersemester 2023%
+  % \raisebox{-10mm}[0pt][0pt]{%
+  %   \parbox{0pt}{\includegraphics[width=27mm]{../../2015-ana1-L/Vorlesungsmaterial/ana1QR}}}
+}
+
+\begin{document}
+\vspace*{-17mm}
+{
+\kopf
+}
+% \vspace*{-5mm}
+\enlargethispage*{25mm}
+
+\begin{center}
+  \LARGE \bfseries Inhaltliches \makebox[0pt]{\hspace*{120mm}\tiny Stand: \today}
+\end{center}
+
+\bigskip
+
+{\bfseries Lernziele.}
+Die Studierenden \ldots
+\begin{compactitem}
+%  Die Studentinnen und Studenten beherrschen algebraische
+%  Schlussweisen und Beweisstrategien und sind mit der Problematik von
+%  Normalformen für lineare Abbildungen und quadratische Formen
+%  vertraut. Sie können zu passenden Problemstellungen auch aus
+%  anderen Wissenschaften geeignete mathematische Formulierungen
+%  entwickeln, dazu die richtigen Lösungen finden und ihre Ergebnisse
+%  wieder im Anwendungskontext richtig interpretieren.
+  
+% \item Die Studentinnen und Studenten k"onnen vom Zufall abh"angige Ph"anomene
+% modellieren und in diesen Modellen argumentieren. Sie k"onnen Daten mit
+% elementaren Mitteln der beschreibenden Statistik ordnen, darstellen
+% und durch Kenndaten charakterisieren. Die Studentinnen und Studenten
+% verf"ugen "uber einen Fundus an Beispielen, die die Fallstricke der
+% schlie"senden Statistik illustrieren. Sie k"onnen so den Gebrauch von
+% Statistiken in der "offentlichen Diskussion kritisch bewerten. Sie
+% begreifen die Stochastik aus ihrer (Ideen-)Geschichte und ihren
+% Anwendungen heraus als lebendige Wissenschaft, und sie k"onnen vor
+% diesem Hintergrund den Schulbezug der vermittelten Inhalte selbstst"andig
+% herstellen.
+  
+% \item Die Studierenden erkennen in der Tagespresse das Auftreten
+%   bedingter Wahrscheinlichkeiten und k"onnen die betreffende Situation
+%   pr"azise mathematisch modellieren.
+% \item \ldots beherrschen algebraische Schlussweisen und
+%   Beweisstrategien. Sie erkennen 
+%   Inhaltsliste) aus der
+%   Tagespresse mathematisch einordnen und auf Plausibilit"at und
+%   versteckte Annahmen pr"ufen.
+\item \ldots k"onnen mithilfe von Resultaten aus der
+  Vorlesung (siehe Inhaltsliste) einfache algebraische Aussagen
+  eigenst"andig beweisen.
+\item \ldots k"onnen eigenst"andig Beispiele und Nicht-Beispiele von
+  Strukturen mit vorgegebenen Eigenschaften konstruieren.
+\item \ldots verf"ugen "uber "Uberblickswissen und k"onnen
+  eigenst"andig die wichtigsten S"atze, Definitionen und Beispiele der
+  Vorlesung in logische/argumentative Beziehung setzen.
+\end{compactitem}
+\bigskip
+
+{\bfseries Inhalte.}
+\begin{compactitem}
+\item Eigenwerte und Eigenvektoren, Diagonalisierbarkeit,
+  Satz von Cayley-Hamilton, Normalformen
+\item Vektorr"aume mit Skalarprodukt, Orthogonalit"at, Isometrien,
+  (selbst-)adjungierte Abbildungen, Orthonormalisierung
+\item ausgew"ahlte Anwendungen
+\end{compactitem}
+
+\mbox{}
+\vfill
+
+\begin{center}
+  \LARGE \bfseries Organisatorisches
+\end{center}
+%\bigskip
+
+%Willkommen zur Vorlesung \emph{Mathematik entdecken} im
+%Wintersemester 2017/18. Sie richtet sich an Studierende der
+%Lehramtsstudieng"ange.
+%Inhaltlich besch"aftigen wir uns mit grundlegenden algebraischen
+%Strukturen (Gruppen, Ringe, K"orper) und deren Anwendungen in
+%Zahlentheorie und Geometrie.
+%
+%Weitere Schwerpunkte der Veranstaltung sind das Erlernen
+%mathematischer Denk- und Arbeitsweisen, sowie die Bef"ahigung, Bez"uge
+%universit"arer Inhalte und Sichtweisen zur Schulmathematik zu erkennen
+%und zu nutzen.
+\bigskip
+
+{\bfseries Termine.} % \medskip
+%
+% Team-Meeting: ???????
+\newline
+\begin{tabular}[t]{llr@{--}ll}
+  Vorlesung 
+  & Montag      & 12&14 & H"orsaal % 2 in der Rostlaube\footnotemark \\
+  001 in der Arnimallee 3  \\
+  % \addtocounter{footnote}{-1}%
+  & Mittwoch & 12&14 & H"orsaal 001 in der Arnimallee 3 \\
+  Zentral-"Ubung  
+  & Montag      &  14&16 & H"orsaal 001 in der Arnimallee 3 \\
+  Tutorien
+  & Dienstag & 08&10 & Seminarraum 032 in der A6 \\ % Eva
+  & Mittwoch & 10&12 & Seminarraum 024 in der A3 \\ % Theresa
+  & Mittwoch & 14&16 & Seminarraum 032 in der A6 \\ % Eva
+  & Donnerstag & 08&10 & Seminarraum 024 in der A3 \\ % Theresa
+%  & Donnerstag & 16&18 & Seminarraum 119 in der A3 \\ % Theresa??
+ %
+  %Probeklausur 
+  %& Montag, 06.06. & 10&12 & H"orsaal Hs2/Rostlaube \\
+  Abschlussklausur
+  & Freitag, 28.07.  & 10&12 & TBA \\ % H"ors"ale A,C Henry-Ford-Bau\\
+  Nachklausur
+  & Donnerstag, 12.10. & 10&12 & TBA \\ % H"ors"ale A,C Henry-Ford-Bau  \\
+\end{tabular}
+% \footnotetext{Ausnahmen beachten: }
+\bigskip
+
+% {\bfseries Zielgruppe.}
+% Die Vorlesung richtet sich in erster Linie an
+
+{\bfseries "Ubungen.}
+\begin{itemize}
+\item \textbf{Zentral-"Ubung.} Es wird eine w"ochentliche, zentrale
+  "Ubung geben. Hier wird zu Beginn ein kurzes Quiz geschrieben,
+  welches dann korrigiert und bewertet wird. Im Anschluss werden
+  ausgew"ahlte Inhalte der Vorlesung exemplarisch aufgearbeitet. Die
+  Teilnahme an dieser Veranstaltung ist verpflichtend f"ur die
+  Best"atigung der Studienleistung "`regelm"a"sige Teilnahme"'. 
+\item \textbf{Tutorien.}
+Neben dieser zentralen Veranstaltung werden w"ochentliche Tutorien
+angeboten, in welchen Sie Hilfe beim Bearbeiten der Hausaufgaben
+bekommen und ggf. Pr"asenzaufgaben bearbeiten.
+Die Tutorien dienen dazu, den Stoff der Vorlesung vor- und
+nachzubereiten. Es soll insbesondere auch ein Ort sein, wo
+Sie all Ihre Fragen % und Ihre bl"oden Fragen loswerden.
+stellen.
+
+Die Tutorien sind explizit {\em nicht} der Ort, wo Ihnen fertige
+L"osungen pr"asentiert werden. 
+% \item \textbf{Tutorien'.}
+% Neben dieser zentralen Veranstaltung werden verschiedene Tutorien
+% angeboten: sie k"onnen Vorlesungsinhalte (auch aus der Linearen
+% Algebra~1) wiederholen, Hilfe beim Herangehen oder beim Aufschreiben
+% der Hausaufgaben bekommen oder weiterf"uhrende Ideen diskutieren.
+% Welches Tutorium welchen Schwerpunkt hat, wird alle drei Wochen
+% aufgrund einer Whiteboard-Abstimmung neu entschieden. Sie k"onnen auch
+% zu mehreren Tutorien gehen.
+% 
+% Die Tutorien sind aber explizit {\em nicht} der Ort, wo Ihnen fertige
+% L"osungen pr"asentiert werden. 
+\end{itemize}
+% Wir stellen Ihnen gescannte L"osungen 
+% zur Verf"ugung.
+% Hier ist Ihre Mitarbeit gefragt. Kommen Sie vorbereitet! Bringen Sie
+% Fragen mit!!
+
+%\smallskip
+%
+%W"ahrend der Tutorien werden Sie randomisiert vom Tutor aufgefordert,
+%L"osungen, f"ur die Sie Punkte erhalten haben, zu
+%erkl"aren. Gegebenenfalls erhalten Sie die Gelegenheit, Ihre L"osungen
+%Lena Walter oder Christian Haase zu erkl"aren.
+%An dieser Stelle sei darauf hingewiesen, dass in den Tutorien die
+%Pflicht zur regelm"a"sigen Teilnahme besteht.
+\bigskip
+
+{\bfseries Aktive Teilnahme.} 
+\newline
+% Der Autor nimmt seine Leser als intelligente und interessierte Menschen an,
+% die ein im Vergleich zur Schule deutlich erweitertes Wissen und vertieftes Ver-
+% ständnis der Mathematik erwerben möchten. Über ein zeilenweise ausgeführtes
+% Nach-Denken hinaus wird ein aktives Mit- und Weiterdenken ebenso erwartet
+% wie die Bereitschaft, die formal-sprachlichen und systematischen Aspekte der
+% Mathematik zu erlernen. Nach Überzeugung des Autors findet vieles, was selbst
+% gedacht werden kann, tatsächlich besser im eigenen Kopf als auf dem bedruckten
+% Papier statt, und die Qualität der Anregungen scheint ihm dabei weitaus wichti-
+% ger zu sein als die Quantität der Hilfestellungen. Alles zu kommentieren und im
+% Detail auszuführen, hieße, das Kind, das ja den Windeln längst entstiegen ist, auf
+% den Berg hochzutragen. Das Plakat „Beispiele und Musterlösungen“ ist oft nur
+% Ausdruck des (menschlichen) Wunsches, die zweifellos anstrengende Geistestä-
+% tigkeit, mathematische Definitionen, Sätze und Beweise zu durchdringen, doch
+% irgendwie vermeiden zu können. Die Mathematik ist aber kein einfacher Auto-
+% mat, den man sich vielleicht tatsächlich besser durch zwei oder drei beispielhafte
+% Bedienungen erklären lässt, anstatt seine Betriebsanleitung zu studieren. In der
+% Mathematik sind Text und Objekt oft nur schwer zu unterscheiden, und im Zen-
+% trum der mathematischen Texte stehen seit den alten Griechen, bei denen die
+% Mathematik als Wissenschaft beginnt, Definitionen, Sätze und Beweise. Sie ent-
+% halten sehr viel hochwertiges Gedankenfutter, sehr viele beispielhafte Lösungs-
+% muster. Nur durch ihre Durchdringung und Aneignung wird das, was zu Beginn
+% schwerfällt, irgendwann einmal einfach und leicht − wie etwa der Supremums-
+% oder der Grenzwertbegriff −, und nur durch sie wird das, was zu Beginn unpro-
+% blematisch erscheint, irgendwann einmal in seiner ungeahnten Komplexität er-
+% kennbar − wie etwa der Begriff der reellen Zahl.
+Montags wird auf der
+\href{https://mycampus.imp.fu-berlin.de/x/wPdhCU}{Whiteboard Kurs-Seite} 
+ein "Ubungsblatt mit drei
+Aufgaben unterschiedlicher Schwierigkeit ausgegeben.
+Ihre L"osungen sollen Sie {in Einzelabgabe} % im Tutorium 
+bis Montag 10:00 der darauf folgenden Woche im Whiteboard hochladen. Das Quiz
+orientiert sich "ublicherweise inhaltlich an einer der "Ubungsaufgaben.
+Die beiden anderen Aufgaben werden korrigiert und bewertet.\footnote{%
+Um den entstehenden Korrekturaufwand ertr"aglich zu halten behalten wir uns vor,
+aus den verbleibenden zwei Aufgaben eine zu korrigierende auszuw"ahlen.}
+% des "Ubungszettels nach dem
+% Abgabetermin im Zufallsverfahren eine Aufgabe ausgew"ahlt.
+% Diese Aufgabe wird korrigiert und bewertet.
+
+Im Verlauf des Semesters ist ein Schreiblabor geplant. Einzelheiten
+zum "Ubungsbetrieb w"ahrend der Laborwochen werden noch bekannt gegeben.
+
+% W"ahrend des Semesters werden Sie in Kleingruppen ein Studienprojekt
+% bearbeiten. Details hierzu werden in der zweiten Semesterwoche bekannt
+% gegeben.
+
+
+
+% Ich denke an sowas wie kein Quiz aber pro Woche zwei Aufgaben, die
+% solange korrigiert werden bis sie vern"unftig aufgeschrieben sind. Das
+% w"aren bei zwei mal zwei Laborwochen 8 Aufgaben von denen 6 richtig
+% sein m"ussen.(?)
+
+% {\bfseries Aktive Teilnahme.} 
+% > Quoting Lutz Heindorf <heindorf@zedat.fu-berlin.de>:
+% >> Hallo Christian,
+% >> Dein Tutor betreut zwei Gruppen (jeweils eine Veranstaltung) und
+% >> korrigiert die zugehörigen Hausaufgaben. Allerdings wird am 
+% >> Fachbereich in Zweiergruppen abgegeben.
+% >> Anfänglich sollte der Tutor also in der Grössenordnung 60 Studenten 
+% >> und 30 Zettel haben.
+\smallskip
+
+Um die Studienleistung "`aktive Teilnahme"' am Ende der Veranstaltung
+best"atigt zu bekommen, m"ussen die folgenden Kriterien erf"ullt sein:
+\begin{itemize}
+\itemsep0pt
+\item Erreichen von mindestens {\em 50\%} der maximal
+erreichbaren Hausaufgabenpunkte, die zwei Hausaufgabenzettel mit 
+den niedrigsten erreichten Punktzahlen gehen dabei nicht mit in die
+Wertung ein,
+\item Erreichen von mindestens {\em 40\%} der maximal
+erreichbaren Quizpunkte, die zwei Quiz mit 
+den niedrigsten erreichten Punktzahlen gehen dabei nicht mit in die
+Wertung ein,
+\item erfolgreiche Teilnahme am Schreiblabor.
+% \item erfolgreiche Bearbeitung und Pr"asentation des Studienprojektes.
+\end{itemize}
+%Es wird dringend empfohlen, eine Punktzahl "uber {\em 60\%}
+%anzustreben.
+% sowie im Tutorium mindestens eine gute Frage stellen.
+\bigskip
+
+%{\bfseries Doppelte Korrektur.} % in den ersten Wochen.}
+%F"ur wenige ausgew"ahlte "Ubungsaufgaben bieten wir Ihnen eine doppelte
+%Korrektur an. Nach der (ersten) Abgabe einer "Ubung werden wir Ihre
+%Aufschriebe im Hinblick auf die schriftliche Umsetzung Ihrer L"osungen
+%kommentieren und auf sprachliche Ungenauigkeiten oder Zweideutigkeiten
+%hinweisen. Diese Vorkorrektur wird im Tutorium zur"uckgegeben; sie
+%wird nicht bewertet. Sie erhalten dann die Gelegenheit Ihre L"osungen
+%zu "uberarbeiten und zusammen mit dem folgenden "Ubungsblatt erneut
+%abzugeben. Zun"achst gar nicht oder nur rudiment"ar bearbeitete
+%Aufgaben werden bei der zweiten Korrektur nicht gewertet. Diesen
+%aufwendigeren Korrekturmodus k"onnen wir aber nicht das ganze Semester
+%"uber leisten.
+%
+%\medskip
+
+% {\bfseries Literatur.}
+% Die Vorlesung richtet sich in weiten Teilen nach \textcolor[rgb]{1,0,0}{???}
+%
+%\smallskip
+%
+%\quad
+
+\end{document}
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% End:

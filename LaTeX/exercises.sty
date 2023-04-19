@@ -1,0 +1,360 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{me-exercises}[2017/11/04 Uebungszettel,
+Arbeitsblaetter und Klausuren Mathe FU Berlin]
+
+% \RequirePackage[T2A,T1]{fontenc}%
+% \DeclareSymbolFont{cyrillic}{T2A}{cmr}{m}{n}
+% \RequirePackage[utf8]{inputenc}
+\RequirePackage{upgreek}
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{amsthm}
+%\RequirePackage{txfonts}
+\RequirePackage{paralist}
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\RequirePackage{units}
+\RequirePackage{ragged2e}
+%\usepackage[charter]{mathdesign}
+%\RequirePackage{lucidabr}
+\RequirePackage{cmbright}
+%\RequirePackage{bbm}
+\RequirePackage[mathscr]{eucal}
+\RequirePackage{marginnote}
+\RequirePackage{framed}
+\RequirePackage[totalwidth=.7\paperwidth,
+                 totalheight=.87\paperheight,
+                 a4paper,
+                 hmarginratio=1:2,
+                 vmarginratio=2:3,
+                 marginparsep=5mm,
+                 marginparwidth=.2\textwidth,
+                 bindingoffset=15mm%,
+%                 dvips
+                 ]{geometry}
+%\RequirePackage{./lecture_notes_macros}
+\RequirePackage{bbm}
+\RequirePackage{tikz}
+\usepackage{booktabs,tabularx,longtable,array}
+
+\definecolor{darkblue}{rgb}{.8,.15,.15} 
+\definecolor{darkgreen}{rgb}{0.15,.4,.5}
+\definecolor{FUgruen}{rgb}{.695,.797,.199}
+\definecolor{FUblau}{rgb}{0,.199,.399}
+\definecolor{FUrot}{rgb}{.8125,0,0}
+
+\RequirePackage[colorlinks,linkcolor=darkblue, 
+            citecolor=darkblue,pagecolor=darkblue,
+            filecolor=darkblue,urlcolor=darkgreen,
+            anchorcolor=darkblue,menucolor=darkblue,
+            bookmarksopen=false,bookmarks=false,
+            pagebackref=true]{hyperref}
+
+% \newcommand{\ebene}{E}
+% \newcommand{\geraden}{{\mathcal G}}
+% \renewcommand{\P}{{\mathbb P}}
+            
+\newcommand{\@aufgabenName}{}
+\newcommand{\aufgabenName}[1]{\renewcommand{\@aufgabenName}{#1}}
+\newcommand{\@uebungsblattName}{}
+\newcommand{\uebungsblattName}[1]{\renewcommand{\@uebungsblattName}{#1}}
+\newcommand{\@dueDate}{}
+\newcommand{\dueDate}[1]{\renewcommand{\@dueDate}{#1}}
+
+\DeclareOption{german}{%
+  \aufgabenName{Aufgabe}
+  \uebungsblattName{Hausaufgabe}
+  \dueDate{Abgabe}
+}
+
+\DeclareOption{american}{%
+  \aufgabenName{Exercise}
+  \uebungsblattName{Problem Set}
+  \dueDate{Due}
+}
+
+\ExecuteOptions{german} % default is german
+\ProcessOptions\relax
+
+\newcommand{\blattnummer}{0}
+
+\newif\ifuebung
+\uebungtrue
+
+\reversemarginpar
+
+\usepackage[geometry]{ifsym}
+
+%\usepackage{newcent}
+\renewcommand{\familydefault}{\sfdefault}
+
+\pagestyle{empty}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\setlength{\parindent}{0mm}
+
+\newcounter{i}
+\setcounter{i}{0}
+
+\newcommand{\@vltitel}{}
+\newcommand{\vltitel}[1]{\renewcommand{\@vltitel}{#1}}
+
+\newcommand{\@dozent}{}
+\newcommand{\dozent}[1]{\renewcommand{\@dozent}{#1}}
+
+\newcommand{\@assistent}{}
+\newcommand{\assistent}[1]{\renewcommand{\@assistent}{#1}}
+
+\newcommand{\@tutoren}{}
+\newcommand{\tutoren}[1]{\renewcommand{\@tutoren}{#1}}
+
+\newcommand{\@semester}{}
+\newcommand{\semester}[1]{\renewcommand{\@semester}{#1}}
+
+\renewcommand{\baselinestretch}{1}
+
+\newcounter{aufgabennummer}
+\setcounter{aufgabennummer}{1}
+
+\def\changemargin#1#2{\list{}{\rightmargin#2\leftmargin#1}\item[]}
+\let\endchangemargin=\endlist
+
+
+%\makeatletter
+\newcommand{\rmnum}[1]{\romannumeral #1}
+\newcommand{\Rmnum}[1]{(\textrm{\expandafter\@slowromancap\romannumeral #1@})}
+%\makeatother
+
+\newcommand{\kopf}{
+%  \bigskip
+%\vspace*{-1.2cm}
+%  \begin{minipage}[c]{0.75\linewidth}
+%    \flushright
+  \textsc{\small\color{FUblau}%
+    {\bfseries\@vltitel} \\
+    \@dozent \\[-1ex]
+    \@assistent \\[-1ex]
+    \@tutoren
+  }
+%  \end{minipage}
+  \hfill
+  \raisebox{4mm}[0pt][0pt]{\includegraphics[width=.3\textwidth]{FU-Logo}}
+%      {\scshape\Large{FU Berlin}}
+
+%      \smallskip
+
+%    \textit{\large\@semester}
+%    \textit{\large Institute of Mathematics}%\\
+%    \end{flushright}
+%  \end{minipage}
+  \bigskip \bigskip
+}
+
+\newcommand{\ueblatt}[2]
+{\setcounter{chapter}{#1}
+  \renewcommand{\blattnummer}{\thechapter}
+ \begin{center}
+{\Large {\bfseries\scshape \@uebungsblattName\ #1}}
+\par \medskip \@dueDate #2
+\end{center}}
+
+\newcommand{\arbeitsblatt}[1]
+{\setcounter{chapter}{#1}
+  \renewcommand{\blattnummer}{\thechapter}
+  \begin{center}
+    {\Large {\bfseries\scshape #1}}
+  \end{center}}
+
+\newcommand{\tutorienfrage}[1]{$\Box$ #1 \qquad & }
+\newcommand{\musterlsgfrage}{%
+  Ich bin damit einverstanden, dass meine Bearbeitungen der \hfill JA $\Box$ \\
+  \"Ubungsaufgaben anonymisiert im Whiteboard hochgeladen werden. \hfill NEIN $\Box$
+  \par \bigskip \bigskip}
+\newcommand{\quiz}[2]%
+{\setcounter{chapter}{#1}
+  \renewcommand{\blattnummer}{\thechapter}
+  \renewcommand{\theaufgabennummer}{} %\blattnummer}
+  \begin{center}
+    {\Large {\bfseries\scshape Quiz #1}}
+    \par \medskip #2
+    \par \bigskip
+    Name: \underline{\hspace{70mm}}
+    \par \bigskip
+    In diesem Quiz bekomme ich \underline{\hspace{25mm}} von 4 Punkten.
+    \small
+    \par \medskip
+    % \par \bigskip
+    
+    % \begin{center}
+    %   $\Box$ Mi 14-16 \qquad\qquad   $\Box$ Do 14-16 \qquad\qquad   $\Box$ Fr 12-14   
+    % \end{center}
+    % \begin{multicols}{3}
+    %   \begin{itemize}[$\Box$]
+    %   \item Mi 14-16
+    %   \item Do 14-16
+    %   \item Fr 12-14
+    %   \end{itemize}
+    % \end{multicols}
+    % \normalsize
+    % \par \medskip
+  \end{center}
+}
+
+\newcommand{\klkopf}{
+
+%  \bigskip
+
+\vspace*{-1cm}
+
+\hspace*{-2cm}
+  \begin{minipage}[t]{0.6\linewidth}
+    \textsc{\Large\bfseries\@vltitel}\\
+    \textit{\large\@semester}
+
+    \smallskip
+
+    {\large\@dozent\\
+    \@assistent\\
+    \@tutoren}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.4\linewidth}
+    \begin{flushright}
+      {\scshape\Large{FU Berlin}}
+
+      \smallskip
+
+      \textit{\large Institute of Mathematics}\\
+%      \textit{\large RG Discrete Mathematics}\\
+      \textit{\large RG Lattice Polytopes}
+    \end{flushright}
+  \end{minipage}\hspace*{-2cm}
+
+  \bigskip
+
+}
+
+
+\newcommand{\klblatt}[1]
+{\begin{center}
+{\Large {\bfseries\scshape Final Exam}}
+\par \medskip #1
+\end{center}}
+
+\definecolor{gray}{rgb}{0.6,0.6,0.6}
+\definecolor{grayA}{rgb}{0.85,0.85,0.85}
+% \renewcommand*\FrameCommand{{\color{grayA}\hspace*{-70pt} 
+%     \vrule width 0pt 
+%     \hspace{10pt}}}
+
+
+\renewcommand*\FrameCommand{\color{grayA}
+ %    \hspace*{-70pt} 
+ %    \vrule width 0pt 
+ %    \hspace{10pt}}
+ }
+
+%--- Aufgaben
+
+%\makeatletter
+\newcommand{\alabel}[3]{
+\typeout{writelabel #1, #2 #3}
+\def\@blindex{#2}
+\ifx\@blindex\@empty
+\typeout{\@blindex ist leer}
+\immediate\write\@auxout{\string\newlabel{aufg:#1}{{{#3}}{1}{}{}{}}}
+\else
+\typeout{\@blindex ist nicht leer}
+\immediate\write\@auxout{\string\newlabel{aufg:#1}{{{#2.#3}}{1}{}{}{}}}
+\fi
+\typeout{writelabelagain #1, #2}
+}
+
+\newcommand{\aufglabel}[1]{%
+  \protected@write\@auxout{}%
+  {\string\newlabel{#1}{{}{F\@arabic{\c@page}}}}
+  }
+%\makeatother
+
+
+\newenvironment{aufgabe}[1][]{%
+\samepage
+{\noindent{
+\scshape\bfseries{\large \@aufgabenName\ 
+  {\blattnummer.\theaufgabennummer}}\if\@empty#1\relax\else\hfill #1\fi} }
+\vspace*{-.2cm}
+\begin{changemargin}{.5cm}{.5cm}
+}{\end{changemargin}\stepcounter{aufgabennummer}\medskip
+\pagebreak[0]
+}
+
+\newenvironment{klaufg}[3][]{%
+\samepage
+\alabel{#3}{}{\theaufgabennummer}
+%\begin{framed}
+
+\smallskip
+\uline
+{\noindent{\scshape\bfseries Aufgabe %Question
+    {\theaufgabennummer}\if\@empty#1\relax\else\ [#1]\fi
+    \marginnote{\textbf{(#2p)}%\\[.2cm]\footnotesize{\texttt{label:
+                              %#3}}
+}}}
+
+\vspace*{.05cm}
+\begin{changemargin}{0cm}{.5cm}
+%\vspace*{-.2cm}
+}{\end{changemargin}\stepcounter{aufgabennummer}\medskip
+\bigskip
+\pagebreak[0]%\end{framed}
+}
+
+\newenvironment{solution}[1]{%
+\uline
+{\noindent{\scshape\bfseries Solution to No. \ref{aufg:#1}
+    \marginnote{\ref{aufg:#1} (#1)}}}
+\begin{changemargin}{0cm}{0cm}
+}{\end{changemargin}\bigskip\bigskip}
+
+
+\newenvironment{klaufga}[2][]{%
+\samepage
+{\noindent{
+\scshape\bfseries
+\marginnote{\large {\theaufgabennummer}}
+\if\@empty#1\relax\else\ [#1]\fi
+%\if\@empty#2\relax\else
+\hfill #2 Points
+%\fi
+} }
+\vspace*{.4cm}
+\begin{changemargin}{.5cm}{.5cm}
+}{\end{changemargin}\stepcounter{aufgabennummer}\medskip
+\pagebreak[0]
+}
+
+\newlength{\starwidth}
+%\settowidth{\starwidth}{\bf $\star$ }
+
+\newenvironment{saufgabe}[1][]{%
+\samepage
+{\noindent{
+\scshape\bfseries{\large{\hspace*{-\starwidth}\bf $\star$}  \@aufgabenName\ 
+  {\blattnummer.\theaufgabennummer}}\if\@empty#1\relax\else\hfill #1
+Points\fi} }
+\vspace*{-.2cm}
+\begin{changemargin}{.5cm}{.5cm}
+}{\end{changemargin}\stepcounter{aufgabennummer}\medskip
+\pagebreak[0]
+}
+
+\renewcommand{\arraystretch}{.95}
+
+\newcommand{\uline}{\hspace*{-.3cm}\rule[-4pt]{9cm}{.5pt}\hspace*{-8.7cm}}
+\setdefaultenum{(1)}{(a)}{(i)}{(A)}
+
+% \newcommand{\se}{\stepcounter{enumi}{\hspace*{-\starwidth}\bf
+%     $\star$} (\theenumi)}
+
+\newcommand{\fakebox}[1]{{\setlength{\fboxrule}{0pt}\framebox{#1}}}
+
+% \renewcommand{\newpage}{}

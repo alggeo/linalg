@@ -1,0 +1,390 @@
+\RequirePackage{bbm}
+\RequirePackage{upgreek}
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{amsthm}
+%\RequirePackage{txfonts}
+%\RequirePackage{paralist}
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\RequirePackage{ngerman}
+
+% \RequirePackage[T2A,T1]{fontenc}
+%\DeclareSymbolFont{cyrillic}{T2A}{cmr}{m}{n}
+
+%% $ Id$ %%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% math macros
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% sets of numbers
+\newcommand{\R}{\mathbbm R}
+% \newcommand{\Rg}{\mathbbm \R_>}
+% \newcommand{\Rge}{\mathbbm \R_\ge}
+% \newcommand{\Rl}{\mathbbm \R_<}
+% \newcommand{\Rle}{\mathbbm \R_\le}
+\newcommand{\Z}{{\mathbbm{Z}}}
+\newcommand{\N}{\mathbb N}
+% \newcommand{\Zg}{\mathbbm \Z_>}
+% \newcommand{\Zge}{\mathbbm \Z_\ge}
+% \newcommand{\Zl}{\mathbbm \Z_<}
+% \newcommand{\Zle}{\mathbbm \Z_\le}
+\newcommand{\Q}{\mathbbm Q}
+\newcommand{\C}{{\mathbbm C}}
+\newcommand{\calH}{\mathcal{H}}
+\renewcommand{\P}{{\mathbbm P}}
+\newcommand{\HH}{{\mathbbm H}}
+
+%% a general field
+\newcommand{\kk}{\mathbbm k}
+
+% %% a matrix group
+% \DeclareMathOperator{\SLoperator}{SL}
+% \newcommand{\SL}[2]{\SLoperator_{#1}(#2)}
+% \newcommand{\SLd}[1]{\SL{d}{#1}}
+% \newcommand{\SLdZ}{\SL{d}{\Z}}
+% \newcommand{\SLZZ}{\SL{2}{\Z}}
+
+% %% special symbols
+% \newcommand{\configuration}{{\mathcal A}}
+% \newcommand{\cube}[1][d]{C_{#1}}
+% \newcommand{\cross}[1][d]{\diamond_{#1}}
+% \newcommand{\triang}{\mathscr T}
+% \newcommand{\skeleton}[2]{#1[#2]}
+% \newcommand{\simplex}[1][d]{\Delta_{#1}}
+% \newcommand{\reeve}[1][d]{\mathsf{R}_{#1}}
+% \newcommand{\hilbert}{\mathscr H}
+% \newcommand{\verts}{\mathscr V}
+% \newcommand{\fp}{\Pi}
+% %\DeclareMathSymbol{\fan}{\mathalpha}{cyrillic}{198}
+% \newcommand{\pcone}{C}
+% \newcommand{\dpcone}{\dual C}
+% \newcommand{\pcomplex}{\mathscr C}
+% \newcommand{\psubdiv}{\mathscr S}
+% \newcommand{\regsubdiv}[2]{\mathscr{RS}_{#1}(#2)}
+% \newcommand{\reglift}[2]{\mathscr{RL}_{#1}(#2)}
+% \newcommand{\regfunction}[2]{\mathscr{RF}_{#1}(#2)}
+% \DeclareMathOperator{\pullOperator}{pull}
+% \newcommand{\pull}[2]{\pullOperator(#1;#2)}
+% \DeclareMathOperator{\conv}{conv}
+% \DeclareMathOperator{\cone}{cone}
+% \DeclareMathOperator{\halfOpenCone}{\cone}
+% \newcommand{\halfopencone}[2]{\halfOpenCone_{#1|#2}}
+% \newcommand{\halfOpenConeClosed}[2]{#1_{[#2]}}
+% \newcommand{\fpClosed}[1]{\fp_{[#1]}}
+% \newcommand{\halfOpenConeOpen}[2]{#1^{[#2]}}
+% \newcommand{\fpOpen}[1]{\fp^{[#1]}}
+% \DeclareMathOperator{\spann}{\lin}
+% \DeclareMathOperator{\relint}{relint}
+% \DeclareMathOperator{\aff}{aff}
+% \DeclareMathOperator{\lin}{lin}
+% \DeclareMathOperator{\rank}{rank}
+% \DeclareMathOperator{\rec}{rec}
+% \DeclareMathOperator{\lineal}{lineal}
+% \DeclareMathOperator{\homog}{homog}
+% \DeclareMathOperator{\eq}{eq} %%% what's this?? equality set of a system of inequalities?
+% \DeclareMathOperator{\vol}{vol}
+% \DeclareMathOperator{\Vol}{Vol}
+% \DeclareMathOperator{\area}{area}
+% \DeclareMathOperator{\length}{length}
+% \DeclareMathOperator{\ind}{Index}
+% \DeclareMathOperator{\Hom}{Hom}
+% \DeclareMathOperator{\supp}{supp}
+% \newcommand{\join}{\star}
+% \DeclareMathOperator{\starOperator}{star}
+% \newcommand{\Star}[2]{\starOperator(#1;#2)}
+% \newcommand{\clStar}[2]{\overline{\starOperator}(#1;#2)}
+% \DeclareMathOperator{\linkOperator}{link}
+% \newcommand{\link}[2]{\linkOperator(#1;#2)}
+% \newcommand{\stdset}{\mathscr S}
+% \newcommand{\eulerchar}{\upchi}
+% \newcommand{\bigO}{\mathcal O}
+% \newcommand{\transpose}[1]{#1^t}
+
+% \DeclareMathOperator{\interior}{int}  %[1]{{#1}^\circ}
+% \newcommand{\intr}[1]{\interior{#1}}
+% \newcommand{\boundary}[1]{\partial #1}
+% \newcommand{\bd}[1]{\boundary{#1}}
+% \newcommand{\dual}[1]{{#1}^\star}
+% \newcommand{\dualG}[1]{{#1}^\vee}
+% \newcommand{\ddual}[1]{{#1}^{\star\star}}
+% \newcommand{\dddual}[1]{{#1}^{\star\star\star}}
+
+% \newcommand{\setn}[1][n]{[#1]}
+
+%% vectors
+\newcommand{\mathvector}{\boldsymbol}
+\newcommand{\va}{{\mathvector a}}
+\newcommand{\vb}{{\mathvector b}}
+\newcommand{\vc}{{\mathvector c}}
+\newcommand{\vd}{{\mathvector d}}
+\newcommand{\ve}{{\mathvector e}}
+\newcommand{\vf}{{\mathvector f}}
+\newcommand{\vg}{{\mathvector g}}
+\newcommand{\vh}{{\mathvector h}}
+\newcommand{\vi}{{\mathvector i}}
+\newcommand{\vj}{{\mathvector j}}
+\newcommand{\vk}{{\mathvector k}}
+\newcommand{\vl}{{\mathvector l}}
+\newcommand{\vm}{{\mathvector m}}
+\newcommand{\vn}{{\mathvector n}}
+\newcommand{\vo}{{\mathvector o}}
+\newcommand{\vp}{{\mathvector p}}
+\newcommand{\vq}{{\mathvector q}}
+\newcommand{\vr}{{\mathvector r}}
+\newcommand{\vs}{{\mathvector s}}
+\newcommand{\vt}{{\mathvector t}}
+\newcommand{\vu}{{\mathvector u}}
+\newcommand{\vv}{{\mathvector v}}
+\newcommand{\vw}{{\mathvector w}}
+\newcommand{\vx}{{\mathvector x}}
+\newcommand{\vy}{{\mathvector y}}
+\newcommand{\vz}{{\mathvector z}}
+
+\newcommand{\valpha}{\bm \alpha}
+\newcommand{\vbeta}{\bm \beta}
+\newcommand{\vgamma}{\bm \gamma}
+\newcommand{\vdelta}{\bm \delta}
+\newcommand{\veps}{\bm \eps}
+\newcommand{\vzeta}{\bm \zeta}
+\newcommand{\veta}{\bm \eta}
+\newcommand{\vtheta}{\bm \theta}
+\newcommand{\viota}{\bm \iota}
+\newcommand{\vkappa}{\bm \kappa}
+\newcommand{\vlambda}{\bm \lambda}
+\newcommand{\vmu}{\bm \mu}
+\newcommand{\vnu}{\bm \nu}
+\newcommand{\vxi}{\bm \xi}
+\newcommand{\vomikron}{\bm \omikron}
+\newcommand{\vpi}{\bm \pi}
+\newcommand{\vrho}{\bm \rho}
+\newcommand{\vsigma}{\bm \sigma}
+\newcommand{\vtau}{\bm \tau}
+\newcommand{\vyps}{\bm \yps}
+\newcommand{\vphi}{\bm \phi}
+\newcommand{\vchi}{\bm \chi}
+\newcommand{\vpsi}{\bm \psi}
+\newcommand{\vomega}{\bm \omega}  
+\newcommand{\het}{{\rm ht}}
+
+\newcommand{\vT}{{\mathvector T}}
+
+
+\newcommand{\1}{{\mathvector 1}}
+\newcommand{\0}{{\mathvector 0}}
+
+%% greek symbols
+\newcommand{\eps}{\varepsilon}
+\renewcommand{\rho}{\varrho}
+\renewcommand{\phi}{\varphi}
+
+%% operators
+\newcommand{\floor}[1]{\left\lfloor #1\right\rfloor}
+\newcommand{\ceil}[1]{\left\lceil #1\right\rceil}
+\newcommand{\fracpart}[1]{\left\{ #1\right\}}
+% \newcommand{\isfaceof}{\preceq}
+% \newcommand{\isproperfaceof}{\prec}
+\newcommand{\suchthat}{\,:\,}
+
+% %% functions
+% %% some series and counting functions
+% %% arguments may be empty, but {} must be there!
+% \DeclareMathOperator{\IntPtGenFOperator}{\mathsf G}
+% \makeatletter
+% \newcommand{\IntPtGenF}[2]{%
+% \def\@tempgf{#1}%
+% \ifx\@tempgf\@empty%
+% \IntPtGenFOperator%
+% \else%
+% \IntPtGenFOperator_{{#1}}%
+% \fi%
+% \def\@tempgf{#2}%
+% \ifx\@tempgf\@empty%
+% \else\left(#2\right)%
+% \fi}
+% \newcommand{\IntPtGenS}[2]{
+% \def\@tempgf{#1}
+% \ifx\@tempgf\@empty%
+% \hat\IntPtGenFOperator 
+% \else
+% \hat\IntPtGenFOperator_{{#1}} 
+% \fi
+% \def\@tempgf{#2}
+% \ifx\@tempgf\@empty%
+% \else\left(#2\right)%
+% \fi}
+% \newcommand{\ehrcount}[2]{
+% \def\@tempgf{#1}
+% \ifx\@tempgf\@empty%
+% {\mathrm{ehr}} 
+% \else
+% {\mathrm{ehr}}_{{#1}} 
+% \fi
+% \def\@tempgf{#2}
+% \ifx\@tempgf\@empty%
+% \else\left(#2\right)%
+% \fi}
+% \newcommand{\ehrseries}[2]{
+% \def\@tempgf{#1}
+% \ifx\@tempgf\@empty%
+% {\mathrm{\hat Ehr}}
+% \else
+% {\mathrm{\hat Ehr}}_{{#1}} 
+% \fi
+% \def\@tempgf{#2}
+% \ifx\@tempgf\@empty%
+% \else\left(#2\right)%
+% \fi}
+% \newcommand{\ehrfunction}[2]{
+% \def\@tempgf{#1}
+% \ifx\@tempgf\@empty%
+% {\mathrm{Ehr}}
+% \else
+% {\mathrm{Ehr}}_{{#1}} 
+% \fi
+% \def\@tempgf{#2}
+% \ifx\@tempgf\@empty%
+% \else\left(#2\right)%
+% \fi}
+% \makeatother
+% \newcommand{\IntPtGenFP}[1]{\IntPtGenF{P}{#1}}
+% \newcommand{\IntPtGenFt}[1]{\IntPtGenF{#1}{\vt}}
+% \newcommand{\IntPtGenFPt}{\IntPtGenF{P}{\vt}}
+% \newcommand{\IntPtGenSP}[1]{\IntPtGenS{P}{#1}}
+% \newcommand{\IntPtGenSt}[1]{\IntPtGenS{#1}{\vt}}
+% \newcommand{\IntPtGenSPt}{\IntPtGenS{P}{\vt}}
+% \newcommand{\ehrcountP}[1]{\ehrcount{P}{#1}}
+% \newcommand{\ehrcountt}[1]{\ehrcount{#1}{t}}
+% \newcommand{\ehrcountk}[1]{\ehrcount{#1}{k}}
+% \newcommand{\ehrcountPt}{\ehrcount{P}{t}}
+% \newcommand{\ehrcountPk}{\ehrcount{P}{k}}
+% \newcommand{\ehrseriesP}[1]{\ehrseries{P}{#1}}
+% \newcommand{\ehrseriest}[1]{\ehrseries{#1}{t}}
+% \newcommand{\ehrseriesPt}{\ehrseries{P}{t}}
+% \newcommand{\ehrfunctionP}[1]{\ehrfunction{P}{#1}}
+% \newcommand{\ehrfunctiont}[1]{\ehrfunction{#1}{t}}
+% \newcommand{\ehrfunctionPt}{\ehrfunction{P}{t}}
+
+% \DeclareMathOperator{\LaurentS}{\widehat{\mathsf L}}
+% \DeclareMathOperator{\LaurentP}{\mathsf L}
+% \DeclareMathOperator{\LaurentQ}{\mathsf Q}
+% \DeclareMathOperator{\LaurentR}{\mathsf R}
+% \DeclareMathOperator{\LaurentSsummable}{\mathsf L^{\mathrm{sum}}}
+% \newcommand{\LaurentHom}{\Upphi}
+
+% \newcommand{\tangentcone}[2]{\mathsf T_{{#2}}#1}
+% \newcommand{\fvec}{\mathsf f}
+% \newcommand{\gvec}{\mathsf g}
+% \newcommand{\lattice}{\Uplambda}
+% \newcommand{\lambdahat}{\hat\lattice}
+% \newcommand{\sublattice}{\Upgamma}
+% \newcommand{\ltrans}{\mathsf T}
+% \newcommand{\basis}{\mathscr B}
+% \newcommand{\csSets}{\mathscr C}
+% \DeclareMathOperator{\ballOperator}{\mathscr B}
+% \newcommand{\ball}[2]{\ballOperator_{#2}(#1)}
+
+% \DeclareMathOperator{\pyr}{Pyr}
+% \DeclareMathOperator{\bipyr}{BiPyr}
+% \DeclareMathOperator{\prism}{Prism}
+% \DeclareMathOperator{\lawrence}{Lawrence}
+% \DeclareMathOperator{\cayley}{Cayley}
+
+% \newcommand{\hstar}{h^\star}
+
+% \newcommand{\halfspace}[1]{H^+_{#1}}       %% obsolete
+% \newcommand{\hyperplane}[1]{H_{#1}}        %%   "
+% \newcommand{\neghalfspace}[1]{H^-_{#1}}    %%   "
+
+% \newcommand{\phspace}[1][]{H^+_{#1}}
+% \newcommand{\nhspace}[1][]{H^-_{#1}}
+% \newcommand{\hyp}[1][]{H_{#1}}
+% \newcommand{\linphspace}[1][]{\hat H^+_{#1}}
+% \newcommand{\linnhspace}[1][]{\hat H^-_{#1}}
+% \newcommand{\linhyp}[1][]{\hat H_{#1}}
+
+% \def\fac{{\mathcal F}}
+% \newcommand{\innP}{\eta}
+% \newcommand{\innC}{u}
+% \newcommand{\barL}{\bar{\Lambda}}
+% \newcommand{\dbarL}{\dual{\bar{\Lambda}}}
+% \newcommand{\mb}{\bar{\vm}}
+
+
+% \newcommand{\card}[1]{|#1|}
+% \newcommand{\norm}[1]{\|#1\|}
+
+% \DeclareMathOperator{\widthoperator}{\upomega}
+% \newcommand{\width}[2]{\widthoperator(#1;#2)}
+% \newcommand{\lwidth}[2]{\widthoperator_{#2}(#1)}
+
+% \DeclareMathOperator{\coeffAsymOperator}{ca}    % {\upalpha}
+% \newcommand{\coeffasym}[2]{\coeffAsymOperator(#1;#2)}
+
+\newcommand{\id}{{\rm id}}
+% \newcommand{\zmatrix}{\bm 0}
+
+% \newcommand{\affline}{\ell}
+
+% \DeclareMathOperator{\distname}{d}
+% \newcommand{\dist}[2]{\distname(#1,#2)}
+
+% \newcommand{\set}[1]{\left\{#1\right\}}
+% \newcommand{\proj}{\uppi}
+
+% \DeclareMathOperator{\packoperator}{\rho}
+% \newcommand{\pack}[1]{\packoperator(#1)}
+% \DeclareMathOperator{\coveroperator}{\mu}
+% \newcommand{\cover}[1]{\coveroperator(#1)}
+% \newcommand{\pro}[2]{\langle\, #1, #2 \, \rangle}
+% %\newcommand{\lat}{\lattice}
+
+
+% %% accents
+
+% \newcommand{\ov}[1]{\overline{#1}}
+
+% \DeclareMathOperator{\pos}{pos}
+% \DeclareMathOperator{\codeg}{codeg}
+% \DeclareMathOperator{\ehr}{ehr}
+% \DeclareMathOperator{\Ehr}{Ehr}
+% \newcommand{\wid}{BLITZA}
+% \DeclareMathOperator{\bipyramid}{bipyramid}
+
+% \newcommand{\vect}[1]{
+% \left(
+%     \begin{array}{r}
+%       #1
+%     \end{array}\right)
+% }
+
+% %TODO: VEREINHEITLICHEN
+% %Das sind Benis Makros
+% \def\cd{{\rm codeg}}
+
+% \def\lcm{{\rm lcm}}
+% \def\GL{\rm GL}
+% \def\Norm{\rm NF}
+% \def\NormL{\rm NF_\text{lin}}
+% \def\Mat{\rm Mat}
+% \def\lolra{\Longleftrightarrow}
+% \def\lora{\Longrightarrow}
+% \def\V{\mathcal{V}}
+% \def\F{\mathcal{F}}
+% \def\VPM{\rm VPM}
+% \def\CP{C_P}
+% \def\CQ{C_Q}
+% \def\Ord{\rm Ord}
+% \def\Sym{\rm Sym}
+% \def\Aff{\rm Aff}
+% \def\Aut{\rm Aut}
+% \def\MbR{{{\Mb}_\R}}
+% \def\Mb{{\bar{M}}}
+% \def\Nb{\bar{N}}
+
+\DeclareMathOperator{\ggT}{ggT}
+\newcommand{\ebene}{E}
+\newcommand{\geraden}{{\mathcal G}}
+\newcommand{\rpzwei}{\P^2\R}
+\newcommand{\kpzwei}{\P^2\kk}
