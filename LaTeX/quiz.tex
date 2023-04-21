@@ -1,51 +1,41 @@
-\documentclass[a4]{report}
- 
-\usepackage{bbm}
-\usepackage[german]{../../me-exercises}
-\usepackage{../../entdecken_macros}
-\graphicspath{{../../texmf/Bilder/}}
-\usepackage{../klaus}
-% \usepackage{tabularx}
-% \usepackage{multirow}
-\usepackage{tikz}
+\documentclass[a4,11pt]{article}
+
+\usepackage{exercises}
+\usepackage{macros}
+
 \usepackage{graphicx}
 \usepackage{ngerman}
-\usepackage{hyperref}
-\usepackage{multicol}
 
-\vltitel{Mathematik entdecken 1}
-%\dozent{Christian Haase \\ Anina Mischau}
-%\assistent{Lena Walter}
-%\tutoren{Martin G"unther, Marie Kristin Piel \\ Marvin Rominger, Hannah Zabel}
-%
-\semester{Wintersemester 2019/20}
+\vltitel{Lineare Algebra 2}
+\dozent{\small{Christian Haase}}
+\assistent{\small{Jan Marten Sevenster}}
+\tutoren{\small{%
+    Theresa Graeber \\[-1ex] Eva Schinzel}}
+
+\semester{Sommersemester 2023%
+  % \raisebox{-10mm}[0pt][0pt]{%
+  %   \parbox{0pt}{\includegraphics[width=27mm]{../../2015-ana1-L/Vorlesungsmaterial/ana1QR}}}
+}
 
 \begin{document}
 {
 \kopf
 }
-\quiz{2}{}
-
-\begin{center}
-  \begin{tabular}{llllll}
-    \tutorienfrage{Elisabeth} \qquad
-    \tutorienfrage{Kristin} \qquad
-    \tutorienfrage{Taha} \qquad
-  \end{tabular}
-\end{center}
+\newcounter{chapter}
+\quiz{1}{}
 
 \musterlsgfrage
 
+\newpage
+
 \begin{aufgabe}[4 Punkte]
-  Suchen Sie sich eine der beiden folgenden Implikationen
-  aus. Entscheiden Sie, ob sie f"ur alle ganzen Zahlen $a,b,c$ wahr
-  ist und begr"unden Sie bzw.\ geben Sie ein Gegenbeispiel.
-  $$ \left( a \text{ teilt } bc \right) \ \wennSo \ \left(\left( a
-      \text{ teilt } b \right) \oder  \left(a \text{ teilt } c
-    \right)\right) $$ 
-  $$ \left( a \text{ teilt } bc \right) \ \leftarrow \ \left(\left( a
-      \text{ teilt } b \right) \oder  \left(a \text{ teilt } c
-    \right)\right) $$ 
+  Bestimmen Sie alle Eigenwerte der linearen Abbildung
+  $$ \begin{array}{rccc}
+       D \colon & C^\infty(\R,\R) &\to& C^\infty(\R,\R) \\
+                & f &\mapsto& f' \ .
+     \end{array} $$
+     Dabei steht $C^\infty(\R,\R)$ f"ur den $\R$-Vektorraum der
+     beliebig of differenzierbaren Funktionen $\R \to \R$.
 \end{aufgabe}
 
 \end{document}
