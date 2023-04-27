@@ -29,27 +29,43 @@
 \ueblatt{1}{ Montag, 8.~Mai 2023 um 10h00 (ein PDF, eine Seite pro Aufgabe)}
 
 \begin{aufgabe}[4 Punkte]
-Polynom Grad 2 oder 3: keine Nullstelle, dann irreduzibel
+Es sei $K$ ein K"orper und $f\in K[t]$ ein nicht konstantes Polynom vom Grad h"ochstens $3$. Ein Polynom heißt \emph{irreduzibel}, wenn seine einzigen Faktorisierungen trivial sind, d.h.
+\[
+f = gh \ \text{impliziert} \ g \in K[t]^* \ \text{oder} \ h\in K[t]^*,
+\]
+wobei $K[t]^*$ die Menge der invertierbaren Elementen von $K[t]$ ist.
+
+Zeigen Sie, dass $f$ irreduzibel ist, wenn es keine Nullstellen hat.
 \end{aufgabe}
 
 \begin{aufgabe}[4 Punkte]
-  
 \begin{enumerate}
-\item Charakteristik 0: $\mu(f,x) = \max$ Ableitungen null.
-\item Bsp falsch ueber $K = \Z/2\Z$.
+\item Es sei $K$ ein K"orper von Charakteristik $0$ und $f \in K[t]$, zeigen Sie, dass f"ur $x\in K$ gilt
+\[
+\mu(f,x) = \max \{ n \in \mathbb{Z}_{\geq 0} \mid  f^{(n)}(x) = 0 \}.
+\]
+\item Geben Sie ein Beispiel an, woraus deutlich wird, dass diese Gleichheit nicht gilt f"ur $K = \Z/2\Z$.
 \end{enumerate}
 
 \end{aufgabe}
 
 \begin{aufgabe}[4 Punkte]
-Fibonacchi Folge
-
-als Vektor-Rekursion
+Es sei $(F_n)_{n\geq 0}$ die bekannte Fibonacchi Folge gegeben durch
+\[
+F_0 = 0, \ F_1 = 1, \  F_{n} = F_{n-1} + F_{n-2}.
+\]
+Wir k"onnen diese Rekursion wie folgt formulieren:
+\[
+\begin{pmatrix}F_{n} \\ F_{n-1}\end{pmatrix} =
+\begin{pmatrix} 1 & 1\\ 1 & 0\end{pmatrix}
+\begin{pmatrix}F_{n-1} \\ F_{n-2}\end{pmatrix}.
+\]
+Wir setzen $A = \begin{pmatrix} 1 & 1\\ 1 & 0\end{pmatrix}$.
   
 \begin{enumerate}
-\item diagonalisieren Sie die Matrix $A$
-\item geben Sie eine geschlossene Formel f"ur $A^n$ an
-\item geben Sie eine geschlossene Formel f"ur $F_n$ an.
+\item Diagonalisieren Sie die Matrix $A$.
+\item Geben Sie eine geschlossene Formel f"ur $A^n$ an.
+\item Geben Sie eine geschlossene Formel f"ur $F_n$ an.
 \end{enumerate}
 
 \end{aufgabe}
