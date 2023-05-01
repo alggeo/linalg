@@ -26,23 +26,39 @@
 % \enlargethispage*{25mm}
 
 \newcounter{chapter}
-\ueblatt{1}{ Montag, 8.~Mai 2023 um 10h00 (ein PDF, eine Seite pro Aufgabe)}
+\ueblatt{2}{ Montag, 8.~Mai 2023 um 10h00 (ein PDF, jede Aufgabe auf neuer Seite beginnen)}
 
 \begin{aufgabe}[4 Punkte]
-Es sei $K$ ein K"orper und $f\in K[t]$ ein nicht konstantes Polynom vom Grad h"ochstens $3$. Ein Polynom heißt \emph{irreduzibel}, wenn seine einzigen Faktorisierungen trivial sind, d.h.
+Es sei $K$ ein K"orper. Ein Polynom $f\in K[t]$ heißt
+\emph{irreduzibel}, wenn seine einzigen Faktorisierungen trivial sind,
+d.h., dass f"ur $g,h \in K[t]$
 \[
-f = gh \ \text{impliziert} \ g \in K[t]^* \ \text{oder} \ h\in K[t]^*,
+f = gh \ \text{ impliziert } \ \deg g = 0 \ \text{ oder } \ \deg h = 0.
 \]
-wobei $K[t]^*$ die Menge der invertierbaren Elementen von $K[t]$ ist.
+% wobei $K[t]^*$ die Menge der invertierbaren Elementen von $K[t]$ ist.
 
-Zeigen Sie, dass $f$ irreduzibel ist, wenn es keine Nullstellen hat.
+% \begin{enumerate}
+% \item
+
+Sei nun $f\in K[t]$ ein nicht-konstantes Polynom
+vom Grad h"ochstens $3$. Zeigen Sie, dass $f$ irreduzibel ist, wenn es
+keine Nullstellen hat.
+
+% \item Geben Sie ein Polynom $f\in K[t]$ ohne Nullstellen an, welches
+%   {\bfseries nicht} irreduzibel ist.
+% \end{enumerate}
 \end{aufgabe}
 
 \begin{aufgabe}[4 Punkte]
+Es sei $K$ ein K"orper. Wir definieren die $K$-lineare Abbildung $D
+\colon K[t] \to K[t]$ auf der Basis der Monome via $D(t^k) := k\,t^{k-1}$
+f"ur $k \in \Z_{\ge 0}$. 
+  
 \begin{enumerate}
-\item Es sei $K$ ein K"orper von Charakteristik $0$ und $f \in K[t]$, zeigen Sie, dass f"ur $x\in K$ gilt
+\item Es sei $K$ ein K"orper der Charakteristik $0$ und $f \in K[t]$, zeigen Sie, dass f"ur $x\in K$ gilt
 \[
-\mu(f,x) = \max \{ n \in \mathbb{Z}_{\geq 0} \mid  f^{(n)}(x) = 0 \}.
+\mu(f,x) = \max \left\{ n \in \mathbb{Z}_{\geq 0} \,\middle|\, f(x) = D(f)(x) =
+D(D(f))(x) = \ldots = D^n(f)(x) = 0 \right\}.
 \]
 \item Geben Sie ein Beispiel an, woraus deutlich wird, dass diese Gleichheit nicht gilt f"ur $K = \Z/2\Z$.
 \end{enumerate}
