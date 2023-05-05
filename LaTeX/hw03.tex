@@ -1,0 +1,84 @@
+\documentclass[a4,11pt]{article}
+
+\usepackage{exercises}
+\usepackage{macros}
+
+\usepackage{graphicx}
+\usepackage{ngerman}
+
+\vltitel{Lineare Algebra 2}
+\dozent{\small{Christian Haase}}
+\assistent{\small{Jan Marten Sevenster}}
+\tutoren{\small{%
+    Theresa Graeber \\[-1ex] Eva Schinzel}}
+
+\semester{Sommersemester 2023%
+  % \raisebox{-10mm}[0pt][0pt]{%
+  %   \parbox{0pt}{\includegraphics[width=27mm]{../../2015-ana1-L/Vorlesungsmaterial/ana1QR}}}
+}
+
+
+% https://math.ug/la2-ss21/sec-cayley-hamilton.html
+
+
+\begin{document}
+\vspace*{-17mm}
+{
+\kopf
+}
+% \vspace*{-5mm}
+% \enlargethispage*{25mm}
+
+\newcounter{chapter}
+\ueblatt{3}{ Montag, 15.~Mai 2023 um 10h00 (ein PDF, jede Aufgabe auf neuer Seite beginnen)}
+
+\begin{aufgabe}[4 Punkte]
+  Betrachten Sie den Endomorphismus ...
+
+  Geben Sie zwei verschiedene $F$ trigonalisierende Basen von $V$ an.
+\end{aufgabe}
+
+\begin{aufgabe}[4 Punkte]
+  Sei $V$ ein Vektorraum "uber dem K"orper
+  $K$. Ein Endomorphismus $F \colon V \to V$ hei"st nilpotent, wenn es
+  ein $k \in \Z_{\ge 1}$ gibt, so dass $F^k=0$ die Nullabbildung ist.
+
+\begin{enumerate}
+\item Sei nun $V$ endlichdimensional und $F$ nilpotent. Bestimmen Sie
+  $P_F$.
+\item Zeigen Sie, dass es eine Basis  ... B ... , so dass
+  <darstellende Matrix> obere Dreiecksform mit Nullen auf der
+  Diagonalen.
+\item $F^{\dim V} = 0$.
+\end{enumerate}
+
+\end{aufgabe}
+
+\begin{aufgabe}[4 Punkte]
+Sei $F$ ein Endomorphismus des Vektorraums $V$ "uber dem K"orper $K$,
+und sein $v \in V$.
+Dann ist der von $v$ erzeugte $F$-zyklische Unterraum von $V$ (Notation span??)
+$$ U_F(v) := span(v, F(v), F(F(v)), \ldots) \,.$$
+  
+  \begin{enumerate}
+  \item Zeigen Sie, dass $U_F(v)$ ein $F$-invarianter Unterraum ist.
+  \item Wenn $V$ endlichdimensional ist, zeigen Sie, dass $v, F(v),
+    F(F(v)), \ldots, F^{k-1}(v)$ mit $k := \dim U_F(v)$ eine
+    Basis von $U_F(v)$ ist. 
+  \item Seien $a \in K^k$ die Koordinaten von $F^k(v)$ in dieser Basis.
+    Bezeichne mit $\bar F \colon U_F(v) \to U_F(v)$ die 
+    Einschr"ankung von $F$ auf $U_F(v)$.
+    
+    Beschreiben Sie die Darstellende Matrix von $\bar F$ bez"uglich
+    dieser Basis mithilfe von $a$.
+  \item Dr"ucken Sie $P_{\bar F}$ mithilfe von $a$ aus.
+  \item Zeigen Sie, dass $P_{\bar F}(\bar F) = 0$.
+\end{enumerate}
+
+\end{aufgabe}
+
+\end{document}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% End: 
