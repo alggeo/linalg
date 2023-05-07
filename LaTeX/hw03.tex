@@ -64,24 +64,26 @@ Sei $F$ ein Endomorphismus des Vektorraums $V$ "uber dem K"orper $K$,
 und sein $v \in V$.
 % Dann ist der von $v$ erzeugte $F$-zyklische Unterraum von $V$ (Notation span??)
 % $$ U_F(v) := span(v, F(v), F(F(v)), \ldots) \,.$$
-  
+
+\newcommand{\bonusitem}{\item\hspace*{-2.4mm}*\ }
+
   \begin{enumerate}
-  \item Rufen Sie sich die Definition des von $v$ erzeugten
+  \bonusitem Rufen Sie sich die Definition des von $v$ erzeugten
     $F$-zyklischen Unterraums $U_F(v)$ ins Ged"achtnis.
-  \item "Uberzeugen Sie sich nochmal, dass $U_F(v)$ ein
+  \bonusitem "Uberzeugen Sie sich nochmal, dass $U_F(v)$ ein
     $F$-invarianter Unterraum ist.
-  \item Wenn $V$ endlichdimensional ist, und $k := \dim U_F(v)$, warum
-    ist dann \\ $v, F(v), F(F(v)), \ldots, F^{k-1}(v)$ eine
+  \bonusitem Wenn $V$ endlichdimensional ist, und $n := \dim U_F(v)$, warum
+    ist dann \\ $v, F(v), F(F(v)), \ldots, F^{n-1}(v)$ eine
     Basis von $U_F(v)$?
-  \item Seien $a \in K^k$ die Koordinaten von $F^k(v)$ in dieser Basis.
+  \item Seien $a \in K^n$ die Koordinaten von $F^n(v)$ in dieser Basis.
     Bezeichne mit \\ $\bar F \colon U_F(v) \to U_F(v)$ die 
     Einschr"ankung von $F$ auf $U_F(v)$.
     
     Beschreiben Sie die Darstellende Matrix von $\bar F$ bez"uglich
     dieser Basis mithilfe der Koeffizienten $a$.
   \item Dr"ucken Sie $P_{\bar F}$ mithilfe der Koeffizienten $a$ aus.
-  \item Zeigen Sie, dass $P_{\bar F}(\bar F) = 0$.
-  \item Warum gen"ugen diese "Uberlegungen, um den Satz von
+  \item Zeigen Sie, dass $P_{\bar F}(\bar F(v)) = 0$.
+  \bonusitem Warum gen"ugen diese "Uberlegungen, um den Satz von
     Cayley-Hamilton zu beweisen?
 \end{enumerate}
 
