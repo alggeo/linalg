@@ -45,11 +45,10 @@
 
 \begin{enumerate}
 \item Sei nun $V$ endlichdimensional und $F$ nilpotent. Bestimmen Sie
-  $P_F$.
-\item Zeigen Sie, dass es eine Basis  ... B ... , so dass
-  <darstellende Matrix> obere Dreiecksform mit Nullen auf der
-  Diagonalen.
-\item $F^{\dim V} = 0$.
+  das charakteristische Polynom $P_F$.
+\item Zeigen Sie, dass es eine Basis $B$ von $V$ gibt, so dass
+  $M_B(F)$ streng obere Dreiecksform annimmt, d.h., $j \leq i$ impliziert $M_B(F)_{ij} = 0$.
+\item Folgern Sie, dass $F^{\dim V} = 0$.
 \end{enumerate}
 
 \end{aufgabe}
@@ -57,15 +56,15 @@
 \begin{aufgabe}[4 Punkte]
 Sei $F$ ein Endomorphismus des Vektorraums $V$ "uber dem K"orper $K$,
 und sein $v \in V$.
-Dann ist der von $v$ erzeugte $F$-zyklische Unterraum von $V$ (Notation span??)
-$$ U_F(v) := span(v, F(v), F(F(v)), \ldots) \,.$$
+Dann ist der von $v$ erzeugte $F$-zyklische Unterraum von $V$
+$$ U_F(v) := \text{span}(v, F(v), F(F(v)), \ldots) \,.$$
   
   \begin{enumerate}
   \item Zeigen Sie, dass $U_F(v)$ ein $F$-invarianter Unterraum ist.
   \item Wenn $V$ endlichdimensional ist, zeigen Sie, dass $v, F(v),
     F(F(v)), \ldots, F^{k-1}(v)$ mit $k := \dim U_F(v)$ eine
     Basis von $U_F(v)$ ist. 
-  \item Seien $a \in K^k$ die Koordinaten von $F^k(v)$ in dieser Basis.
+  \item Es sei $a \in K^k$ der Koordinatvektor von $F^k(v)$ in dieser Basis.
     Bezeichne mit $\bar F \colon U_F(v) \to U_F(v)$ die 
     Einschr"ankung von $F$ auf $U_F(v)$.
     
