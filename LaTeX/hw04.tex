@@ -33,27 +33,39 @@
 \ueblatt{4}{ Montag, 22.~Mai 2023 um 10h00 (ein PDF, jede Aufgabe auf neuer Seite beginnen)}
 
 \begin{aufgabe}[4 Punkte]
-$I \subseteq K[t]$ Ideal, dann gibt es ein Polynom $p$ kleinsten
-Grades in $I$.
+Es sei $K$ ein K\"orper und $I \subseteq K[t]$ ein Ideal.
 
-Es gilt $I = (p)$.
-
-Wenn $(p) = (q)$, dann gibt es ein $\lambda \in K \setminus \{0\}$ so
-dass $q = \lambda p$.
+\begin{enumerate}
+\item Zeigen Sie, dass es ein Polynom $p \in K[t]$ gibt, so dass
+\[
+\forall f \in I, \quad \degr (p) \leq \degr (f).
+\]
+\item Zeigen Sie weiter das, $I = (p)$.
+\item Folgern Sie, dass f\"ur ein zweites Polynom $q$, das diese Eigenschaft eirf\"ullt, einen Skalar $\lambda \in K \setminus \{0\}$ gibt, so dass $p = \lambda q$
+\end{enumerate}
 
 \end{aufgabe}
 
 \begin{aufgabe}[4 Punkte]
-Wenn $F \circ G = G \circ F$, und $U$ $F$-invariant, dann sind $\ker G$
-und $G(U)$ auch $F$-invariant.
 
-Wenn zus"atzlich $F$ und $G$ diagonalisierbar, dann gibt es Basis aus
-gemeinsamen Eigenvektoren
+Es seien $V$ ein Vektorraum und $F, G \in \text{End}(V)$ kommutierende Endomorphismen, d.h., $F \circ G = G \circ F$.
+\begin{enumerate}
+\item
+Zeigen Sie, dass wenn $U \subset V$ ein $F$-invarianter Unterraum ist, $G(U)$ ebenfalls $F$-invariant ist, und dass auch $\ker G$  $F$-invariant ist.
+
+\item Wir nehmen zus"atzlich an, dass  $F$ und $G$ diagonalisierbar sind und dass $V$ endlichdimensional ist, zeigen Sie dass es eine Basis $B$ von $V$ gibt, bestehend aus gemeinsame Eigenvektoren von $F$ und $G$. Also eine basis $B = \{ b_1, \dots , b_m\}$ f"ur die $b_i$ ein Eigenvektor von $F$ ist und ein Eigenvektor von $G$ $i = 1, \dots , m$, obwohl m"oglicherweise geh"orend zu verschiedenen Eigenwerten.
+\end{enumerate}
 \end{aufgabe}
 
 
 \begin{aufgabe}[4 Punkte]
-Gebe Dimensionen der $\ker (F -\lambda)^i$ vor \ldots finde so ein $F$  
+Es sei $V$ ein $7$ $K$-dimensionaler Vektorraum und $\lambda \in K$. Finden Sie ein Endomorphismus $F$, so dass
+\begin{align*}
+\dim \ker (F -\lambda I_V)^1 = 3\\
+\dim \ker (F -\lambda I_V)^2 = 6 \\
+\dim \ker (F -\lambda I_V)^3 = 7
+\end{align*}.
+Geben Sie eine Darstellende Matrix f"ur $F$ an, und begr"unden Sie wie Sie die gefunden haben.
 \end{aufgabe}
 
 \end{document}
