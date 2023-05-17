@@ -17,9 +17,7 @@
   %   \parbox{0pt}{\includegraphics[width=27mm]{../../2015-ana1-L/Vorlesungsmaterial/ana1QR}}}
 }
 
-
-% https://math.ug/la2-ss21/sec-cayley-hamilton.html
-
+\DeclareMathOperator{\End}{End}
 
 \begin{document}
 \vspace*{-17mm}
@@ -44,18 +42,22 @@
 \end{aufgabe}
 
 \begin{aufgabe}[4 Punkte]
+  $F,G$ nilpotent und kommutieren, dann $F+G$ nilpotent
 
+  Gegenbeispiel, wenn nicht kommutieren
 \end{aufgabe}
 
 
 \begin{aufgabe}[4 Punkte]
-Es sei $V$ ein $7$-dimensionaler $K$-Vektorraum und $\lambda \in K$. Finden Sie ein Endomorphismus $F$, so dass
-\begin{align*}
-\dim \ker (F -\lambda I_V)^1 &= 3\\
-\dim \ker (F -\lambda I_V)^2 &= 6 \\
-\dim \ker (F -\lambda I_V)^3 &= 7
-\end{align*}.
-Geben Sie eine Darstellende Matrix f"ur $F$ an, und begr"unden Sie wie Sie die gefunden haben.
+Betrachte den $\R$-Vektorraum $V=C^0([0,1],\R)$ der stetigen,
+reellwertigen Funktionen auf dem Intervall $[0,1]$.
+
+Zeige, dass
+$$
+\langle f,g \rangle \coloneq \int_0^1 f(x)g(x) dx
+$$
+f"ur $f,g \in V$ ein Skalarprodukt auf $V$ definiert.
+
 \end{aufgabe}
 
 Wiederholungsaufgaben
@@ -65,7 +67,7 @@ Wiederholungsaufgaben
 
   $F \colon M(2 \times 2; \R) \to M(2 \times 2; \R)$ $X \mapsto AX$
   for fixed $A =
-  \left( \begin{smallmatrix}a&b\\c&d\end{smallmartix}\right)$  
+  \left( \begin{smallmatrix}a&b\\c&d\end{smallmatrix}\right)$  
   
   $ev \colon K[t]_{\le 4} \to \End(M(2 \times 2; \R))$ $p \mapsto
   p(F)$ ($F$ wie oben).
@@ -73,6 +75,18 @@ Wiederholungsaufgaben
 
 \begin{aufgabe}
   direkte Summe invarianter Unterr"aume iff Blockdiagonalform
+\end{aufgabe}
+
+\begin{aufgabe}
+  "Ubersetzen Sie die folgende Aussage in die Sprache der
+  Endomorphismen und der invarianten Unterr"aume.
+  \begin{quotation}
+    $F \in \End(V)$ hat eine darstellende Matrix, die eine obere
+    Dreiecksmatrix mit Nullen auf der Diagonalen.
+  \end{quotation}
+
+  Benutzen Sie Ihre "Ubersetzung, um zu zeigen, dass dann $F^{\dim V}
+  = 0$.
 \end{aufgabe}
 
 \begin{aufgabe}
