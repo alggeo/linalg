@@ -1,0 +1,95 @@
+\documentclass[a4,11pt]{article}
+
+\usepackage{exercises}
+\usepackage{macros}
+
+\usepackage{graphicx}
+\usepackage{ngerman}
+
+\vltitel{Lineare Algebra 2}
+\dozent{\small{Christian Haase}}
+\assistent{\small{Jan Marten Sevenster}}
+\tutoren{\small{%
+    Theresa Graeber \\[-1ex] Eva Schinzel}}
+
+\semester{Sommersemester 2023%
+  % \raisebox{-10mm}[0pt][0pt]{%
+  %   \parbox{0pt}{\includegraphics[width=27mm]{../../2015-ana1-L/Vorlesungsmaterial/ana1QR}}}
+}
+
+
+% https://math.ug/la2-ss21/sec-cayley-hamilton.html
+
+
+\begin{document}
+\vspace*{-17mm}
+{
+\kopf
+}
+% \vspace*{-5mm}
+% \enlargethispage*{25mm}
+
+\newcounter{chapter}
+\ueblatt{5}{ Montag, 29.~Mai 2023 um 10h00 (ein PDF, jede Aufgabe auf neuer Seite beginnen)}
+
+\begin{aufgabe}[4 Punkte]
+
+  $D \colon$ Polynome ableiten. Kann man auf Polynome Grad $\le d$ einschr"anken
+  
+\begin{enumerate}
+\item Wenn $\Q \subseteq K$, Minimalpolynom, Jordan-Basis
+\item Wenn $p$ prim und $K = \Z/p\Z$, JNF
+\end{enumerate}
+
+\end{aufgabe}
+
+\begin{aufgabe}[4 Punkte]
+
+\end{aufgabe}
+
+
+\begin{aufgabe}[4 Punkte]
+Es sei $V$ ein $7$-dimensionaler $K$-Vektorraum und $\lambda \in K$. Finden Sie ein Endomorphismus $F$, so dass
+\begin{align*}
+\dim \ker (F -\lambda I_V)^1 &= 3\\
+\dim \ker (F -\lambda I_V)^2 &= 6 \\
+\dim \ker (F -\lambda I_V)^3 &= 7
+\end{align*}.
+Geben Sie eine Darstellende Matrix f"ur $F$ an, und begr"unden Sie wie Sie die gefunden haben.
+\end{aufgabe}
+
+Wiederholungsaufgaben
+
+\begin{aufgabe}
+  Ein paar Abbildungen ... Basen w"ahlen, darstellende Matrix bestimmen
+
+  $F \colon M(2 \times 2; \R) \to M(2 \times 2; \R)$ $X \mapsto AX$
+  for fixed $A =
+  \left( \begin{smallmatrix}a&b\\c&d\end{smallmartix}\right)$  
+  
+  $ev \colon K[t]_{\le 4} \to \End(M(2 \times 2; \R))$ $p \mapsto
+  p(F)$ ($F$ wie oben).
+\end{aufgabe}
+
+\begin{aufgabe}
+  direkte Summe invarianter Unterr"aume iff Blockdiagonalform
+\end{aufgabe}
+
+\begin{aufgabe}
+  zwei Polynome $p,q$ bestimme ein Polynom $s$, so dass $(p,q) = (s)$
+  und $a,b$, so dass $ap+bq=s$
+
+  drei Polynome $p,q,r$ bestimme ein Polynom $s$, so dass $(p,q,r) = (s)$
+\end{aufgabe}
+
+\begin{aufgabe}
+Ideale $I,J$. Definiere/zeige: $I+J$, $I \cap J$, $IJ$ sind Ideale und
+$IJ \subseteq I \cap J$. Beispiel f"ur $\neq$.  
+\end{aufgabe}
+
+
+\end{document}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% End: 
