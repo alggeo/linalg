@@ -2,6 +2,7 @@
 
 \usepackage{exercises}
 \usepackage{macros}
+\usepackage{mathtools}
 
 \usepackage{graphicx}
 \usepackage{ngerman}
@@ -32,19 +33,28 @@
 
 \begin{aufgabe}[4 Punkte]
 
-  $D \colon$ Polynome ableiten. Kann man auf Polynome Grad $\le d$ einschr"anken
+Erinneren Sie sich an die lineare Abbildung
+\[
+D : K[x] \rightarrow K[x] : x^n \mapsto nx^{n-1}.
+\]
+Schr"anken wir diese Abbildung ein auf den endlichdimensionalen $K$-Vektorraum $K[X]_{\leq d} = \bigoplus_{i = 0}^d Kx^d$ der Polynome vom Grad h"ochstens $d$, dann erhalten wir ein Endomorphismus
+\[
+\overline{D} \coloneqq D\mid_{K[x]_{\leq d}} : K[x]_{\leq d} \rightarrow K[x]_{\leq d}
+\]
   
 \begin{enumerate}
-\item Wenn $\Q \subseteq K$, Minimalpolynom, Jordan-Basis
-\item Wenn $p$ prim und $K = \Z/p\Z$, JNF
+\item Wenn $K$ der Charakteristik $0$ ist, also $\Q \subseteq K$, bestimmen Sie das Minimalpolynom von $\overline{D}$ und geben Sie eine Jordan-Basis an. Machen Sie jeweils Ihren Rechenweg kennbar.
+\item Wenn $K = \Z/p\Z$ der kleinste K"orper der Charakteristik $p > 0$ ist, mit $p$ also prim, bringen Sie $\overline{D}$ in Jordansche Normalform.
 \end{enumerate}
 
 \end{aufgabe}
 
 \begin{aufgabe}[4 Punkte]
-  $F,G$ nilpotent und kommutieren, dann $F+G$ nilpotent
 
-  Gegenbeispiel, wenn nicht kommutieren
+Seien $F$ und $G$ kommutierende Endomorphisen einer $K$-Vektorraums $V$, mit K ein K"orper, und $F$ und $G$ beide nilpotent, zeigen Sie dann, dass auch $F+G$ nilpotent ist.
+
+Geben Sie zwei nicht kommutierende Endomorphismen an, die beide nilpotent sind, aber ihre Summe nicht.
+
 \end{aufgabe}
 
 
@@ -54,7 +64,7 @@ reellwertigen Funktionen auf dem Intervall $[0,1]$.
 
 Zeige, dass
 $$
-\langle f,g \rangle := \int_0^1 f(x)g(x) dx
+\langle f,g \rangle \coloneqq \int_0^1 f(x)g(x) dx
 $$
 f"ur $f,g \in V$ ein Skalarprodukt auf $V$ definiert.
 
@@ -76,7 +86,20 @@ f"ur $f,g \in V$ ein Skalarprodukt auf $V$ definiert.
 \end{aufgabe}
 
 \begin{aufgabe}
-  direkte Summe invarianter Unterr"aume iff Blockdiagonalform
+Es seien $K$ ein K"orper, $V$ ein endlichdimensionaler $K$-Vektorraum und $F : V \rightarrow V$ ein $K$-Vektorraum Endomorphismus. Beweisen Sie die "Aquivalenz der folgenden Aussagen:
+
+
+\begin{enumerate}
+\item Es gibt $F$ invariante Unterr"aume $V_i \subset V \ i= 1,\dots , m$, so dass $V = V_1 \oplus \cdots \oplus V_m$
+\item Es gibt eine Basis $B$ von $V$ so dass 
+\[
+M_B(F) = \begin{pmatrix}B_1 & 0 & \cdots& 0\\
+0& \ddots & & \vdots \\
+\vdots & & \ddots& 0 \\
+0 & \cdots & 0 & B_m
+\end{pmatrix}
+\]
+\end{enumerate}
 \end{aufgabe}
 
 \begin{aufgabe}
@@ -84,7 +107,7 @@ f"ur $f,g \in V$ ein Skalarprodukt auf $V$ definiert.
   Endomorphismen und der invarianten Unterr"aume.
   \begin{quotation}
     $F \in \End(V)$ hat eine darstellende Matrix, die eine obere
-    Dreiecksmatrix mit Nullen auf der Diagonalen.
+    Dreiecksmatrix mit Nullen auf der Diagonalen ist.
   \end{quotation}
 
   Benutzen Sie Ihre "Ubersetzung, um zu zeigen, dass dann $F^{\dim V}
@@ -99,8 +122,14 @@ f"ur $f,g \in V$ ein Skalarprodukt auf $V$ definiert.
 \end{aufgabe}
 
 \begin{aufgabe}
-Ideale $I,J$. Definiere/zeige: $I+J$, $I \cap J$, $IJ$ sind Ideale und
-$IJ \subseteq I \cap J$. Beispiel f"ur $\neq$.  
+
+Es sei $R$ ein kommutativer Ring und $I, J \subset R$ Ideale. Dann definieren wir die Summe, das Produkt und der Durchschnitt von $I$ und $J$ wie
+\begin{align*}
+I + J &= \{ i + j \mid i \in I, j \in J \}\\
+IJ &= \left\{ \sum_{k = 1}^n i_k j_k \mid i_k \in I, j_k \in J, k \geq 0 \right\}\\
+I \cap J &= I \cap J.
+\end{align*}
+Zeigen Sie, dass diese drei Menge Ideale von $R$ sind. Zeigen Sie weiter dass $IJ \subseteq I \cap J$ und geben Sie ein Ring $R$ und Ideale $I, J \subset R$ f"ur die die umgegehrte Inklusion nicht gilt.  
 \end{aufgabe}
 
 
