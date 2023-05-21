@@ -53,7 +53,7 @@ Schr"anken wir diese Abbildung ein auf den endlichdimensionalen $K$-Vektorraum $
 
 Seien $F$ und $G$ kommutierende Endomorphisen einer $K$-Vektorraums $V$, mit K ein K"orper, und $F$ und $G$ beide nilpotent, zeigen Sie dann, dass auch $F+G$ nilpotent ist.
 
-Geben Sie zwei nicht kommutierende Endomorphismen an, die beide nilpotent sind, aber ihre Summe nicht.
+Geben Sie zwei Endomorphismen an, die beide nilpotent sind, aber ihre Summe nicht.
 
 \end{aufgabe}
 
@@ -64,25 +64,35 @@ reellwertigen Funktionen auf dem Intervall $[0,1]$.
 
 Zeige, dass
 $$
-\langle f,g \rangle \coloneqq \int_0^1 f(x)g(x) dx
+\langle f,g \rangle \coloneqq \int_0^1 f(x)g(x) dx, \quad f,g \in V,
 $$
-f"ur $f,g \in V$ ein Skalarprodukt auf $V$ definiert.
+ein Skalarprodukt auf $V$ definiert.
 
 \end{aufgabe}
 
+\newpage
 \bigskip
 {\Large \bfseries Wiederholungsaufgaben}
 \bigskip
 
 \begin{aufgabe}
-  Ein paar Abbildungen ... Basen w"ahlen, darstellende Matrix bestimmen
-
-  $F \colon M(2 \times 2; \R) \to M(2 \times 2; \R)$ $X \mapsto AX$
-  for fixed $A =
-  \left( \begin{smallmatrix}a&b\\c&d\end{smallmatrix}\right)$  
+  Wir betrachten die lineare Abbildungen 
+  \begin{align*}
+  F &\colon M(2 \times 2; \R) \to M(2 \times 2; \R) : X \mapsto AX, \ \text{mit} \ 
+  A =
+  \left( \begin{smallmatrix}a&b\\c&d\end{smallmatrix}\right) \ \text{fest}\\
+  ev &\colon K[t]_{\le 4} \to \End(M(2 \times 2; \R)) : p \mapsto
+  p(F)
+  \end{align*}
   
-  $ev \colon K[t]_{\le 4} \to \End(M(2 \times 2; \R))$ $p \mapsto
-  p(F)$ ($F$ wie oben).
+  \begin{enumerate}
+  \item
+  Nehmen Sie f"ur $M(2 \times 2; \R)$ die Basis $B =\left\{ \left( \begin{smallmatrix}1&0\\0&0\end{smallmatrix}\right),\left(  \begin{smallmatrix}0&1\\0&0\end{smallmatrix}\right),\left(  \begin{smallmatrix}0&0\\1&0\end{smallmatrix}\right),\left(\begin{smallmatrix}0&0\\0&1\end{smallmatrix} \right)\right\}$ und f"ur $K[t]_{\leq 4}$ die Basis $P = \{1, t, t^2, t^3, t^4\}$. 
+  Der Vektorraum $\End(M(2 \times 2; \R))$ erhalt eine induzierte Basis von $M(2 \times 2; \R)$, n"ahmlich $$B' = \left\{ b_{ij} : b_k \mapsto \begin{cases} b_j, & k = i \\ 0, & k\neq i\end{cases}  \mid b_i, b_j \in B \right\}.$$
+  Bestimmen Sie $M_B(F)$ und $M_P^{B'}(ev)$
+  \item
+  Gleiche frage, aber jetzt ist $B =\left\{ \left( \begin{smallmatrix}1&0\\0&1\end{smallmatrix}\right),\left(  \begin{smallmatrix}1&1\\1&1\end{smallmatrix}\right),\left(  \begin{smallmatrix}1&0\\0&-1\end{smallmatrix}\right),\left(\begin{smallmatrix}1&1\\-1&1\end{smallmatrix} \right)\right\}$ und $P = \{1,1+ t, 1+t+t^2, 1+t+t^2+t^3, 1+t+t^2+t^3+t^4\}$. Die induzierte Basis $B'$ wird jetzt also durch die neue Basis $B$ induziert.
+  \end{enumerate}
 \end{aufgabe}
 
 \begin{aufgabe}
@@ -115,10 +125,19 @@ M_B(F) = \begin{pmatrix}B_1 & 0 & \cdots& 0\\
 \end{aufgabe}
 
 \begin{aufgabe}
-  zwei Polynome $p,q$ bestimme ein Polynom $s$, so dass $(p,q) = (s)$
-  und $a,b$, so dass $ap+bq=s$
-
-  drei Polynome $p,q,r$ bestimme ein Polynom $s$, so dass $(p,q,r) = (s)$
+Wir nehmen drei Polynome in $Q[x]$
+\begin{align*}
+p &= x^8 + 3x^7 + 2x^6 + x^5 - x^4 - 3x^3 - 2x^2 - x\\
+q &= 2x^7 + 2x^6 + x^4 - 2x^3 - 2x^2 - 1\\
+r &= x^5 + x^4 - x^3 - 1,
+\end{align*}
+\begin{enumerate}
+\item
+  Bestimmen Sie ein Polynom $s$, so dass $(p,q) = (s)$
+  und $a,b$, so dass $ap+bq=s$.
+\item
+  Bestimme ein Polynom $s$, so dass $(p,q,r) = (s)$.
+ \end{enumerate}
 \end{aufgabe}
 
 \begin{aufgabe}
