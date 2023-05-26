@@ -16,15 +16,17 @@
   % \raisebox{-10mm}[0pt][0pt]{%
   %   \parbox{0pt}{\includegraphics[width=27mm]{../../2015-ana1-L/Vorlesungsmaterial/ana1QR}}}
 }
-
 \begin{document}
-{
-\kopf
-}
-\newcounter{chapter}
-\quiz{1}{}
 
-%\musterlsgfrage
+\begin{aufgabe}[4 Punkte]
+  Bestimmen Sie alle Eigenwerte der linearen Abbildung
+  $$ \begin{array}{rccc}
+       D \colon & C^\infty(\R,\R) &\to& C^\infty(\R,\R) \\
+       & f &\mapsto& f' \ .
+  \end{array} $$
+  Dabei steht $C^\infty(\R,\R)$ f"ur den $\R$-Vektorraum der
+  beliebig of differenzierbaren Funktionen $\R \to \R$.
+\end{aufgabe}
 
 \newpage
 
@@ -35,14 +37,28 @@
 
 \newpage
 
-\begin{aufgabe}[4 Punkte]
-  Bestimmen Sie alle Eigenwerte der linearen Abbildung
-  $$ \begin{array}{rccc}
-       D \colon & C^\infty(\R,\R) &\to& C^\infty(\R,\R) \\
-       & f &\mapsto& f' \ .
-  \end{array} $$
-  Dabei steht $C^\infty(\R,\R)$ f"ur den $\R$-Vektorraum der
-  beliebig of differenzierbaren Funktionen $\R \to \R$.
+\newpage
+
+\begin{aufgabe}
+
+Es sei $M \in \text{Mat}(9 \times 9; \mathbb{C})$ die Matrix
+\[
+M = 
+\begin{pmatrix}
+2 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+0 & 2 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+0 & 0 & 2 & 1 & 0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 2 & 1 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 2 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0 & 2 & 1 & 0 & 0\\
+0 & 0 & 0 & 0 & 0 & 0 & 2 & 1 & 0\\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 2 & 1\\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 2\\
+
+\end{pmatrix}
+\]
+Bestimmen Sie das Minimalpolynom.
+
 \end{aufgabe}
 
 \newpage
@@ -69,7 +85,23 @@ M =
 \end{aufgabe}
 
 
-   
+\begin{aufgabe}
+
+Es sei $M \in \text{Mat}(2 \times 2 ; \mathbb{C})$ die Matrix
+
+\[
+\begin{pmatrix}
+1 & i + 1\\
+i - 1 & i \\
+\end{pmatrix}.
+\]
+Entscheiden Sie, ob die Abbildung
+\[
+\mathbb{C}^2 \times \mathbb{C}^2 \rightarrow \mathbb{C} : (v, w) \rightarrow v^\dagger (v^* , \overline{v^T} ? ) M w 
+\]
+ein Skalarprodukt auf $\mathbb{C}^2$ definiert und beweisen Sie das Ergebnis Ihrer "Uberlegung.
+
+\end{aufgabe}
 
 \end{document}
 
