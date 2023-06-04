@@ -1,0 +1,75 @@
+\documentclass[a4,11pt]{article}
+
+\usepackage{exercises}
+\usepackage{macros}
+\usepackage{mathtools}
+\usepackage{tikz-cd}
+
+\usepackage{graphicx}
+\usepackage{ngerman}
+
+\vltitel{Lineare Algebra 2}
+\dozent{\small{Christian Haase}}
+\assistent{\small{Jan Marten Sevenster}}
+\tutoren{\small{%
+    Theresa Graeber \\[-1ex] Eva Schinzel}}
+
+\semester{Sommersemester 2023%
+  % \raisebox{-10mm}[0pt][0pt]{%
+  %   \parbox{0pt}{\includegraphics[width=27mm]{../../2015-ana1-L/Vorlesungsmaterial/ana1QR}}}
+}
+
+\DeclareMathOperator{\End}{End}
+
+\begin{document}
+\vspace*{-17mm}
+{
+\kopf
+}
+% \vspace*{-5mm}
+% \enlargethispage*{25mm}
+
+\newcounter{chapter}
+\ueblatt{7}{ Montag, 12.~Juni 2023 um 10h00}
+
+\begin{aufgabe}[4 Punkte]
+
+
+\end{aufgabe}
+
+\begin{aufgabe}[4 Punkte]
+Wir definieren eine Abbildung 
+\begin{align*}
+\left<-,-\right>_{F} : &\text{Mat}(m \times n; \mathbb{C}) \times\text{Mat}(m \times n; \mathbb{C}) &&\to &&&K\\
+&(A,B)&&\mapsto &&&\text{Spur}(\transpose A \overline{B}).
+\end{align*}
+\begin{enumerate}
+\item Zeigen Sie, dass $\left<-,-\right>_{F}$ ein Skalarprodukt auf $\text{Mat}(m \times n; \mathbb{C})$ definiert.
+\item Betrachten wir die Vektorr"aume $\mathbb{C}^n$ und $\mathbb{C}^m$ mit ihren Standardbasen $\mathcal{B}_n$ und $\mathcal{B}_m$, dann ist der Vektorraum $\text{Mat}(m \times n; \mathbb{C})$ "ublicherweise isomorph zum Vektorraum $\text{Hom}_\mathbb{C}(\mathbb{C}^n, \mathbb{C}^m)$. Nehmen wir jetzt verschiedene Basen $\mathcal{B}'_n$ und $\mathcal{B}'_m$, dann erhalten wir ein zweites Isomorphismus
+\[
+\text{Hom}_\mathbb{C}(\mathbb{C}^n, \mathbb{C}^m) \to \text{Mat}(m \times n; \mathbb{C}) : f \mapsto M_{\mathcal{B}'_n}^{\mathcal{B}'_m}(f).
+\]
+Zeigen Sie, dass wenn $\mathcal{B}'_n$ und $\mathcal{B}'_m$ Orthonormalbasen sind, f"ur alle $f, g \in \text{Hom}_\mathbb{C}(\mathbb{C}^n, \mathbb{C}^m)$
+\[
+\left<M_{\mathcal{B}_n}^{\mathcal{B}_m}(f),M_{\mathcal{B}_n}^{\mathcal{B}_m}(g)\right>_{F} = \left<M_{\mathcal{B}'_n}^{\mathcal{B}'_m}(f),M_{\mathcal{B}'_n}^{\mathcal{B}'_m}(g)\right>_{F}
+\]
+gilt.
+\begin{center}
+
+\end{center}
+\end{enumerate}
+\end{aufgabe}
+
+\begin{aufgabe}[4 Punkte]
+Benutzen Sie die Cauchy–Bunyakovsky–Schwarz Ungliechung um die Ungleichung
+\[
+\frac{(a_1 + \dots +  a_n)^2}{b_1 + \dots + b_n} \leq \frac{a_1^2}{b_1} + \dots + \frac{a_n^2}{b_n}
+\]
+zu Beweisen f"ur alle $(a_i)_{i = 1}^n \in \mathbb{R}^n$ und $(b_i)_{i=1}^n \in \mathbb{R}^n_{\geq 0}$.
+\end{aufgabe}
+
+\end{document}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% End: 
