@@ -34,21 +34,27 @@
 
 
 \begin{aufgabe}[4 Punkte]
-orthonormalisiere $1,x,x^2$ auf $[0,2]$
+Wir betrachten die Vektoren $1,x,x^2 \in C^0([0,2],\mathbb{R})$, wobei $C^0([0,2],\mathbb{R})$ den Vektorraum der stetigen reellwertigen Funktionen auf $[0,2]$ bezeichnet. Dieser Vektorraum ist mit dem folgenden Skalarprodukt ausgestattet:
+\[
+\left<f,g\right> = \int_0^2 f(x)g(x)dx.
+\]
+Bestimmen Sie mit dem Schmidtsen Verfahren eine Orthonormalbasis von $\text{span}(1,x,x^2)$.
 \end{aufgabe}
 
 \begin{aufgabe}[4 Punkte]
 \begin{enumerate}
-\item $\dim V < \infty$ dann $U^{\perp \perp} = U$
-\item Beispiel, dass $U^{\perp \perp} \neq U$
-\item welche Inklusion gilt immer?
+\item Es sei $V$ ein endlichdimensionaleVektorraum "uber einen K"orper $K$ mit einem Skalarprodukt $\left<-,-\right>$. Zeigen Sie, dass $U^{\perp \perp} = U$
+\item Geben Sie ein Beispiel an f"ur einen Vektorraum mit Skalarprodukt, f"ur den diese Gleichheit nicht gilt.
+\item Welche der Inklusionen $U^{\perp \perp} \subseteq U$  und $U \subseteq U^{\perp \perp}$ gilt auch in undlichdimensionale Vektorr"aume?
 \end{enumerate}
 \end{aufgabe}
 
 \begin{aufgabe}[4 Punkte]
-  irgendwas zu positiv (semi)definit
-
-  Wurzel?
+Es sei $M \in \text{Mat}(n \times n; \mathbb{C})$ eine Hermitesche Matrix, zeigen Sie, dass die folgenden Aussagen "aquivalent sind:
+\begin{enumerate}
+\item $M$ ist positiv semidefinit
+\item Es gibt eine Matrix $W \in \text{Mat}(n\times n;\mathbb{C})$ f"ur welche $M = \overline{\transpose \ W} W$.
+\end{enumerate}
 \end{aufgabe}
 
 \end{document}
