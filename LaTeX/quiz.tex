@@ -104,13 +104,27 @@ ein Skalarprodukt auf $\mathbb{C}^2$ definiert und beweisen Sie das Ergebnis Ihr
 
 \end{aufgabe}
 
+\newpage
 
 \begin{aufgabe}
-  ausgeartete Bilinearform (nicht als Matrix gegeben)
-
-  bestimme darstellende Matrix
-
-  entscheide, ob $\sqrt{s(v,v)}$ eine Norm definiert
+Wir betrachten den $\mathbb{Q}$-Vektorraum
+\[
+\mathbb{Q}\left[ \sqrt{-d}\right] = \left\{ p + q \sqrt{-d} \mid p,q \in \mathbb{Q} \right\} \subset \mathbb{C},
+\]
+wobei $d \in \mathbb{Z}_{>0}$ Quadratfrei ist. Auf diesen Vektorraum wird auf die folgende Weise eine Bilinearform $s$ definiert:
+\[
+s(v,w) = \frac{1}{4}\left((v + \overline{v})(w + \overline{w}) - d^{-1} (v - \overline{v})(w - \overline{w}) + 2\sqrt{-d}^{-1}(vw - \overline{vw})\right) \in \mathbb{Q}. 
+\]
+\begin{enumerate}
+\item
+W"ahlen Sie eine Basis $\mathcal{B}$ f"ur $\mathbb{Q}\left[ \sqrt{-d}\right]$ und geben Sie die darstellende Matrix $M_\mathcal{B}(s)$.
+\item
+Erweitern wir diese definition nach dem $\mathbb{R}$ Vektrorraum $\mathbb{R}\left[ \sqrt{-d}\right] \cong \mathbb{C}$, dann erhalten wir eine Bilinearform
+\[
+\overline{s} : \mathbb{R}\left[ \sqrt{-d}\right] \times \mathbb{R}\left[ \sqrt{-d}\right] \rightarrow \mathbb{R}
+\]
+Induziert diese Bilinearform einen Norm auf $\mathbb{R}\left[ \sqrt{-d}\right]$? (also ist die Abbildung $v \mapsto \sqrt{\overline{s}(v,v)}$ ein Norm?)
+\end{enumerate}
 \end{aufgabe}
 
 

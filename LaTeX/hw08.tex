@@ -20,6 +20,9 @@
 }
 
 \DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Span}{span}
+\newcommand{\bonusitem}{\item\hspace*{-2.4mm}*\ }
+
 
 \begin{document}
 \vspace*{-17mm}
@@ -34,22 +37,61 @@
 
 
 \begin{aufgabe}[4 Punkte]
-orthonormalisiere $1,x,x^2$ auf $[0,2]$
+Wir betrachten die Vektoren $1,x,x^2 \in C^0([0,2],\mathbb{R})$, wobei $C^0([0,2],\mathbb{R})$ den Vektorraum der stetigen reellwertigen Funktionen auf $[0,2]$ bezeichnet. Dieser Vektorraum ist mit dem folgenden Skalarprodukt ausgestattet:
+\[
+\left<f,g\right> := \int_0^2 f(x)g(x)dx.
+\]
+(Sie brauchen nicht nachzuweisen, dass es sich um ein Skalarprodukt
+handelt.)
+
+Bestimmen Sie mit dem Gram-Schmidtschen Verfahren eine Orthonormalbasis von $\Span(1,x,x^2)$.
 \end{aufgabe}
 
 \begin{aufgabe}[4 Punkte]
 \begin{enumerate}
-\item $\dim V < \infty$ dann $U^{\perp \perp} = U$
-\item Beispiel, dass $U^{\perp \perp} \neq U$
-\item welche Inklusion gilt immer?
+\item Es sei $(V,\left<-,-\right>)$ ein endlichdimensionaler
+  euklidischer oder unit"arer Vektorraum. Zeigen Sie, dass $U^{\perp
+    \perp} = U$.
+\item Welche der Inklusionen $U^{\perp \perp} \subseteq U$ oder $U
+  \subseteq U^{\perp \perp}$ gilt in allen euklidischen oder unit"aren
+  Vektorr"aumen?
+\item Geben Sie ein Beispiel an f"ur einen Unterraum eines
+  euklidischen Vektorraums, f"ur den diese Gleichheit nicht gilt.
 \end{enumerate}
 \end{aufgabe}
 
 \begin{aufgabe}[4 Punkte]
-  irgendwas zu positiv (semi)definit
-
-  Wurzel?
+Sei $n \in \Z_{>0}$ und $A \in M(n \times n; \R)$ symmetrisch mit der
+Eigenschaft, dass f"ur alle $i=1, \ldots, n$
+\begin{equation} \tag{$*$}
+a_{ii} > \sum_{j \neq i} |a_{ij}| \,.
+\end{equation}
+\begin{enumerate}
+\item Zeigen Sie, dass im Fall $n=2$ f"ur $A = \left(
+    \begin{smallmatrix}
+      a&b\\b&c
+    \end{smallmatrix} \right)$ und $v = \binom{x}{y}$ die Absch"atzung
+  $$
+  ^t\!v A v \ge |b| (|x|-|y|)^2
+  $$
+  gelten muss.
+\item Folgern Sie, dass (immernoch $n=2$) die Matrix $A$ positiv
+  definit ist.
+\item Beweisen Sie f"ur allgemeines $n$, dass die Eigenschaft $(*)$
+  impliziert, dass $A$ positiv definit ist.
+\bonusitem Geben Sie ein Beispiel (mit Begr"undung) einer positiv
+definiten Matrix, die Eigenschaft $(*)$ verletzt.
+\end{enumerate}
+\footnotetext{*: Ggf.\ im Tutorium besprechen.}
 \end{aufgabe}
+
+% \begin{aufgabe}[4 Punkte]
+% Es sei $M \in \text{Mat}(n \times n; \mathbb{C})$ eine Hermitesche Matrix, zeigen Sie, dass die folgenden Aussagen "aquivalent sind:
+% \begin{enumerate}
+% \item $M$ ist positiv semidefinit
+% \item Es gibt eine Matrix $W \in \text{Mat}(n\times n;\mathbb{C})$ f"ur welche $M = \overline{\transpose \ W} W$.
+% \end{enumerate}
+% \end{aufgabe}
 
 \end{document}
 
