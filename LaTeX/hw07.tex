@@ -1,6 +1,6 @@
 \documentclass[a4,11pt]{article}
 
-\usepackage{exercises}
+\usepackage{./exercises}
 \usepackage{macros}
 \usepackage{mathtools}
 \usepackage{tikz-cd}
@@ -59,12 +59,19 @@
 
 \begin{aufgabe}[4 Punkte]
 Wir definieren eine Abbildung 
-\begin{align*}
-\left<-,-\right>_{F} : &\text{Mat}(m \times n; \mathbb{C}) \times\text{Mat}(m \times n; \mathbb{C}) &&\to &&&K\\
-&(A,B)&&\mapsto &&&\text{Spur}(\transpose A \overline{B}).
-\end{align*}
+$$
+\begin{array}{rccc}
+  \left<-,-\right>_{F} : & \text{Mat}(m \times n; \mathbb{C})
+                           \times\text{Mat}(m \times n; \mathbb{C}) &
+                                                                      \to
+  & K \\
+                         & (A,B) & \mapsto & \text{Spur}(\transpose A \overline{B}).
+\end{array}
+$$
+
 \begin{enumerate}
-\item Zeigen Sie, dass $\left<-,-\right>_{F}$ ein Skalarprodukt auf $\text{Mat}(m \times n; \mathbb{C})$ definiert.
+\item Zeigen Sie, dass $\left<-,-\right>_{F}$ ein Skalarprodukt auf
+  $\text{Mat}(m \times n; \mathbb{C})$ definiert.
 \item Betrachten wir die Vektorr"aume $\mathbb{C}^n$ und
   $\mathbb{C}^m$ mit ihren Standardbasen $\mathcal{B}_n$ und
   $\mathcal{B}_m$, dann ist der Vektorraum $\text{Mat}(m \times n;
@@ -73,16 +80,18 @@ Wir definieren eine Abbildung
   jetzt verschiedene Basen $\mathcal{B}'_n$ und $\mathcal{B}'_m$, dann
   erhalten wir einen zweiten Isomorphismus
 \[
-\text{Hom}_\mathbb{C}(\mathbb{C}^n, \mathbb{C}^m) \to \text{Mat}(m \times n; \mathbb{C}) : f \mapsto M_{\mathcal{B}'_n}^{\mathcal{B}'_m}(f).
+\text{Hom}_\mathbb{C}(\mathbb{C}^n, \mathbb{C}^m) \to \text{Mat}(m
+\times n; \mathbb{C}) : f \mapsto
+M_{\mathcal{B}'_n}^{\mathcal{B}'_m}(f).
 \]
-Zeigen Sie, dass wenn $\mathcal{B}'_n$ und $\mathcal{B}'_m$ Orthonormalbasen sind, f"ur alle $f, g \in \text{Hom}_\mathbb{C}(\mathbb{C}^n, \mathbb{C}^m)$
+Zeigen Sie, wenn $\mathcal{B}'_n$ und $\mathcal{B}'_m$
+Orthonormalbasen sind, dass dann
 \[
-\left<M_{\mathcal{B}_n}^{\mathcal{B}_m}(f),M_{\mathcal{B}_n}^{\mathcal{B}_m}(g)\right>_{F} = \left<M_{\mathcal{B}'_n}^{\mathcal{B}'_m}(f),M_{\mathcal{B}'_n}^{\mathcal{B}'_m}(g)\right>_{F}
+\left<M_{\mathcal{B}_n}^{\mathcal{B}_m}(f),M_{\mathcal{B}_n}^{\mathcal{B}_m}(g)\right>_{F}
+=
+\left<M_{\mathcal{B}'_n}^{\mathcal{B}'_m}(f),M_{\mathcal{B}'_n}^{\mathcal{B}'_m}(g)\right>_{F}
 \]
-gilt.
-\begin{center}
-
-\end{center}
+f"ur alle $f, g \in \text{Hom}_\mathbb{C}(\mathbb{C}^n, \mathbb{C}^m)$ gilt.
 \end{enumerate}
 \end{aufgabe}
 
