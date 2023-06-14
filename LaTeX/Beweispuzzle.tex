@@ -1,0 +1,164 @@
+\documentclass[a4paper%%%,12pt
+]{report}
+
+\usepackage[german]{exercises}
+\usepackage{macros}
+\DeclareMathOperator{\Span}{span}
+
+
+\begin{document}
+\Large
+
+{\bfseries Satz:} Sei $F$ ein unit"arer Endomorphismus des
+endlichdimensionalen unit"aren Vektorraums $V$. Dann besitzt $V$ eine
+Orthonormalbasis aus Eigenvektoren von $F$. Insbesondere ist $F$
+diagonalisierbar.
+\medskip
+
+{\bfseries Beweis.}
+
+\begin{itemize}[\mbox{}]
+\addtolength{\itemsep}{4mm}
+% \begin{enumerate}
+\item Wir f"uhren Induktion "uber $n:=\dim V$. 
+\\ F"ur $n = 0$ und $n = 1$ ist nichts zu beweisen.
+\item Sei also $n \ge 2$ und $P_F = (\lambda_1 - t) \cdot \ldots \cdot
+  (\lambda_n - t)$ mit $\lambda_1, \ldots, \lambda_n \in \C$
+  die nach dem Fundamentalsatz der Algebra existierende
+  Linearfaktorzerlegung des charakteristischen Polynoms von $F$.
+\item Zum Eigenwert $\lambda_1$ w"ahlen wir einen Eigenvektor $v_1$
+  mit $\|v_1\| = 1$. 
+\item Wir betrachten das orthogonale Komplement zur Geraden
+  $\Span(v_1)$: $W:= \Span(v_1)^\perp$.
+\quad Wir wissen, dass $\dim W = n-1$.
+\\ Wir zeigen nun, dass $W$ invariant unter $F$ ist:
+\item Sei $w \in W$. % also $\langle v_1, w \rangle = 0$.
+   Dann ist $$\lambda_1 \langle v_1, F(w) \rangle
+  = \langle \lambda_1 v_1, F(w) \rangle = \langle F(v_1), F(w) \rangle
+  = \langle v_1, w \rangle = 0 \,.$$
+\item Wegen $|\lambda_1|=1$ ist $\lambda_1 \neq 0$, so dass $\langle
+  v_1, F(w) \rangle = 0$ folgt.
+\item Damit ist $F(w) \in W$ und die Invarianz gezeigt.
+\item Die Einschr"ankung $F|_W$ von $F$ auf $W$ ist immer noch
+  unit"ar.
+\item Wir k"onnen also die Induktionsannahme auf $F|_W$
+  anwenden:
+\item Es gibt eine Orthonormalbasis $v_2, \ldots, v_n$ von $W$, die
+  aus Eigenvektoren von $F|_W$ besteht.
+\\ Diese Vektoren sind dann offenbar auch Eigenvektoren von $F$.
+\item Damit ist aber die Basis $v_1, \ldots, v_n$ von $V$ orthonormal
+  und besteht aus Eigenvektoren von $F$.
+\item \hfill $\Box$
+\end{itemize}
+% \end{enumerate}
+  
+\newpage
+
+\begin{itemize}[\mbox{}]
+%%% \addtolength{\itemsep}{5mm}
+\item {\bfseries Definition:} Eine \emph{Linie} ist eine Teilmenge
+  $\ell$ der Ebene $\R^2$, sodass es zwei Punkte $P$ und $Q$ im $\R^2$
+  gibt, wobei $Q$ nicht der Ursprung $(0,0)$ ist, und $\ell$ gleich
+  der Menge aller Punkte der Form $P+t Q$ f"ur reelle Zahlen $t$ ist.
+  \medskip
+
+  Eine \emph{Gerade} ist eine Teilmenge $g$ der Ebene $\R^2$, sodass
+  es reelle Zahlen $a,b,c$ gibt, wobei $a$ und $b$ nicht beide $0$
+  sind, und $g$ gleich der Menge aller Punkte $(x,y)$ im $\R^2$ ist,
+  die die Gleichung $ax+by=c$ erf"ullen.
+\item {\bfseries Satz:} Jede Gerade ist eine Linie.
+\item {\bfseries Beweis.}
+% \item Es sei $P=(p_{1},p_{2})\in\R^2,\, Q=(q_{1},q_{2})\in\R^2\setminus\left\{(0,0)\right\}$ und $\ell=\left\{P+t Q \suchthat t \in \R \right\} $ eine Linie.
+% \item Wir setzen $a:=-q_{2}, b:=q_{1}$ und $c:=-q_{2}p_{1}+q_{1}p_{2}$.
+% \item Weil $q_{1}$ und $q_{2}$ nicht beide 0 sind, sind auch $a$ und $b$ nicht beide 0.
+% \item Daher ist $g:=\{(x,y)\in\R^2\suchthat ax+by=c\}$ eine Gerade.
+% \item Man rechnet nach, dass gilt $g=\ell$.
+% \item Daher ist jede Linie eine Gerade.
+\item Seien $a,b,c$ reelle Zahlen, sodass $a$ und $b$ nicht beide $0$
+  sind, und sei $g \subset \R^2$ die Menge aller Punkte $(x,y)$ im
+  $\R^2$, die die Gleichung $ax+by=c$ erf"ullen.
+\item Wir nehmen an, dass $a$ nicht $0$ ist. (Der Beweis funktioniert
+  analog, wenn $b$ nicht $0$ ist.)
+\item Wir setzen $P=(p_{1},p_{2}):=(c/a,0)$
+
+  und $Q=(q_{1},q_{2}):=(b,-a)$.
+\item Weil $a$ nicht $0$ ist, ist auch $Q$ nicht der Ursprung.
+\item Betrachte die Menge $\ell \subset \R^2$ aller Punkte der Form
+  $P+tQ$ f"ur reelle Zahlen $t$.
+\item Wir zeigen $g=\ell$:
+\item Wenn $(x,y)$ ein Punkt in $\ell$ ist, gibt es eine reelle Zahl
+  $t$, so dass $(x,y)$ gerade der Punkt $P+tQ$ ist.
+\item Man rechnet nach, dass die Gleichung $ax+by=c$ erf"ullt ist,
+  also ist $(x,y)$ ein Punkt in $g$.
+\item Sei umgekehrt $(x,y)$ ein Punkt in $g$.
+\item Falls $q_1$ nicht $0$ ist, w"ahle f"ur $t$ die Zahl
+  $\displaystyle \frac{x-p_1}{q_1}$.
+  
+  Falls $q_2$ nicht $0$ ist, w"ahle f"ur $t$ die Zahl $\displaystyle
+  \frac{y-p_2}{q_2}$.
+\item Unter Verwendung von $ax+by=c$ und der Definitionen von $P$ und
+  $Q$ rechnet man nach, dass $(x,y)$ gerade der Punkt $P +tQ$ ist,
+  also ist $(x,y)$ ein Punkt in $\ell$.\hfill$\Box$
+\end{itemize}
+
+%%% \bigskip
+
+%%% \bigskip
+\newpage
+
+\begin{itemize}[\mbox{}]
+%%% \addtolength{\itemsep}{5mm}
+\item {\bfseries Definition:} $\ell\subseteq\R^2$ ist eine Linie
+  $:\Leftrightarrow$
+
+  $\exists P\in\R^2 \colon \exists
+  Q\in\R^2\setminus\left\{(0,0)\right\} \colon \ell=\left\{P+t Q
+    \suchthat t \in \R \right\}$.
+  \bigskip
+  
+  $g\subseteq\R^2$ ist eine Gerade $:\Leftrightarrow$
+
+  \mbox{%
+    $\exists a,b,c\in\R\colon (a,b)\neq (0,0) \ \wedge \ 
+    g=\left\{(x,y) \in \R^2 \suchthat ax+by=c\right\}$.
+  }
+\item {\bfseries Satz:} $\ell \subseteq \R^2$ ist eine Gerade $\Leftarrow
+  \ell \subseteq \R^2$ ist eine Linie.
+\item {\bfseries Beweis.}
+\item Sei $P=(p_{1},p_{2})\in\R^2,\,
+  Q=(q_{1},q_{2})\in\R^2\setminus\left\{(0,0)\right\}$ und
+  $\ell=\left\{P+t Q \suchthat t \in \R \right\}$.
+\item $a:=-q_{2}, b:=q_{1}$ und $c:=-q_{2}p_{1}+q_{1}p_{2}$.
+\item $(q_{1},q_{2})\neq (0,0)\Rightarrow (a,b)\neq (0,0)$.
+\item $\Rightarrow g:=\{(x,y)\in\R^2\suchthat ax+by=c\}$ ist eine
+  Gerade.
+\item Wir zeigen $g=\ell$:
+\item $(x,y) \in \ell$ $\Rightarrow$ $\exists t \in \R \colon (x,y) =
+  P+tQ$.
+\item Man rechnet nach, dass $ax+by=c$.
+
+  $\Rightarrow$ $(x,y) \in g$.
+\item Sei umgekehrt $(x,y) \in g$.
+\item % \mbox{%
+    % Falls $q_1 \neq 0$, setze $t := \displaystyle \frac{x-p_1}{q_1}$.
+    % Falls $q_2 \neq 0$, setze $t := \displaystyle \frac{y-p_2}{q_2}$.}
+  $\displaystyle t :=
+  \begin{cases}
+    \frac{x-p_1}{q_1} & \text{ falls } q_1 \neq 0 \\
+    \frac{y-p_2}{q_2} & \text{ falls } q_2 \neq 0
+  \end{cases}$
+\item Mit $ax+by=c$ rechnet man nach, dass $(x,y) = P +tQ$.
+
+  $\Rightarrow$ $(x,y) \in \ell$.\hfill$\Box$
+
+% \item Seien $a,b,c\in\R$ mit $(a,b)\neq (0,0)$ und
+%   $g=\{(x,y)\in\R^2\suchthat ax+by=c\}$.
+% \item Es gelte $a\neq 0$ ($b\neq 0$ funktioniert analog).
+% \item $P=(p_{1},p_{2}):=(c/a,0)$ und $Q=(q_{1},q_{2}):=(b,-a)$.
+% \item $a\neq 0\Rightarrow (q_{1},q_{2})\neq (0,0)$.
+% \item $\Rightarrow \ell :=\left\{P+t Q \suchthat t \in \R
+%   \right\}$ ist eine Linie.
+% \item Dann gilt $g=\ell$.
+\end{itemize}
+
+\end{document}
