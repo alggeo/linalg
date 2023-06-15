@@ -1,8 +1,8 @@
 \documentclass[a4paper%%%,12pt
 ]{report}
 
-\usepackage[german]{exercises}
-\usepackage{macros}
+\usepackage[german]{./exercises}
+\usepackage{./macros}
 \DeclareMathOperator{\Span}{span}
 
 
@@ -21,7 +21,7 @@ diagonalisierbar.
 \addtolength{\itemsep}{4mm}
 % \begin{enumerate}
 \item Wir f"uhren Induktion "uber $n:=\dim V$. 
-\\ F"ur $n = 0$ und $n = 1$ ist nichts zu beweisen.
+\\ F"ur $n = 1$ ist nichts zu beweisen.
 \item Sei also $n \ge 2$ und $P_F = (\lambda_1 - t) \cdot \ldots \cdot
   (\lambda_n - t)$ mit $\lambda_1, \ldots, \lambda_n \in \C$
   die nach dem Fundamentalsatz der Algebra existierende
@@ -36,7 +36,7 @@ diagonalisierbar.
    Dann ist $$\lambda_1 \langle v_1, F(w) \rangle
   = \langle \lambda_1 v_1, F(w) \rangle = \langle F(v_1), F(w) \rangle
   = \langle v_1, w \rangle = 0 \,.$$
-\item Wegen $|\lambda_1|=1$ ist $\lambda_1 \neq 0$, so dass $\langle
+\item Wegen $|\lambda_1|=1$ ist $\lambda_1 \neq 0$, sodass $\langle
   v_1, F(w) \rangle = 0$ folgt.
 \item Damit ist $F(w) \in W$ und die Invarianz gezeigt.
 \item Die Einschr"ankung $F|_W$ von $F$ auf $W$ ist immer noch
@@ -46,7 +46,7 @@ diagonalisierbar.
 \item Es gibt eine Orthonormalbasis $v_2, \ldots, v_n$ von $W$, die
   aus Eigenvektoren von $F|_W$ besteht.
 \\ Diese Vektoren sind dann offenbar auch Eigenvektoren von $F$.
-\item Damit ist aber die Basis $v_1, \ldots, v_n$ von $V$ orthonormal
+\item Damit ist $v_1, \ldots, v_n$ eine Basis von $V$, sie ist orthonormal
   und besteht aus Eigenvektoren von $F$.
 \item \hfill $\Box$
 \end{itemize}
@@ -87,7 +87,7 @@ diagonalisierbar.
   $P+tQ$ f"ur reelle Zahlen $t$.
 \item Wir zeigen $g=\ell$:
 \item Wenn $(x,y)$ ein Punkt in $\ell$ ist, gibt es eine reelle Zahl
-  $t$, so dass $(x,y)$ gerade der Punkt $P+tQ$ ist.
+  $t$, sodass $(x,y)$ gerade der Punkt $P+tQ$ ist.
 \item Man rechnet nach, dass die Gleichung $ax+by=c$ erf"ullt ist,
   also ist $(x,y)$ ein Punkt in $g$.
 \item Sei umgekehrt $(x,y)$ ein Punkt in $g$.
