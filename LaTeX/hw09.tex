@@ -1,0 +1,80 @@
+\documentclass[a4,11pt]{article}
+
+\usepackage{./exercises}
+\usepackage{./macros}
+\usepackage{mathtools}
+\usepackage{tikz-cd}
+
+\usepackage{graphicx}
+\usepackage{ngerman}
+
+\vltitel{Lineare Algebra 2}
+\dozent{\small{Christian Haase}}
+\assistent{\small{Jan Marten Sevenster}}
+\tutoren{\small{%
+    Theresa Graeber \\[-1ex] Eva Schinzel}}
+
+\semester{Sommersemester 2023%
+  % \raisebox{-10mm}[0pt][0pt]{%
+  %   \parbox{0pt}{\includegraphics[width=27mm]{../../2015-ana1-L/Vorlesungsmaterial/ana1QR}}}
+}
+
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Span}{span}
+% \DeclareMathOperator{\ker}{ker}
+\DeclareMathOperator{\im}{im}
+\newcommand{\bonusitem}{\item\hspace*{-2.4mm}*\ }
+
+
+\begin{document}
+\vspace*{-17mm}
+{
+\kopf
+}
+% \vspace*{-5mm}
+% \enlargethispage*{25mm}
+
+\newcounter{chapter}
+\ueblatt{9}{ Montag, 26.~Juni 2023 um 10h00}
+
+
+\begin{aufgabe}[4 Punkte]
+pos semi-definit wenn alle Hauptminoren $\ge 0$
+\end{aufgabe}
+
+\begin{aufgabe}[4 Punkte]
+  \begin{enumerate}
+  \item Geben Sie ein Beispiel eines nicht-trivialen Endomorphismus
+    $F$ eines euklidischen Vektorraums $V$, sodass f"ur alle $v \in V$
+    \begin{equation}
+      \tag{$**$}
+      \langle F(v), v \rangle = 0 \,.
+    \end{equation}
+  \bonusitem Schlagen Sie die verschiedenen Charakterisierungen nilpotenter
+  Endomorphismen nach.
+  \bonusitem Was war nochmal ein $F$-zyklischer Unterraum?
+  \item Sei nun $F$ ein Endomorphismus eines endlichdimensionalen,
+    unit"aren Vektorraums, der ($**$) erf"ullt. Zeigen Sie, dass $F=0$ sein muss.
+  \end{enumerate}
+\end{aufgabe}
+
+\begin{aufgabe}[4 Punkte]
+  Sei $V$ ein euklidischer oder unit"arer Vektorraum und $F
+  \in \End(V)$ ein Endomorphismus, der einen adjungierten
+  Endomorphismus $F^*$ hat. Zeigen Sie
+  $$
+  \ker F^* \subseteq (\im F)^\perp \qquad \text{ und } \qquad \im F^*
+  \subseteq (\ker F)^\perp \,.
+  $$
+  Wenn $V$ endlichdimensional ist, folgern Sie, dass in beiden F"allen
+  Gleichheit gilt.
+\end{aufgabe}
+
+\footnotetext{*: Ggf.\ im Tutorium besprechen.}
+
+
+\end{document}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% End: 
