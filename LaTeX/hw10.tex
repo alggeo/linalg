@@ -1,0 +1,75 @@
+\documentclass[a4,11pt]{article}
+
+\usepackage{./exercises}
+\usepackage{./macros}
+\usepackage{mathtools}
+\usepackage{tikz-cd}
+
+\usepackage{graphicx}
+\usepackage{ngerman}
+
+\vltitel{Lineare Algebra 2}
+\dozent{\small{Christian Haase}}
+\assistent{\small{Jan Marten Sevenster}}
+\tutoren{\small{%
+    Theresa Graeber \\[-1ex] Eva Schinzel}}
+
+\semester{Sommersemester 2023%
+  % \raisebox{-10mm}[0pt][0pt]{%
+  %   \parbox{0pt}{\includegraphics[width=27mm]{../../2015-ana1-L/Vorlesungsmaterial/ana1QR}}}
+}
+
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Span}{span}
+% \DeclareMathOperator{\ker}{ker}
+\DeclareMathOperator{\im}{im}
+\newcommand{\bonusitem}{\item\hspace*{-2.4mm}*\ }
+
+
+\begin{document}
+\vspace*{-17mm}
+{
+\kopf
+}
+% \vspace*{-5mm}
+% \enlargethispage*{25mm}
+
+\newcounter{chapter}
+\ueblatt{9}{ Montag, 26.~Juni 2023 um 10h00}
+
+
+\begin{aufgabe}[4 Punkte]
+  $U \subseteq V$, $\dim V < \infty$
+  
+  \begin{enumerate}
+  \item $b \in V$.
+  Dann gibt es einen eindeutig bestimmten Vektor $u \in U$, so dass $b-u \perp U$.
+  \item die Abbildung $b \mapsto u$ ist linear
+  \item $u$ wird dadurch charakterisiert, dass $\| b - u \|^2$ "uber $U$ minimiert wird.
+\end{enumerate}
+\end{aufgabe}
+
+\begin{aufgabe}[4 Punkte]
+  $F \colon V \to W$ injektiv.
+  \begin{enumerate}
+  \item $F^*F$ invertierbar
+  \item gegeben $b \in W$, Formel f"ur $v \in V$, so dass $\| b - F(v) \|^2$ minimiert wird.
+  \item Daten $(1,y_1), \ldots, (4,y_n) \in \R^2$ gemessen.
+    Suche quadratisches Polynom $f$, so dass $\sum_i (f(i)-y_i)^2$ minimal wird.
+
+    Beschreibe passendes $F$ und bestimme die Abbildung.
+  \end{enumerate}
+\end{aufgabe}
+
+\begin{aufgabe}[4 Punkte]
+Wurzel aus pos def Matrix
+\end{aufgabe}
+
+% \footnotetext{*: Ggf.\ im Tutorium besprechen.}
+
+
+\end{document}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% End: 
