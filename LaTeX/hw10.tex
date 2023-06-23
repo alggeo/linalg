@@ -39,31 +39,48 @@
 
 
 \begin{aufgabe}[4 Punkte]
-  $U \subseteq V$, $\dim V < \infty$
+Es sei $V$ ein endlichdimensionaler Skalarproduktraum mit dem Skalarprodukt $\left<\cdot , \cdot \right>$, und nehme $U \subseteq V$ einen Unterraum.
   
   \begin{enumerate}
-  \item $b \in V$.
-  Dann gibt es einen eindeutig bestimmten Vektor $u \in U$, so dass $b-u \perp U$.
-  \item die Abbildung $b \mapsto u$ ist linear
-  \item $u$ wird dadurch charakterisiert, dass $\| b - u \|^2$ "uber $U$ minimiert wird.
+  \item Geben Sie zu einem Vektor $b \in V$, einen Vektor $u \in U$ an, so dass  $b-u \perp U$. Zeigen Sie, dass es genau einen solchen Vektor in $U$ gibt.
+  \item Zeigen Sie, dass das Endomorphismus $b \mapsto u$, das einem Vektor $b \in V$ diesen Vektor $u$ zuweist, linear ist.
+  \item Der Vektor $u$ wird dadurch charakterisiert, dass 
+  \[
+  \| b - u \|^2 = \min_{w\in U} \| b - w \|^2.
+  \]
+  Natürlich ist $\| \cdot \|$ hier der durch $\left<\cdot , \cdot \right>$ induzierte Norm. Beweisen Sie diese Gleichung.
 \end{enumerate}
 \end{aufgabe}
 
 \begin{aufgabe}[4 Punkte]
-  $F \colon V \to W$ injektiv.
+  Wie nehmen $F \colon V \to W$ ein injektives Homomorphismus zwischen endlichdimensionalen Skalarproduktr"uamen.
   \begin{enumerate}
-  \item $F^*F$ invertierbar
-  \item gegeben $b \in W$, Formel f"ur $v \in V$, so dass $\| b - F(v) \|^2$ minimiert wird.
-  \item Daten $(1,y_1), \ldots, (4,y_n) \in \R^2$ gemessen.
-    Suche quadratisches Polynom $f$, so dass $\sum_i (f(i)-y_i)^2$ minimal wird.
-
-    Beschreibe passendes $F$ und bestimme die Abbildung.
+  \item Zeigen Sie, dass $F^*F$ invertierbar ist.
+  \item Gegeben ist ein Vektor $b \in W$, geben Sie eine Formel f"ur $v \in V$ an, so dass $\| b - F(v) \|^2$ minimiert wird "uber $V$, d.h.
+  \[
+  \| b - F(v) \|^2 = \min_{w\in U} \| b - F(w) \|^2.
+  \]
+  \item Wir haben eine Reihe Daten $(1,y_1), \ldots, (n,y_n) \in \mathbb{R}^2$ gemessen. Suchen Sie zu einem Polynom $p = b_0 + b_1 x + b_2 x^2\in \mathbb{R} [x]_{\leq 2}$ eine lineare Abbildung $P : \mathbb{R}^3 \rightarrow \mathbb{R}^n$ die
+  \[
+  P(\transpose (b_0 \ b_1 \ b_2)) = \transpose (p(1) \ p(2) \dots p(n))
+  \]
+  erf"ullt.
+   Bestimmen Sie mit Hilfe dieser Abbildung und den vorigen Teilfragen ein quadratisches Polynom $f$, so dass
+  \[
+  \sum_{i = 1}^n (f(i)-y_i)^2 = \min_{g \in \mathbb{R} [x]_{\leq 2}} \sum_{i = 1}^n (g(i)-y_i)^2 .
+  \]
   \end{enumerate}
 \end{aufgabe}
 
-\begin{aufgabe}[4 Punkte]
-Wurzel aus pos def Matrix
-\end{aufgabe}
+
+ \begin{aufgabe}[4 Punkte]
+ Es sei $M \in \text{Mat}(n \times n; \mathbb{C})$ eine Hermitesche Matrix, zeigen Sie, dass die folgenden Aussagen "aquivalent sind:
+ \begin{enumerate}
+ \item $M$ ist positiv semidefinit.
+ \item Es gibt eine Matrix $W \in \text{Mat}(n\times n;\mathbb{C})$ f"ur welche $M = \overline{\transpose \ W} W$.
+ \end{enumerate}
+ \end{aufgabe}
+
 
 % \footnotetext{*: Ggf.\ im Tutorium besprechen.}
 
