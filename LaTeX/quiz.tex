@@ -166,13 +166,17 @@ Leiten Sie notwendige und hinreichende Bedingungen ab f"ur die Hauptminoren eine
 Erinneren Sie sich an den folgenden "aquivalente Definitionen die wir bisher gefunden haben f"ur positiv semidefinite Matrizen $M \in \text{Mat}(n\times n ; \mathbb{C})$ die selbstadjungiert sind
 \begin{enumerate}
 \item Alle Eigenwerte sind nichtnegativ
-\item  $v^* M v \geq 0 \ \forall v \in \mathbb{C}^n$
-\item Es existiert $W \in \text{Mat}(n\times n ; \mathbb{C})$ so dass $M = W W^*$
+\item  $\transpose v M \overline{v} \geq 0 \ \forall v \in \mathbb{C}^n$
+\item Es existiert $W \in \text{Mat}(n\times n ; \mathbb{C})$ so dass $M = W W^* = W \transpose \  \overline{W}$
 \end{enumerate}
-Beweisen Sie dass auch diese Bedingung zu den obigen "aquivalent ist
-\[
-\text{Sp}(MP) \geq 0 \ \forall P \in  \text{Mat}(n\times n ; \mathbb{C}) \text{ positiv semidefinit}
-\]
+Diese Bedingung ist zu den obigen "aquivalent.
+\begin{equation}
+\label{one}
+\text{Spur}(MP) \geq 0 \ \forall P \in  \text{Mat}(n\times n ; \mathbb{C}) \text{ positiv semidefinit}.
+\end{equation}
+
+Beweisen Sie eine der beiden Implikationen. Also \ref{one} impliziert positiv semidefinit oder positiv semidefinit impliziert \ref{one}.
+
 
 \end{aufgabe}
 
