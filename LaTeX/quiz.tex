@@ -183,6 +183,35 @@ Beweisen Sie eine der beiden Implikationen. Also \eqref{one} impliziert positiv 
 
 \end{aufgabe}
 
+\newpage
+
+\begin{aufgabe}
+
+F"ur Matrizen haben wir den folgenden Norm gesehen in vergangenen Hausaufgaben
+\[
+\| M \|_F = \sqrt{\text{Spur}(\transpose M \overline{M})}
+\]
+und es war gezeigt, dass wenn wir eine Matrix multiplizieren mit einer unit"aren Matrix, dass der Norm des Produkts dann der Norm der urspr"unglichen Matrix ist. Jetzt introduzieren wir den Spektralnorm. Sie ist definiert wie den gr"oßten Singularwert einer Matrix:
+\[
+\| M \|_S = \max \{ \sigma : \sigma \text{ ist ein Singul"arwert von } M \}.
+\]
+Erinnern Sie sich daran, dass die Singul"arwerte einer Matrix $M$, die Diagonaleintr"age der Matrix $\Sigma$ sind in der Singul"arwertzerlegung $M = U\Sigma V^*$.
+
+\begin{enumerate}
+\item
+Zeigen Sie, dass f"ur alle komplexe Matrizen $M$ gilt dass
+\[
+\| M \|_S \leq \| M \|_F 
+\]
+\item
+Nehmen wir jetzt an, dass $M$ eine $m \times n$ Matrix ist mit $m \leq n$, zeigen Sie dann, dass
+\[
+\| M \|_F \leq \sqrt{m} \| M \|_S.
+\]
+\end{enumerate}
+
+\end{aufgabe}
+
 \end{document}
 
 %%% Local Variables:
