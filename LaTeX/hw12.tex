@@ -1,0 +1,89 @@
+\documentclass[a4,11pt]{article}
+
+\usepackage{./exercises}
+\usepackage{./macros}
+\usepackage{mathtools}
+\usepackage{tikz-cd}
+
+\usepackage{graphicx}
+\usepackage{ngerman}
+
+\vltitel{Lineare Algebra 2}
+\dozent{\small{Christian Haase}}
+\assistent{\small{Jan Marten Sevenster}}
+\tutoren{\small{%
+    Theresa Graeber \\[-1ex] Eva Schinzel}}
+
+\semester{Sommersemester 2023%
+  % \raisebox{-10mm}[0pt][0pt]{%
+  %   \parbox{0pt}{\includegraphics[width=27mm]{../../2015-ana1-L/Vorlesungsmaterial/ana1QR}}}
+}
+
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Span}{span}
+% \DeclareMathOperator{\ker}{ker}
+\DeclareMathOperator{\im}{im}
+\newcommand{\bonusitem}{\item\hspace*{-2.4mm}*\ }
+
+
+\begin{document}
+\vspace*{-17mm}
+{
+\kopf
+}
+% \vspace*{-5mm}
+% \enlargethispage*{25mm}
+
+\newcounter{chapter}
+\ueblatt{12}{ Montag, 17.~Juli 2023 um 10h00}
+
+
+\begin{aufgabe}[4 Punkte]
+lineare Abb $V \to W$ dim $n$ resp. $m$, Rang $r$ kann man Basen
+w"ahlen mit Einheitsmatrix $E_r$ und sonst Nullen
+
+Warum folgt nicht sofort der SVD-Satz?
+
+Kann man umgekehrt den obigen Satz einfach aus dem SVD-Satz folgern?  
+\end{aufgabe}
+
+\begin{aufgabe}[4 Punkte]
+  Bsp Internet aus Fig. 2.1
+
+  verifiziere, dass Eig$(A;1)$ eindimensional ist.
+
+  Wir wollen den Pagerank manipulieren, ohne mit den Webmastern f"ur
+  die Seiten $1$ bis $4$ zu reden. Dazu f"ugen wir ein Netz von fake
+  Seiten ein, die sich untereinander verlinken und von denen einige
+  auf die von uns pr"aferierte Seite $2$ verweisen.
+
+  Wie "andert sich der Pagerank? (Beispiel oder Aussage mit Beweis).
+
+  Durch Zufall lernen wir Webmaster $4$ auf der Fachbereichsparty
+  kennen. Wir k"onnen sie "uberzeugen, einen Link auf eine unserer
+  fake Seiten auf ihre Seite zu stellen. Wie "andert sich der Pagerank?
+  
+  
+\end{aufgabe}
+
+
+\begin{aufgabe}[4 Punkte]
+Ein Spaziergang der L"ange $\ell \in \N$ in einem Internet $G=(V,E)$ ist
+eine Folge von Seiten $v_0, \ldots, v_\ell \in V$ (Wiederholungen
+erlaubt), so dass f"ur $i=1, \ldots, \ell$ $(v_{i-1},v_i) \in E$.
+
+Zu einer Matrix $A \in M(n \times n; \R)$ mit nicht-negativen
+Eintr"agen k"onnen wir ein Internet auf den Seiten $V = \{ 1, \ldots,
+n \}$ definieren: $(i,j) \in E :\Leftrightarrow a_{ij} > 0$.
+
+Zeigen Sie, dass f"ur $i,j \in V$ der $ij$-Eintrag der $\ell$-ten
+Potenz $A^\ell$ genau dann positiv ist, wenn es in $G=(V,E)$ einen
+Spaziergang der L"ange $\ell$ von $j$ nach $i$ gibt.
+  
+\end{aufgabe}
+
+\end{document}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% End: 
