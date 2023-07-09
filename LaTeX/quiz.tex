@@ -186,27 +186,44 @@ Beweisen Sie eine der beiden Implikationen. Also \eqref{one} impliziert positiv 
 \newpage
 
 \begin{aufgabe}
-
-F"ur Matrizen haben wir den folgenden Norm gesehen in vergangenen Hausaufgaben
+Auf dem Vektorraum $M(m \times n; \C)$ der Matrizen hatten wir die
+folgende Norm gesehen
 \[
 \| M \|_F = \sqrt{\text{Spur}(\transpose M \overline{M})}
 \]
-und es war gezeigt, dass wenn wir eine Matrix multiplizieren mit einer unit"aren Matrix, dass der Norm des Produkts dann der Norm der urspr"unglichen Matrix ist. Jetzt introduzieren wir den Spektralnorm. Sie ist definiert wie den gr"oßten Singularwert einer Matrix:
+und gezeigt, dass Multiplikation mit unit"aren Matrizen $U$
+% \in % U(m) \subset
+% M(m \times m; \C)$
+und $V$
+% \in % U(n) \subset 
+% M(n \times n; \C)$
+diese Norm nicht "andert:
+$\| UMV \|_F = \| M \|_F$\,.
+
+Wir f"uhren eine neue Norm ein: die Spektralnorm ist der gr"oßte
+Singul"arwert einer Matrix.
 \[
 \| M \|_S = \max \{ \sigma : \sigma \text{ ist ein Singul"arwert von } M \}.
 \]
-Erinnern Sie sich daran, dass die Singul"arwerte einer Matrix $M$, die Diagonaleintr"age der Matrix $\Sigma$ sind in der Singul"arwertzerlegung $M = U\Sigma V^*$.
-
+% Erinnern Sie sich daran, dass die Singul"arwerte einer Matrix $M$, die
+% Diagonaleintr"age der Matrix $\Sigma$ sind in der
+% Singul"arwertzerlegung $M = U\Sigma V^*$.
+(Sie brauchen nicht zu zeigen, dass das eine Norm ist; das k"onnen Sie
+uns glauben.)
 \begin{enumerate}
 \item
-Zeigen Sie, dass f"ur alle komplexe Matrizen $M$ gilt dass
+Zeigen Sie, dass f"ur alle Matrizen $M \in M(m \times n; \C)$ gilt,
+dass
 \[
-\| M \|_S \leq \| M \|_F 
+\| M \|_S \leq \| M \|_F \,.
 \]
 \item
-Nehmen wir jetzt an, dass $M$ eine $m \times n$ Matrix ist mit $m \leq n$, zeigen Sie dann, dass
+% Nehmen wir jetzt an, dass $M$ eine $m \times n$ Matrix ist mit $m
+% \leq n$, zeigen Sie dann, dass
+  Zeigen Sie, dass umgekehrt f"ur alle Matrizen $M \in M(m \times n;
+  \C)$
 \[
-\| M \|_F \leq \sqrt{m} \| M \|_S.
+\| M \|_F \leq \sqrt{m} \ \| M \|_S \,.
 \]
 \end{enumerate}
 
