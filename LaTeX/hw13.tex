@@ -1,0 +1,82 @@
+\documentclass[a4,11pt]{article}
+
+\usepackage{./exercises}
+\usepackage{./macros}
+\usepackage{mathtools}
+\usepackage{tikz}
+
+\usepackage{graphicx}
+\usepackage{ngerman}
+
+\vltitel{Lineare Algebra 2}
+\dozent{\small{Christian Haase}}
+\assistent{\small{Jan Marten Sevenster}}
+\tutoren{\small{%
+    Theresa Graeber \\[-1ex] Eva Schinzel}}
+
+\semester{Sommersemester 2023%
+  % \raisebox{-10mm}[0pt][0pt]{%
+  %   \parbox{0pt}{\includegraphics[width=27mm]{../../2015-ana1-L/Vorlesungsmaterial/ana1QR}}}
+}
+
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Span}{span}
+% \DeclareMathOperator{\ker}{ker}
+\DeclareMathOperator{\im}{im}
+\newcommand{\bonusitem}{\item\hspace*{-2.4mm}*\ }
+
+
+\begin{document}
+\vspace*{-17mm}
+{
+\kopf
+}
+% \vspace*{-5mm}
+% \enlargethispage*{25mm}
+
+\newcounter{chapter}
+\ueblatt{13}{ Montag, 24.~Juli 2023 um 10h00 -- Bonusblatt}
+
+
+\begin{aufgabe}[4 Punkte]
+  Wir beweisen nochmal, dass jede endlichdimensionale Darstellung
+  $\rho \colon G \to \operatorname{GL}(V)$ einer endlichen Gruppe $G$ in irreduzible
+  Darstellungen zerf"allt.
+\begin{enumerate}
+\addtocounter{enumi}{-1}
+\bonusitem
+Das zentrale Lemma garantiert f"ur jeden $G$-invarianten Unterraum $U
+\subseteq V$ einen $G$-invarianten Unterraum $U' \subseteq V$, so dass
+$V = U \oplus U'$ als $G$-Darstellungen.
+
+Folgern Sie aus dieser Aussage, dass jede endlichdimensionale
+$G$-Darstellung in irreduzible zerf"allt.
+\item Gegeben $U \subseteq V$ wie oben, konstruieren Sie einen
+  komplement"aren Unterraum $W \subseteq V$ zusammen mit einer
+  Projektion $\pi \colon V \to U$ mit Kern $W$ und Bild
+  $U$. ("`Projektion"' hei"st, $\pi \circ \pi = \pi$, insbesondere
+  $\pi|_U = \id_U$.)
+\item Definieren Sie $\hat \pi \colon V \to V$ als
+  $$
+  \hat \pi = \frac{1}{|G|} \sum_{g \in G} \rho(g) \circ \pi \circ \rho(g^{-1}) \,.
+  $$
+  Zeigen Sie, dass $\hat \pi$ eine $G$-invariante Projektion mit Bild $U$ ist.
+\item Sei $U'$ das Bild von $\hat \pi$. Zeigen Sie, dass $V = U \oplus
+  U'$ als $G$-Darstellungen.
+  \end{enumerate}
+\end{aufgabe}
+
+\begin{aufgabe}[4 Punkte]
+Was mit Konjugationsklassen. $S_4$?
+\end{aufgabe}
+
+\begin{aufgabe}[4 Punkte]
+Komposition von Homomorphismen von Darstellungen ist wieder ein
+Homomorphismus von Darstellungen.
+\end{aufgabe}
+
+\end{document}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% End: 
