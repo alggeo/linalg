@@ -67,12 +67,40 @@ $G$-Darstellung in irreduzible zerf"allt.
 \end{aufgabe}
 
 \begin{aufgabe}[4 Punkte]
-Was mit Konjugationsklassen. $S_4$?
+Es sei $G$ eine Gruppe und $g,h \in G$ Elementen aus $G$, dann hei"st $g$ zu $h$ konjugiert, wenn es einen $c \in G$ gibt, so dass $g = chc^{-1}$.\begin{enumerate}
+\item
+Zeigen Sie, dass die Konjugationsrelation ($g \sim h$ genau dann, wenn $g$ zu $h$ konjugiert ist) eine "Aquivalenzrelation ist. Die "Aquivalenzklassen dieser Relation werden Konjugationsklassen genannt.
+\item
+Es sei nun $G$ eine endliche Gruppe und $\rho$ eine Darstellung von $G$. Zeigen Sie dass wenn $g$ und $h$ in derselben Konjugationsklasse enthalten sind, dass dann
+\[
+\text{Spur}(\rho(g)) = \text{Spur}(\rho(h)) 
+\]
+gilt.
+\item
+Wir nehmen die Permutationsgruppe auf $4$ Elementen:
+\[
+S_4 = \{ \sigma : \{ 1,2,3,4 \} \to \{ 1,2,3,4 \} \mid f \text{ ist bijektiv } \}.
+\]
+Listen Sie die Konjugationsklasse dieser Gruppe der $4! = 24$ Elementen auf.
+\item
+Eine wichtige Darstellung der $S_4$ ist die Permuationsdarstellung. Sie permutiert die Basisvektoren eines vierdimensionalen $K$-Vektorraums.
+\[
+\pi : S_4 \to \operatorname{GL}(\operatorname{span}(v_1, v_2, v_3, v_4)) : \pi(\sigma)(v_i) = v_{\sigma(i)}.
+\]
+Gen"ugt die Spurabbildung um Konjugationsklasse von $S_4$ voneinander zu unterscheiden? Also gilt
+\[
+\text{Spur}(\pi(\sigma_1)) = \text{Spur}(\pi(\sigma_2)) \Leftrightarrow \sigma_1 \sim \sigma_2 ?
+\]
+\end{enumerate}
+
 \end{aufgabe}
 
 \begin{aufgabe}[4 Punkte]
-Komposition von Homomorphismen von Darstellungen ist wieder ein
-Homomorphismus von Darstellungen.
+Ein Homomorphismus zwischen Darstellungen $\rho, \tau : G \to \operatorname{GL}(V)$ ist eine Abbildung $T \in \operatorname{End}(V)$, sodass
+\[
+T \circ \rho(g) = \tau(g) \circ T \ \text{ f"ur alle } g \in G.
+\]
+Zeigen Sie, dass f"ur zwei Homomorphismen $T_1$ und $T_2$ von $\rho$ nach $\tau$, ihre Verkettung $T_2 \circ T_1$ wieder ein Homomorphismus von $\rho$ nach $\tau$ ist.
 \end{aufgabe}
 
 \end{document}
