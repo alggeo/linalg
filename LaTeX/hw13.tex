@@ -71,7 +71,7 @@ Es sei $G$ eine Gruppe und $g,h \in G$ Elementen aus $G$, dann hei"st $g$ zu $h$
 \item
 Zeigen Sie, dass die Konjugationsrelation ($g \sim h$ genau dann, wenn $g$ zu $h$ konjugiert ist) eine "Aquivalenzrelation ist. Die "Aquivalenzklassen dieser Relation werden Konjugationsklassen genannt.
 \item
-Es sei nun $G$ eine endliche Gruppe und $\rho$ eine Darstellung von $G$. Zeigen Sie dass wenn $g$ und $h$ in derselben Konjugationsklasse enthalten sind, dass dann
+Es sei nun $G$ eine endliche Gruppe und $\rho$ eine Darstellung von $G$. Zeigen Sie, dass wenn $g$ und $h$ in derselben Konjugationsklasse enthalten sind, dass dann
 \[
 \text{Spur}(\rho(g)) = \text{Spur}(\rho(h)) 
 \]
@@ -79,7 +79,7 @@ gilt.
 \item
 Wir nehmen die Permutationsgruppe auf $4$ Elementen:
 \[
-S_4 = \{ \sigma : \{ 1,2,3,4 \} \to \{ 1,2,3,4 \} \mid f \text{ ist bijektiv } \}.
+S_4 = \{ \sigma : \{ 1,2,3,4 \} \to \{ 1,2,3,4 \} \mid \sigma \text{ ist bijektiv } \}.
 \]
 Listen Sie die Konjugationsklasse dieser Gruppe der $4! = 24$ Elementen auf.
 \item
@@ -87,7 +87,7 @@ Eine wichtige Darstellung der $S_4$ ist die Permuationsdarstellung. Sie permutie
 \[
 \pi : S_4 \to \operatorname{GL}(\operatorname{span}(v_1, v_2, v_3, v_4)) : \pi(\sigma)(v_i) = v_{\sigma(i)}.
 \]
-Gen"ugt die Spurabbildung um Konjugationsklasse von $S_4$ voneinander zu unterscheiden? Also gilt
+Gen"ugt die Spurabbildung hier um Konjugationsklasse von $S_4$ voneinander zu unterscheiden? Also gilt
 \[
 \text{Spur}(\pi(\sigma_1)) = \text{Spur}(\pi(\sigma_2)) \Leftrightarrow \sigma_1 \sim \sigma_2 ?
 \]
@@ -96,11 +96,12 @@ Gen"ugt die Spurabbildung um Konjugationsklasse von $S_4$ voneinander zu untersc
 \end{aufgabe}
 
 \begin{aufgabe}[4 Punkte]
-Ein Homomorphismus zwischen Darstellungen $\rho, \tau : G \to \operatorname{GL}(V)$ ist eine Abbildung $T \in \operatorname{End}(V)$, sodass
+Ein Homomorphismus zwischen Darstellungen $\rho : G \to \operatorname{GL}(V)$ und $\tau : G \to \operatorname{GL}(W)$ von $G$ ist eine Abbildung $T \in \operatorname{Hom}(V,W)$, sodass
 \[
 T \circ \rho(g) = \tau(g) \circ T \ \text{ f"ur alle } g \in G.
 \]
-Zeigen Sie, dass f"ur zwei Homomorphismen $T_1$ und $T_2$ von $\rho$ nach $\tau$, ihre Verkettung $T_2 \circ T_1$ wieder ein Homomorphismus von $\rho$ nach $\tau$ ist.
+Die Menge der Homomorphismen zwischen Darstellungen $\rho$ und $\tau$, bezeichnen wir mit $\operatorname{Hom}(\rho, \tau)$.
+Zeigen Sie, dass f"ur zwei Homomorphismen $T_1 \in \operatorname{Hom}(\rho, \tau)$ und $T_2 \in \operatorname{Hom}(\tau, \upsilon)$, ihre Verkettung $T_2 \circ T_1$ wieder ein Homomorphismus zwischen Darstellungen von $G$ ist.
 \end{aufgabe}
 
 \end{document}
