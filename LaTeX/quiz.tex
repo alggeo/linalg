@@ -5,6 +5,7 @@
 
 \usepackage{graphicx}
 \usepackage{ngerman}
+\usepackage{tikz}
 
 \vltitel{Lineare Algebra 2}
 \dozent{\small{Christian Haase}}
@@ -232,16 +233,40 @@ dass
 \newpage
 
 \begin{aufgabe}
-  Ein Zyklus in einem Internet $G = (V, E)$ ist ein Spaziergang $v_0, \dots v_\ell$, so dass $\ell > 0$ und $v_0 = v_\ell$.
+  Ein Zyklus in einem Internet $G = (V, E)$ ist ein Spaziergang $v_0, \dots v_\ell$, so dass $\ell > 0$ und $v_0 = v_\ell$. 
   
   \begin{enumerate}
   \item
-  Zeigen Sie, dass ein Internet ohne Zyklen, eine assoziierte Matrix hat, die eine Spalte enth"alt, deren Eintr"agen allen gleich $\mid V \mid^{-1}$ sind.
+  Wir betrachten ein Internet mit $n$ Seiten, bestehend aus komplette Zyklen, ohne Wiederholungen. Also es gibt Zyklen
+  \[
+  Z_i = (v^i_1, \dots , v^i_n, v^i_1), \text{ so dass f"ur alle } 1 \leq k, \ell \leq n, \ v^i_k \neq v^i_\ell
+  \]
+  f"ur $i = 1, \dots , m$, so dass alle Links im Internet genau in einem Zyklus benutzt werden. Zeigen Sie, dass alle Seite denselben Pagerank (importance scores) haben.
   \item
   Wir betrachten das Internet
   \[
-  1 \to 2 \to 3 \to \cdots \to n
-  \]
+ \begin{tikzpicture}
+ \node (1) at (1,0) {$1$};
+  \node (2) at (2,0) {$2$};
+  \node (3) at (3,0) {$3$};
+  \node (4) at (4,0) {$\cdots$};
+  \node (5) at (5.5,0) {$n -1$};
+  \node (n) at (3,2) {$n$};
+  \node (nn) at (3,3) {$n + 1$};
+\draw[->] (1)--(2);
+\draw[->] (2)--(3);
+\draw[->] (3)--(4);
+\draw[->] (4)--(5);
+\draw[->] (n) [out=180, in=90] to (1);
+\draw[->] (n)--(2);
+\draw[->] (n)--(2);
+\draw[->] (n)--(3);
+\draw[->] (5)--(n);
+\draw[->] (n) [out=0, in=90] to (5);
+\draw[->] (n.100) [out=100, in=260] to (nn.260);
+\draw[->] (nn.280) [out=280, in=80] to (n.80);
+ \end{tikzpicture}
+ \]
   Wie beziehen sich die Pageranks (importance scores) zueinander. Sie d"urfen einfach den Pagerank ausrechnen, oder intuitiv erkl"aren welche Seite den h"ohsten Pagerank hat.
   \end{enumerate}
 \end{aufgabe}
