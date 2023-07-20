@@ -1,0 +1,296 @@
+\documentclass[a4paper]{article}
+
+\usepackage{mdframed}
+\usepackage{tikz}
+\usepackage{pdfpages}
+% \usetikzlibrary{shadows}
+% \usetikzlibrary{calc}
+\usetikzlibrary{patterns}
+	\usetikzlibrary{intersections,calc,decorations.pathreplacing}
+\newcommand{\ngon}[5]{ % #1 = number of vertices
+                       % #2 = center point of the n-gon
+                       % #3 = diameter of the circle defining the n-gon
+                       % #4 = label name of the object to use relative coordinates
+                       % #5 = rotation
+
+  \foreach \t in {1,...,#1} {
+    \coordinate (#4\t) at ($#2+(#5-\t*360/#1:#3)$);
+    \fill (#4\t) circle (5pt);
+  }
+}
+
+\usepackage{me-exercises}
+\usepackage{graphicx}
+\usepackage{ngerman}
+\usepackage{entdecken_macros}
+% \graphicspath{{../../texmf/Bilder/}}
+% \definecolor{graphcolor}{rgb}{.7,0,0}
+% \definecolor{cryptcolor}{rgb}{0,0,.7}
+% \definecolor{codescolor}{rgb}{0,.4,0}
+% \definecolor{darkgreen}{rgb}{0,0,0}
+% \newcommand{\gr}{\color{graphcolor}}
+% \newcommand{\cy}{\color{cryptcolor}}
+% \newcommand{\er}{\color{codescolor}}
+
+
+\tikzset{
+  schraffiert/.style={pattern=north west lines,pattern color=#1},
+  schraffiert/.default=black}
+
+\newcommand{\sage}{%
+  \raisebox{-.6mm}{\includegraphics[width=9mm]{../qsl/dayOne/sagenb}}}
+
+
+\vltitel{Lineare Algebra 2
+  \makebox[1mm]{\raisebox{-19mm}[0pt][0pt]{%
+      \hspace*{4mm}
+ %     \includegraphics[width=25mm]{../qsl/abacus}
+}}}
+\dozent{Christian Haase}
+\assistent{Jan Sevenster}
+\tutoren{Theresa Graeber \\[-1ex] Eva Schinzel}}
+\semester{Sommersemester 2023}
+
+% \newcommand{\N}{\mathbb{N}}
+% \newcommand{\Z}{\mathbb{Z}}
+% \newcommand{\R}{\mathbb{R}}
+% \newcommand{\C}{\mathbb{C}}
+% \newcommand{\Q}{\mathbb{Q}}
+
+% \DeclareMathOperator{\Spur}{Spur}
+
+% \theorembodyfont{\rmfamily}
+% \newtheorem{aufgabe}{Aufgabe}
+\pagestyle{empty}
+%\geometry{body={16cm,22cm},left=25mm}
+
+\setlength{\parindent}{0pt}
+
+\semester{Wintersemester 2021/22}
+
+% \renewcommand{\pagebreak}{\vspace{8mm} \par}
+
+\begin{document}
+% \includepdf{Klausurdeckblatt.pdf}
+
+{
+\kopf
+}
+ \begin{center}
+   {\Large {\bfseries\scshape Abschlussklausur}}
+\end{center}
+
+\enlargethispage*{40mm}
+
+Bearbeiten Sie bitte die Aufgaben 1-4 und w\"ahlen Sie {\bfseries
+  \sffamily EINE} der Aufgaben 5 oder 6. Markieren Sie bitte unten,
+welche benotet werden soll. 
+\\
+Bitte nehmen Sie sich Zeit, die Aufgabenstellung durchzulesen und zu
+verstehen. Begr\"unden Sie Ihre Antworten!
+\\
+Schreiben Sie bitte Ihre L\"osungen auf diese Bl\"atter. 
+Sollten die Vorder- und R\"uckseiten nicht ausreichen, stellen wir
+Schmierpapier zur Verf\"ugung.
+Bitte schreiben Sie Ihren Namen und Ihre Matrikelnummer auf diese
+Extraseiten. 
+\\
+Tragen Sie bitte jetzt Ihren Namen und Ihre Matrikelnummer ein.
+Bitte bl\"attern Sie erst um, wenn zum Angriff geblasen wird.
+\\[\baselineskip] %\vfill
+Denken Sie nach, bleiben Sie ruhig. Viel Spa"s und Erfolg.
+\\[\baselineskip] %\vfill
+Name: \underline{\hspace{50mm}} \hfill
+\mbox{Matrikel: \underline{\hspace{40mm}}}
+\\[.5\baselineskip]
+\mbox{} \hfill \mbox{Studiengang: \underline{\hspace{40mm}}}
+\\[\baselineskip] %\vfill
+\begin{center}
+  \begin{tabular}{l c | rcr}
+    \multicolumn{2}{r|}{Aufgabe} & Punkte \\
+    \hline
+    $\boxtimes$ & 1 & & / & 8 \\
+    $\boxtimes$ & 2 & & / & 8 \\
+    $\boxtimes$ & 3 & & / & 8 \\
+    $\boxtimes$ & 4 & & / & 8 \\
+%    $\boxtimes$ & 5 & & / & 8 \\
+%    $\Box$ & 5 & & / & 10 \\
+    $\Box$ & 5 & & / & 8 \\
+    $\Box$ & 6 & & / & 8 \\
+%    $\Box$ & 8 & & / & 7 \\
+    \hline
+    & $\sum$ & & / & 40
+  \end{tabular}
+\end{center}
+\vfill
+
+\vspace{5mm}
+
+\begin{center}
+  % \includegraphics[width=.7\textwidth]{massa-marianneth-fotocumunity}
+  % \\
+  % \Large Denken ist wie {\tt googeln}, nur krasser.
+%%\includegraphics[width=.7\textwidth]{bunnyTee}
+%%\\
+%\mbox{} \hfill {\tiny The Book of Bunny Suicides \copyright Andy Riley}
+\end{center}
+%% \vfill \vfill
+%\mbox{}
+
+\newpage
+
+AUFGABENSAMMLUNG
+
+\begin{klaufg}{8}{}
+beweise oder widerlege: zu jeder Matrix gibt es ein Skalarprodukt, so dass sie unit"ar ist
+\end{klaufg}
+
+\begin{klaufg}{8}{}
+sei $A$ eine Matrix, so dass $A^{12} = E_n$. beweise oder widerlege: es gibt ein Skalarprodukt, so dass $A$ unit"ar ist.
+\end{klaufg}
+
+\begin{klaufg}{8}{}
+
+\end{klaufg}
+
+\begin{klaufg}{8}{}
+
+\end{klaufg}
+
+\begin{klaufg}{8}{}
+
+\end{klaufg}
+
+
+\pagebreak
+
+\begin{klaufg}{4+4}{Reproduktion}
+  Erkl"aren Sie {\bfseries\sffamily kurz},
+
+\begin{enumerate} %[(i)]
+\item[(\it i)] ...
+   \vfill
+\item[(\it ii)] ...
+ \vfill
+\end{enumerate}
+
+\end{klaufg}
+
+\pagebreak
+\begin{klaufg}{4+4}{examples}
+
+  \makebox[0pt][r]{($i$) }%
+
+  Geben Sie Beispiele von ...
+
+  (Begr"unden Sie {\bfseries\sffamily kurz}, dass Ihr Beispiel die
+  geforderten Eigenschaften hat.)
+  \pagebreak
+  
+  \makebox[0pt][r]{($ii$) }%
+    Geben Sie Beispiele von ...
+  
+  (Begr"unden Sie {\bfseries\sffamily kurz}, dass Ihr Beispiel die
+  geforderten Eigenschaften hat.)
+
+\end{klaufg}
+
+\pagebreak
+\begin{klaufg}{8}{einfacher Beweis}
+
+\end{klaufg}
+
+\pagebreak
+\begin{klaufg}{8}{einfache Modellierung/Beweis}
+
+  
+\end{klaufg}
+ 
+\pagebreak
+{\bfseries Nur eine der Aufgaben 5 \& 6 wird gewertet.}
+\bigskip
+\bigskip
+
+\begin{klaufg}{8}{hard1}
+
+\end{klaufg}
+
+\pagebreak
+{\bfseries Nur eine der Aufgaben 5 \& 6 wird gewertet.}
+\bigskip
+\bigskip
+
+\begin{klaufg}{8}{hard2}
+
+\end{klaufg}
+
+\pagebreak
+NACHKLAUSUR
+
+\begin{klaufg}{4+4}{Reproduktion}
+  Erkl"aren Sie {\bfseries\sffamily kurz},
+
+\begin{enumerate} %[(i)]
+\item[(\it i)] ...
+   \vfill
+\item[(\it ii)] ...
+ \vfill
+\end{enumerate}
+
+\end{klaufg}
+
+\pagebreak
+\begin{klaufg}{4+4}{examples}
+
+  \makebox[0pt][r]{($i$) }%
+
+  Geben Sie Beispiele von ...
+
+  (Begr"unden Sie {\bfseries\sffamily kurz}, dass Ihr Beispiel die
+  geforderten Eigenschaften hat.)
+  \pagebreak
+  
+  \makebox[0pt][r]{($ii$) }%
+    Geben Sie Beispiele von ...
+  
+  (Begr"unden Sie {\bfseries\sffamily kurz}, dass Ihr Beispiel die
+  geforderten Eigenschaften hat.)
+
+\end{klaufg}
+
+\pagebreak
+\begin{klaufg}{8}{einfacher Beweis}
+
+\end{klaufg}
+
+\pagebreak
+\begin{klaufg}{8}{einfache Modellierung/Beweis}
+
+  
+\end{klaufg}
+ 
+\pagebreak
+{\bfseries Nur eine der Aufgaben 5 \& 6 wird gewertet.}
+\bigskip
+\bigskip
+
+\begin{klaufg}{8}{hard1}
+
+\end{klaufg}
+
+\pagebreak
+{\bfseries Nur eine der Aufgaben 5 \& 6 wird gewertet.}
+\bigskip
+\bigskip
+
+\begin{klaufg}{8}{hard2}
+
+\end{klaufg}
+
+
+
+\end{document}
+
+
+
+
