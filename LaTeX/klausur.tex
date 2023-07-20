@@ -22,7 +22,7 @@
 \usepackage{me-exercises}
 \usepackage{graphicx}
 \usepackage{ngerman}
-\usepackage{entdecken_macros}
+\usepackage{entdecken-macros}
 % \graphicspath{{../../texmf/Bilder/}}
 % \definecolor{graphcolor}{rgb}{.7,0,0}
 % \definecolor{cryptcolor}{rgb}{0,0,.7}
@@ -48,7 +48,7 @@
 }}}
 \dozent{Christian Haase}
 \assistent{Jan Sevenster}
-\tutoren{Theresa Graeber \\[-1ex] Eva Schinzel}}
+\tutoren{Theresa Graeber \\[-1ex] Eva Schinzel}
 \semester{Sommersemester 2023}
 
 % \newcommand{\N}{\mathbb{N}}
@@ -150,15 +150,44 @@ sei $A$ eine Matrix, so dass $A^{12} = E_n$. beweise oder widerlege: es gibt ein
 \end{klaufg}
 
 \begin{klaufg}{8}{}
-
+\begin{enumerate}
+\item
+Bestimmen die Anzahl der Matrizen $M \in \operatorname{Mat}(2\times 2; \mathbb{F}_2)$ mit dem charakteristischen Polynom 
+\[
+p_M = x^2 + x + 1
+\]
+\item
+Bestimmen die Anzahl der Matrizen $M \in \operatorname{Mat}(2\times 2; \mathbb{F}_2)$ mit dem Minimalpolynom 
+\[
+m_M = x^2 + x + 1
+\]
+\item
+Ist die Matrix
+\[
+\begin{pmatrix}
+1 & 0 & 0\\
+0 & 0 & 1\\
+0 & 1 & 1
+\end{pmatrix} \in \operatorname{Mat}(3\times 3; \mathbb{F}_2)
+\]
+diagonalisierbar?
+\end{enumerate}
 \end{klaufg}
 
 \begin{klaufg}{8}{}
-
+Geben Sie ein Beispiel einer reellen nilpotenten Matrix, die nicht eine obere oder untere Dreieicksmatrix ist.
 \end{klaufg}
 
 \begin{klaufg}{8}{}
-
+Bestimmen Sie f"ur $n > 0$ die Jordansche Normalform von
+\[
+\begin{pmatrix}
+1 & 1 & \cdots & 1\\
+1 & 1 &  & 1\\
+\vdots & & \ddots & 1 \\
+1 & 1&  \cdots & 1
+\end{pmatrix} \in \operatorname{Mat}(n \times n; \mathbb{R})
+\]
 \end{klaufg}
 
 
