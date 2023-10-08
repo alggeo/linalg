@@ -57,8 +57,11 @@
 % \newcommand{\C}{\mathbb{C}}
 % \newcommand{\Q}{\mathbb{Q}}
 
-% \DeclareMathOperator{\Spur}{Spur}
-
+\DeclareMathOperator{\Spur}{Spur}
+\DeclareMathOperator{\Span}{span}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\im}{Im}
+% \DeclareMathOperator{\ker}{Ker}
 % \theorembodyfont{\rmfamily}
 % \newtheorem{aufgabe}{Aufgabe}
 \pagestyle{empty}
@@ -77,17 +80,18 @@
 \kopf
 }
  \begin{center}
-   {\Large {\bfseries\scshape Abschlussklausur}}
+   {\Large {\bfseries\scshape Abschlussklausur 28.~Juli 2023}}
 \end{center}
 
 \enlargethispage*{40mm}
 
 Bearbeiten Sie bitte die Aufgaben 1-4 und w\"ahlen Sie {\bfseries
-  \sffamily EINE} der Aufgaben 5 oder 6. Markieren Sie bitte unten,
-welche benotet werden soll. 
+  \sffamily EINE} der Aufgaben 5 oder 6. {\bfseries Markieren Sie}
+bitte unten, welche benotet werden soll. 
 \\
-Bitte nehmen Sie sich Zeit, die Aufgabenstellung durchzulesen und zu
-verstehen. Begr\"unden Sie Ihre Antworten!
+Bitte nehmen Sie sich Zeit, die Aufgabenstellung {\bfseries
+  durchzulesen} und zu {\bfseries verstehen}. Begr\"unden Sie Ihre
+Antworten!
 \\
 Schreiben Sie bitte Ihre L\"osungen auf diese Bl\"atter. 
 Sollten die Vorder- und R\"uckseiten nicht ausreichen, stellen wir
@@ -96,7 +100,7 @@ Bitte schreiben Sie Ihren Namen und Ihre Matrikelnummer auf diese
 Extraseiten. 
 \\
 Tragen Sie bitte jetzt Ihren Namen und Ihre Matrikelnummer ein.
-Bitte bl\"attern Sie erst um, wenn zum Angriff geblasen wird.
+Bitte bl\"attern Sie erst um, wenn Sie dazu aufgefordert werden.
 \\[\baselineskip] %\vfill
 Denken Sie nach, bleiben Sie ruhig. Viel Spa"s und Erfolg.
 \\[\baselineskip] %\vfill
@@ -130,7 +134,7 @@ Name: \underline{\hspace{50mm}} \hfill
   % \includegraphics[width=.7\textwidth]{massa-marianneth-fotocumunity}
   % \\
   % \Large Denken ist wie {\tt googeln}, nur krasser.
-%%\includegraphics[width=.7\textwidth]{bunnyTee}
+\includegraphics[width=.5\textwidth]{sudoku}
 %%\\
 %\mbox{} \hfill {\tiny The Book of Bunny Suicides \copyright Andy Riley}
 \end{center}
@@ -139,120 +143,120 @@ Name: \underline{\hspace{50mm}} \hfill
 
 \newpage
 
-AUFGABENSAMMLUNG
+% ABSCHLUSSKLAUSUR ;;;
 
-\begin{klaufg}{8}{}
-beweise oder widerlege: zu jeder Matrix gibt es ein Skalarprodukt, so dass sie unit"ar ist
+\begin{klaufg}{8}{Reproduktion}
+  Sei $K$ ein K"orper, und sei $F \colon M(2 \times 2;K) \to M(2
+  \times 2;K)$ der durch $F(A) = \transpose A$ gegebene
+  Endomorphismus.
+
+  Bestimmen Sie $\det F$, $P_F$, $M_F$, Eigenwerte, Eigenr"aume und
+  entscheiden Sie, ob $F$ diagonalisierbar ist.
 \end{klaufg}
 
-\begin{klaufg}{8}{}
-sei $A$ eine Matrix, so dass $A^{12} = E_n$. beweise oder widerlege: es gibt ein Skalarprodukt, so dass $A$ unit"ar ist.
+\pagebreak
+\begin{klaufg}{4+4}{examples}
+
+  \makebox[0pt][r]{($i$) }%
+  Geben Sie Beispiele f"ur zwei Matrizen mit dem charakteristischen Polynom
+  $(2+t)^2(3-t)$, sodass die eine diagonalisierbar ist und die andere
+  nicht.
+
+  (Begr"unden Sie {\bfseries\sffamily kurz}, dass Ihre Beispiele die
+  geforderten Eigenschaften haben.)
+  \pagebreak
+  
+  \makebox[0pt][r]{($ii$) }%
+  Geben Sie ein Beispiel einer $11 \times 11$ Matrix $B$, so dass
+  $\dim \ker B = 4$, $\dim \ker B^2 = 8$, $\dim \ker B^3 = 10$,
+  $\dim \ker B^4 = 11$.
+  
+  (Begr"unden Sie {\bfseries\sffamily kurz}, dass Ihr Beispiel die
+  geforderten Eigenschaften hat.)
 \end{klaufg}
 
-\begin{klaufg}{8}{}
-\begin{enumerate}
-\item
-Bestimmen die Anzahl der Matrizen $M \in \operatorname{Mat}(2\times 2; \mathbb{F}_2)$ mit dem charakteristischen Polynom 
-\[
-p_M = x^2 + x + 1
-\]
-\item
-Bestimmen die Anzahl der Matrizen $M \in \operatorname{Mat}(2\times 2; \mathbb{F}_2)$ mit dem Minimalpolynom 
-\[
-m_M = x^2 + x + 1
-\]
-\item
-Ist die Matrix
-\[
-\begin{pmatrix}
-1 & 0 & 0\\
-0 & 0 & 1\\
-0 & 1 & 1
-\end{pmatrix} \in \operatorname{Mat}(3\times 3; \mathbb{F}_2)
-\]
-diagonalisierbar?
-\end{enumerate}
-\end{klaufg}
+\pagebreak
+\begin{klaufg}{4+4}{einfacher Beweis}
+  \makebox[0pt][r]{($i$) }%
+Sei $A \in M(n \times n; \R)$ symmetrisch positiv
+definit. Zeigen Sie, dass $\det A$ das Produkt der Eigenwerte
+(mit Vielfachheiten) von $A$ ist.
+\vfill
 
-\begin{klaufg}{8}{}
-Geben Sie ein Beispiel einer reellen nilpotenten Matrix, die nicht eine obere oder untere Dreieicksmatrix ist.
-\end{klaufg}
+\makebox[0pt][r]{($ii$) }%
+Geben Sie ein Beispiel, das zeigt, dass man die Voraussetzung, dass
+$A$ symmetrisch positiv definit ist, nicht ersatzlos streichen kann.
 
-\begin{klaufg}{8}{}
-Bestimmen Sie f"ur $n > 0$ die Jordansche Normalform von
-\[
-\begin{pmatrix}
-1 & 1 & \cdots & 1\\
-1 & 1 &  & 1\\
-\vdots & & \ddots & 1 \\
-1 & 1&  \cdots & 1
-\end{pmatrix} \in \operatorname{Mat}(n \times n; \mathbb{R})
-\]
-\end{klaufg}
-
-\begin{klaufg}{8}{}
-Wir nehmen ein Internet $G = (V, E)$ mit den folgenden Eigenschaften:
-\begin{enumerate}
-\item
-Das Internet ist stark zusammenh"angend.
-\item
-Von allen Seiten gehen genau $3$ Links aus.
-\item
-Zwei mal navigieren (auf einen Link clicken), kann nicht zur"uckf"uhren zur Seiten auf die mann begonnen war.
-\item
-Es gibt immer h"ochstens eine M"oglichkeit, um in zwei Klicks von einer Seite zu einer anderen zu navigieren.
-\end{enumerate}
-Zeigen Sie, dass das Internet $\tilde{G} = (V, \tilde{E})$, gebildet durch dieselbe Seite wie $G$ zu nehmen, und Links zwischen Seiten$i$ und $j$ zu nehmen, genau dann, wenn mann in $G$ in zwei Klicks von $i$ nach $j$ navigieren kann, denselben Pagerank hat wie $G$. Wir nehmen an, dass $\tilde{G}$ auch stark zusammenh"anged ist, um Verwirrung "uber die Definierbarkeit des Pageranks zu vermeiden.
-\end{klaufg}
-
-\begin{klaufg}{8}{}
-Es seien $A, B \in \operatorname{Mat}(n \times n ; \mathbb{C})$ diagonalisierbare kommutierende Matrizen, sodass $AB$ nilpotent ist. Zeigen Sie, dass
-\[
-\dim \operatorname{Eig}(0, A) + \dim \operatorname{Eig}(0, B) \geq n
-\]
-und geben Sie zwei $3 \times 3$ Matrizen an von denen keine die Nullmatrix ist, f"ur die diese obere Schranke angenommen wird.
-\end{klaufg}
-
-\begin{klaufg}{8}{}
-
-Es sei $U$ eine unit"are Matrix, dann wissen wir, dass
-\begin{enumerate}
-\item
-es eine unit"are Matrix $\tilde{U}$ und eine Diagonalmatrix $D$ gibt, so dass
-\[
-U = \tilde{U} D \tilde{U}^*,
-\]
-\item
-es unit"are Matrizen $\widehat{U}$ und $\widehat{V}$ und eine Diagonalmatrix $\Sigma$ gibt, so dass
-\[
-U = \widehat{U} \Sigma \widehat{V}^*
-\]
-eine Singul"arwertzerlegung von $U$ ist.
-\end{enumerate}
-Die Diagonaleintr"age von $\Sigma$ und $D$ sind bis auf Reihefolge eindeutig bestimmt. Wenn $\Sigma$ und $D$ notwendig dieselbe Diagonaleintr"age haben, beweisen Sie dass. Wenn das nicht so ist, geben Sie ein Gegenbeispiel an.
-\end{klaufg}
-
-\begin{klaufg}{8}{}
-
-Es sie $P$ eine Projectionabbildung (eine lineare Abbildung f"ur die $P^2 = P$). Zeigen Sie, dass $P$ nur die Eigenwerte $0$ und $1$ haben kann.
+(Begr"unden Sie {\bfseries\sffamily kurz}, dass Ihre Matrix ein
+geeignetes Beispiel ist.)
+\vfill
 
 \end{klaufg}
 
 \pagebreak
+\begin{klaufg}{8}{einfache Modellierung/Beweis}
+  Sei $V$ ein unit"arer Vektorraum, und seien $F,G \in
+  \Hom(V,V)$ selbstadjungiert. Zeigen Sie, dass $FG$ genau dann
+  selbstadjungiert ist, wenn $FG=GF$.
+\end{klaufg}
+ 
+\pagebreak
+{\bfseries Nur eine der Aufgaben 5 \& 6 wird gewertet.}
+\bigskip
+\bigskip
 
-ABSCHLUSSKLAUSUR
+\begin{klaufg}{8}{hard1}
+   Sei $V$ ein $n$-dimensionaler Vektorraum, und sei $F \in
+   \operatorname{Hom}(V,V)$ invertierbar mit charakteristischem
+   Polynom $$P_F(t) = (-1)^n t^n + a_{n-1} t^{n-1} + \cdots + a_1 t +
+   a_0 .$$
+
+   Zeigen Sie, dass es ein Polynom $g \in K[t]$ gibt mit $g(F)= F^{-1}$.
+   \medskip
+
+   \underline{\emph{Hinweis:}} Cayley--Hamilton; $a_0 \neq 0$.  
+\end{klaufg}
+
+\pagebreak
+{\bfseries Nur eine der Aufgaben 5 \& 6 wird gewertet.}
+\bigskip
+\bigskip
+
+\begin{klaufg}{8}{hard2}
+  Es sei $U$ eine unit"are Matrix. Dann wissen wir, 
+  \begin{enumerate}
+  \item dass es eine unit"are Matrix $\tilde{U}$ und eine Diagonalmatrix
+    $D$ gibt, sodass
+    \[ U = \tilde{U} D \tilde{U}^{-1}\,, \text{ sowie}
+    \]
+  \item dass
+    es unit"are Matrizen $\widehat{U}$ und $\widehat{V}$ und eine
+    Diagonalmatrix $\Sigma$ gibt, sodass
+    \[ U = \widehat{U} \Sigma \widehat{V}^*
+    \]
+    eine Singul"arwertzerlegung von $U$ ist.
+  \end{enumerate}
+  Dabei sind die Diagonaleintr"age von $\Sigma$ und von $D$ jeweils
+  bis auf ihre Reihenfolge eindeutig durch $U$ bestimmt. (All das
+  brauchen Sie {\bfseries nicht} zu zeigen.)
+
+  Beweisen Sie oder widerlegen Sie mit konkretem Beispiel: $\Sigma$ und
+  $D$ haben notwendigerweise dieselben Diagonaleintr"age.
+\end{klaufg}
+
+\end{document}
+
+
+\pagebreak
+NACHKLAUSUR ;;;
 
 \begin{klaufg}{4+4}{Reproduktion}
-  Erkl"aren Sie {\bfseries\sffamily kurz},
+  Sei $K$ ein K"orper, und sei $F \colon K[t]_{\le3} \to K[t]_{\le3}$
+  der durch $F(f) = f(1)\,t^2$ gegebene Endomorphismus.
 
-\begin{enumerate} %[(i)]
-\item[(\it i)] ...
-   \vfill
-\item[(\it ii)] ...
- \vfill
-\end{enumerate}
-
-\end{klaufg}
+  Berechne $\det F$, $P_F$, Eigenwerte, Eigenr"aume und entscheide, ob
+  $F$ diagonalisierbar ist.
+  \end{klaufg}
 
 \pagebreak
 \begin{klaufg}{4+4}{examples}
@@ -275,15 +279,24 @@ ABSCHLUSSKLAUSUR
 
 \pagebreak
 \begin{klaufg}{8}{einfacher Beweis}
+  Sei $V$ ein endlichdimensionaler Vektorraum "uber dem K"orper $K$
+  und seien $F,G \in \Hom(V,V)$ simultan diagonalisierbar. Das hei"st,
+  es gibt eine Basis von $V$, die Eigenvektoren von $F$ und von $G$
+  sind.
 
+  Zeige, dass $FG=GF$.
 \end{klaufg}
 
 \pagebreak
 \begin{klaufg}{8}{einfache Modellierung/Beweis}
+  Sei $V$ ein $n$-dimensionaler Vektorraum, und sei $F \in \Hom(V,V)$
+  ein Endomorphismus vom Rang eins.
+  Zeigen Sie, dass entweder $F^2=0$ oder $F$ ist diagonalisierbar
+  (aber nicht beides).
 
-  
+  \underline{\emph{Hinweis:}} $\dim(\im F \cap \ker F) = ?$
 \end{klaufg}
- 
+
 \pagebreak
 {\bfseries Nur eine der Aufgaben 5 \& 6 wird gewertet.}
 \bigskip
@@ -299,70 +312,11 @@ ABSCHLUSSKLAUSUR
 \bigskip
 
 \begin{klaufg}{8}{hard2}
+Sei $V$ ein endlichdimensionaler $\C$-Vektorraum, und sei $F \in
+\Hom(V,V)$ so dass $F^6 = \id_V$.
 
-\end{klaufg}
-
-\pagebreak
-NACHKLAUSUR
-
-\begin{klaufg}{4+4}{Reproduktion}
-  Erkl"aren Sie {\bfseries\sffamily kurz},
-
-\begin{enumerate} %[(i)]
-\item[(\it i)] ...
-   \vfill
-\item[(\it ii)] ...
- \vfill
-\end{enumerate}
-
-\end{klaufg}
-
-\pagebreak
-\begin{klaufg}{4+4}{examples}
-
-  \makebox[0pt][r]{($i$) }%
-
-  Geben Sie Beispiele von ...
-
-  (Begr"unden Sie {\bfseries\sffamily kurz}, dass Ihr Beispiel die
-  geforderten Eigenschaften hat.)
-  \pagebreak
-  
-  \makebox[0pt][r]{($ii$) }%
-    Geben Sie Beispiele von ...
-  
-  (Begr"unden Sie {\bfseries\sffamily kurz}, dass Ihr Beispiel die
-  geforderten Eigenschaften hat.)
-
-\end{klaufg}
-
-\pagebreak
-\begin{klaufg}{8}{einfacher Beweis}
-
-\end{klaufg}
-
-\pagebreak
-\begin{klaufg}{8}{einfache Modellierung/Beweis}
-
-  
-\end{klaufg}
- 
-\pagebreak
-{\bfseries Nur eine der Aufgaben 5 \& 6 wird gewertet.}
-\bigskip
-\bigskip
-
-\begin{klaufg}{8}{hard1}
-
-\end{klaufg}
-
-\pagebreak
-{\bfseries Nur eine der Aufgaben 5 \& 6 wird gewertet.}
-\bigskip
-\bigskip
-
-\begin{klaufg}{8}{hard2}
-
+Zeigen Sie, dass es ein Skalarprodukt $\langle .,. \rangle$ auf $V$
+gibt, so dass $F$ unit"ar ist.  
 \end{klaufg}
 
 
@@ -372,3 +326,7 @@ NACHKLAUSUR
 
 
 
+
+%%% Local Variables:
+%%% mode: latex
+%%% End:
