@@ -69,7 +69,7 @@
 
 \setlength{\parindent}{0pt}
 
-\semester{Wintersemester 2021/22}
+\semester{Sommersemester 2023}
 
 % \renewcommand{\pagebreak}{\vspace{8mm} \par}
 
@@ -145,180 +145,184 @@ Name: \underline{\hspace{50mm}} \hfill
 
 % ABSCHLUSSKLAUSUR ;;;
 
-\begin{klaufg}{8}{Reproduktion}
-  Sei $K$ ein K"orper, und sei $F \colon M(2 \times 2;K) \to M(2
-  \times 2;K)$ der durch $F(A) = \transpose A$ gegebene
-  Endomorphismus.
+% \begin{klaufg}{8}{Reproduktion}
+%   Sei $K$ ein K"orper, und sei $F \colon M(2 \times 2;K) \to M(2
+%   \times 2;K)$ der durch $F(A) = \transpose A$ gegebene
+%   Endomorphismus.
 
-  Bestimmen Sie $\det F$, $P_F$, $M_F$, Eigenwerte, Eigenr"aume und
-  entscheiden Sie, ob $F$ diagonalisierbar ist.
-\end{klaufg}
+%   Bestimmen Sie $\det F$, $P_F$, $M_F$, Eigenwerte, Eigenr"aume und
+%   entscheiden Sie, ob $F$ diagonalisierbar ist.
+% \end{klaufg}
 
-\pagebreak
-\begin{klaufg}{4+4}{examples}
+% \pagebreak
+% \begin{klaufg}{4+4}{examples}
 
-  \makebox[0pt][r]{($i$) }%
-  Geben Sie Beispiele f"ur zwei Matrizen mit dem charakteristischen Polynom
-  $(2+t)^2(3-t)$, sodass die eine diagonalisierbar ist und die andere
-  nicht.
+%   \makebox[0pt][r]{($i$) }%
+%   Geben Sie Beispiele f"ur zwei Matrizen mit dem charakteristischen Polynom
+%   $(2+t)^2(3-t)$, sodass die eine diagonalisierbar ist und die andere
+%   nicht.
 
-  (Begr"unden Sie {\bfseries\sffamily kurz}, dass Ihre Beispiele die
-  geforderten Eigenschaften haben.)
-  \pagebreak
+%   (Begr"unden Sie {\bfseries\sffamily kurz}, dass Ihre Beispiele die
+%   geforderten Eigenschaften haben.)
+%   \pagebreak
   
-  \makebox[0pt][r]{($ii$) }%
-  Geben Sie ein Beispiel einer $11 \times 11$ Matrix $B$, so dass
-  $\dim \ker B = 4$, $\dim \ker B^2 = 8$, $\dim \ker B^3 = 10$,
-  $\dim \ker B^4 = 11$.
+%   \makebox[0pt][r]{($ii$) }%
+%   Geben Sie ein Beispiel einer $11 \times 11$ Matrix $B$, so dass
+%   $\dim \ker B = 4$, $\dim \ker B^2 = 8$, $\dim \ker B^3 = 10$,
+%   $\dim \ker B^4 = 11$.
   
-  (Begr"unden Sie {\bfseries\sffamily kurz}, dass Ihr Beispiel die
-  geforderten Eigenschaften hat.)
-\end{klaufg}
+%   (Begr"unden Sie {\bfseries\sffamily kurz}, dass Ihr Beispiel die
+%   geforderten Eigenschaften hat.)
+% \end{klaufg}
 
-\pagebreak
-\begin{klaufg}{4+4}{einfacher Beweis}
-  \makebox[0pt][r]{($i$) }%
-Sei $A \in M(n \times n; \R)$ symmetrisch positiv
-definit. Zeigen Sie, dass $\det A$ das Produkt der Eigenwerte
-(mit Vielfachheiten) von $A$ ist.
-\vfill
+% \pagebreak
+% \begin{klaufg}{4+4}{einfacher Beweis}
+%   \makebox[0pt][r]{($i$) }%
+% Sei $A \in M(n \times n; \R)$ symmetrisch positiv
+% definit. Zeigen Sie, dass $\det A$ das Produkt der Eigenwerte
+% (mit Vielfachheiten) von $A$ ist.
+% \vfill
 
-\makebox[0pt][r]{($ii$) }%
-Geben Sie ein Beispiel, das zeigt, dass man die Voraussetzung, dass
-$A$ symmetrisch positiv definit ist, nicht ersatzlos streichen kann.
+% \makebox[0pt][r]{($ii$) }%
+% Geben Sie ein Beispiel, das zeigt, dass man die Voraussetzung, dass
+% $A$ symmetrisch positiv definit ist, nicht ersatzlos streichen kann.
 
-(Begr"unden Sie {\bfseries\sffamily kurz}, dass Ihre Matrix ein
-geeignetes Beispiel ist.)
-\vfill
+% (Begr"unden Sie {\bfseries\sffamily kurz}, dass Ihre Matrix ein
+% geeignetes Beispiel ist.)
+% \vfill
 
-\end{klaufg}
+% \end{klaufg}
 
-\begin{klaufg}{8}{}
+% \begin{klaufg}{8}{}
 
-Es sei $M$ die komplexe Matrix
-\[
-M = \begin{pmatrix}
-1 & 1 & 0 & 0 & 0 \\
-0 & 1 & 1 & 0 & 0 \\
-0 & 0 & 1 & 0 & 0 \\
-0 & 0 & 0 & 2 & 1 \\
-0 & 0 & 0 & 0 & 2 \\
-\end{pmatrix}.
-\]
-Welche der folgenden Matrizen ist/sind zu $M$ konjugiert?
-\begin{enumerate}
-\item
-\[
-\begin{pmatrix}
-1 & 0 & 0 & 0 & 1 \\
-0 & 1 & 1 & 0 & 0 \\
-0 & 0 & 1 & 0 & 0 \\
-0 & 0 & 0 & 2 & 1 \\
-0 & 0 & 0 & 0 & 2 \\
-\end{pmatrix}.
-\]
-\item
-\[
-\begin{pmatrix}
-1 & 0 & 0 & 0 & 0 \\
-1 & 1 & 0 & 0 & 0 \\
-0 & 1 & 1 & 0 & 0 \\
-0 & 0 & 0 & 2 & 1 \\
-0 & 0 & 0 & 0 & 2 \\
-\end{pmatrix}.
-\]
-\item
-\[
-\begin{pmatrix}
-1 & 1 & 0 & 0 & 0 \\
-1 & 1 & 1 & 0 & 0 \\
-0 & 1 & 1 & 1 & 0 \\
-0 & 0 & 1 & 2 & 1 \\
-0 & 0 & 0 & 1 & 2 \\
-\end{pmatrix}.
-\]
-\end{enumerate}
+% Es sei $M$ die komplexe Matrix
+% \[
+% M = \begin{pmatrix}
+% 1 & 1 & 0 & 0 & 0 \\
+% 0 & 1 & 1 & 0 & 0 \\
+% 0 & 0 & 1 & 0 & 0 \\
+% 0 & 0 & 0 & 2 & 1 \\
+% 0 & 0 & 0 & 0 & 2 \\
+% \end{pmatrix}.
+% \]
+% Welche der folgenden Matrizen ist/sind zu $M$ konjugiert?
+% \begin{enumerate}
+% \item
+% \[
+% \begin{pmatrix}
+% 1 & 0 & 0 & 0 & 1 \\
+% 0 & 1 & 1 & 0 & 0 \\
+% 0 & 0 & 1 & 0 & 0 \\
+% 0 & 0 & 0 & 2 & 1 \\
+% 0 & 0 & 0 & 0 & 2 \\
+% \end{pmatrix}.
+% \]
+% \item
+% \[
+% \begin{pmatrix}
+% 1 & 0 & 0 & 0 & 0 \\
+% 1 & 1 & 0 & 0 & 0 \\
+% 0 & 1 & 1 & 0 & 0 \\
+% 0 & 0 & 0 & 2 & 1 \\
+% 0 & 0 & 0 & 0 & 2 \\
+% \end{pmatrix}.
+% \]
+% \item
+% \[
+% \begin{pmatrix}
+% 1 & 1 & 0 & 0 & 0 \\
+% 1 & 1 & 1 & 0 & 0 \\
+% 0 & 1 & 1 & 1 & 0 \\
+% 0 & 0 & 1 & 2 & 1 \\
+% 0 & 0 & 0 & 1 & 2 \\
+% \end{pmatrix}.
+% \]
+% \end{enumerate}
 
-\end{klaufg}
+% \end{klaufg}
 
-\pagebreak
-\begin{klaufg}{8}{einfache Modellierung/Beweis}
-  Sei $V$ ein unit"arer Vektorraum, und seien $F,G \in
-  \Hom(V,V)$ selbstadjungiert. Zeigen Sie, dass $FG$ genau dann
-  selbstadjungiert ist, wenn $FG=GF$.
-\end{klaufg}
+% \pagebreak
+% \begin{klaufg}{8}{einfache Modellierung/Beweis}
+%   Sei $V$ ein unit"arer Vektorraum, und seien $F,G \in
+%   \Hom(V,V)$ selbstadjungiert. Zeigen Sie, dass $FG$ genau dann
+%   selbstadjungiert ist, wenn $FG=GF$.
+% \end{klaufg}
  
-\pagebreak
-{\bfseries Nur eine der Aufgaben 5 \& 6 wird gewertet.}
-\bigskip
-\bigskip
+% \pagebreak
+% {\bfseries Nur eine der Aufgaben 5 \& 6 wird gewertet.}
+% \bigskip
+% \bigskip
 
-\begin{klaufg}{8}{hard1}
-   Sei $V$ ein $n$-dimensionaler Vektorraum, und sei $F \in
-   \operatorname{Hom}(V,V)$ invertierbar mit charakteristischem
-   Polynom $$P_F(t) = (-1)^n t^n + a_{n-1} t^{n-1} + \cdots + a_1 t +
-   a_0 .$$
+% \begin{klaufg}{8}{hard1}
+%    Sei $V$ ein $n$-dimensionaler Vektorraum, und sei $F \in
+%    \operatorname{Hom}(V,V)$ invertierbar mit charakteristischem
+%    Polynom $$P_F(t) = (-1)^n t^n + a_{n-1} t^{n-1} + \cdots + a_1 t +
+%    a_0 .$$
 
-   Zeigen Sie, dass es ein Polynom $g \in K[t]$ gibt mit $g(F)= F^{-1}$.
-   \medskip
+%    Zeigen Sie, dass es ein Polynom $g \in K[t]$ gibt mit $g(F)= F^{-1}$.
+%    \medskip
 
-   \underline{\emph{Hinweis:}} Cayley--Hamilton; $a_0 \neq 0$.  
-\end{klaufg}
+%    \underline{\emph{Hinweis:}} Cayley--Hamilton; $a_0 \neq 0$.  
+% \end{klaufg}
 
-\pagebreak
-{\bfseries Nur eine der Aufgaben 5 \& 6 wird gewertet.}
-\bigskip
-\bigskip
+% \pagebreak
+% {\bfseries Nur eine der Aufgaben 5 \& 6 wird gewertet.}
+% \bigskip
+% \bigskip
 
-\begin{klaufg}{8}{hard2}
-  Es sei $U$ eine unit"are Matrix. Dann wissen wir, 
-  \begin{enumerate}
-  \item dass es eine unit"are Matrix $\tilde{U}$ und eine Diagonalmatrix
-    $D$ gibt, sodass
-    \[ U = \tilde{U} D \tilde{U}^{-1}\,, \text{ sowie}
-    \]
-  \item dass
-    es unit"are Matrizen $\widehat{U}$ und $\widehat{V}$ und eine
-    Diagonalmatrix $\Sigma$ gibt, sodass
-    \[ U = \widehat{U} \Sigma \widehat{V}^*
-    \]
-    eine Singul"arwertzerlegung von $U$ ist.
-  \end{enumerate}
-  Dabei sind die Diagonaleintr"age von $\Sigma$ und von $D$ jeweils
-  bis auf ihre Reihenfolge eindeutig durch $U$ bestimmt. (All das
-  brauchen Sie {\bfseries nicht} zu zeigen.)
+% \begin{klaufg}{8}{hard2}
+%   Es sei $U$ eine unit"are Matrix. Dann wissen wir, 
+%   \begin{enumerate}
+%   \item dass es eine unit"are Matrix $\tilde{U}$ und eine Diagonalmatrix
+%     $D$ gibt, sodass
+%     \[ U = \tilde{U} D \tilde{U}^{-1}\,, \text{ sowie}
+%     \]
+%   \item dass
+%     es unit"are Matrizen $\widehat{U}$ und $\widehat{V}$ und eine
+%     Diagonalmatrix $\Sigma$ gibt, sodass
+%     \[ U = \widehat{U} \Sigma \widehat{V}^*
+%     \]
+%     eine Singul"arwertzerlegung von $U$ ist.
+%   \end{enumerate}
+%   Dabei sind die Diagonaleintr"age von $\Sigma$ und von $D$ jeweils
+%   bis auf ihre Reihenfolge eindeutig durch $U$ bestimmt. (All das
+%   brauchen Sie {\bfseries nicht} zu zeigen.)
 
-  Beweisen Sie oder widerlegen Sie mit konkretem Beispiel: $\Sigma$ und
-  $D$ haben notwendigerweise dieselben Diagonaleintr"age.
-\end{klaufg}
+%   Beweisen Sie oder widerlegen Sie mit konkretem Beispiel: $\Sigma$ und
+%   $D$ haben notwendigerweise dieselben Diagonaleintr"age.
+% \end{klaufg}
 
-% \end{document}
+% % \end{document}
 
 
-\pagebreak
-NACHKLAUSUR ;;;
+% \pagebreak
+% NACHKLAUSUR ;;;
 
-\begin{klaufg}{4+4}{Reproduktion}
+\begin{klaufg}{8}{Reproduktion}
   Sei $K$ ein K"orper, und sei $F \colon K[t]_{\le3} \to K[t]_{\le3}$
-  der durch $F(f) = f(1)\,t^2$ gegebene Endomorphismus.
+  der durch $F(f) = f(1)\,t^2$ gegebene Endomorphismus.\footnote{Zum
+    Beispiel ist $F(t^3-2t+5) = 4t^2$.}
 
-  Berechne $\det F$, $P_F$, Eigenwerte, Eigenr"aume und entscheide, ob
+  Berechnen Sie $\det F$, $P_F$, die Eigenwerte, die Eigenr"aume und entscheiden Sie, ob
   $F$ diagonalisierbar ist.
+  \vfill \mbox{}
   \end{klaufg}
 
 \pagebreak
 \begin{klaufg}{4+4}{examples}
 
   \makebox[0pt][r]{($i$) }%
+  Geben Sie zwei verschiedene Beispiele von $2 \times 3$ Matrizen mit
+  Singulärwerten $5$ und $4$.
 
-  Geben Sie Beispiele von ...
-
-  (Begr"unden Sie {\bfseries\sffamily kurz}, dass Ihr Beispiel die
-  geforderten Eigenschaften hat.)
+  (Begr"unden Sie {\bfseries\sffamily kurz}, dass Ihre Beispiele die
+  geforderten Eigenschaften haben.)
   \pagebreak
   
   \makebox[0pt][r]{($ii$) }%
-    Geben Sie Beispiele von ...
+  Geben Sie ein Beispiel eines endlichdimensionalen Vektorraums $V$
+  und eines Endomorphismus $F \in \Hom(V,V)$, so dass $V$
+    {\bfseries keine} Jordan-Basis für $F$ zulässt.
   
   (Begr"unden Sie {\bfseries\sffamily kurz}, dass Ihr Beispiel die
   geforderten Eigenschaften hat.)
@@ -329,17 +333,17 @@ NACHKLAUSUR ;;;
 \begin{klaufg}{8}{einfacher Beweis}
   Sei $V$ ein endlichdimensionaler Vektorraum "uber dem K"orper $K$
   und seien $F,G \in \Hom(V,V)$ simultan diagonalisierbar. Das hei"st,
-  es gibt eine Basis von $V$, die Eigenvektoren von $F$ und von $G$
-  sind.
+  es gibt eine Basis von $V$, deren Elemente Eigenvektoren von $F$ und
+  von $G$ sind.
 
-  Zeige, dass $FG=GF$.
+  Zeigen Sie, dass $FG=GF$.
 \end{klaufg}
 
 \pagebreak
 \begin{klaufg}{8}{einfache Modellierung/Beweis}
   Sei $V$ ein $n$-dimensionaler Vektorraum, und sei $F \in \Hom(V,V)$
   ein Endomorphismus vom Rang eins.
-  Zeigen Sie, dass entweder $F^2=0$ oder $F$ ist diagonalisierbar
+  Zeigen Sie, dass entweder $F^2=0$ oder $F$ diagonalisierbar ist
   (aber nicht beides).
 
   \underline{\emph{Hinweis:}} $\dim(\im F \cap \ker F) = ?$
@@ -351,7 +355,12 @@ NACHKLAUSUR ;;;
 \bigskip
 
 \begin{klaufg}{8}{hard1}
+Sei $V$ ein $n$-dimensionaler unitärer Vektorraum und $F \in
+\Hom(V,V)$, so dass $V$ eine Orthonormalbasis aus Eigenvektoren von $F$
+besitzt.
 
+Zeigen Sie, dass $F$ mit seiner Adjungierten kommutiert:
+$F^{\mathrm{ad}}F = FF^{\mathrm{ad}}$.
 \end{klaufg}
 
 \pagebreak
@@ -361,7 +370,7 @@ NACHKLAUSUR ;;;
 
 \begin{klaufg}{8}{hard2}
 Sei $V$ ein endlichdimensionaler $\C$-Vektorraum, und sei $F \in
-\Hom(V,V)$ so dass $F^6 = \id_V$.
+\Hom(V,V)$, so dass $F^6 = \id_V$.
 
 Zeigen Sie, dass es ein Skalarprodukt $\langle .,. \rangle$ auf $V$
 gibt, so dass $F$ unit"ar ist.  
